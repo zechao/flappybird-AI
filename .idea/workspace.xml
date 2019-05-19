@@ -1,118 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/camshift/camshift.py" line="43" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="49a14c5b-883a-41bd-92c9-22c88916d7c5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/camshift/image/prueba.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/camshift/image_test/bird_contour.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/camshift/image_test/bird_match_template.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/camshift/image_test/contours_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/camshift/image_test/img.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/camshift/image_test/redbird-downflap.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/camshift/image_test/redbird-midflap.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/camshift/image_test/redbird-upflap.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/camshift/redbird-downflap.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/camshift/redbird-midflap.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/camshift/camshift.py" beforeDir="false" afterPath="$PROJECT_DIR$/camshift/camshift.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im100.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im101.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im102.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im103.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im104.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im105.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im106.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im107.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im108.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im109.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im110.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im111.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im112.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im113.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im114.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im115.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im116.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im117.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im118.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im119.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im12.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im120.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im121.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im122.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im123.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im124.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im125.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im126.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im127.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im128.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im129.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im13.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im130.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im14.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im15.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im17.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im18.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im19.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im20.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im21.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im22.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im23.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im24.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im32.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im33.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im34.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im35.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im36.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im37.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im38.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im39.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im40.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im41.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im42.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im43.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im44.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im45.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im46.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im47.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im48.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im49.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im50.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im51.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im52.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im53.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im54.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im61.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im62.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im63.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im64.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im65.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im66.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im67.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im68.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im69.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im70.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im71.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im72.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im73.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im74.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im80.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im81.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im82.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im83.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im84.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im85.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im86.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im87.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im88.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im89.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im91.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im92.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im93.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im94.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im95.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im96.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im97.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im98.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/image/im99.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/camshift/image/im90.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/camshift/image/prueba.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/flappy_bird_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/flappy_bird_utils.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -123,15 +29,41 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/camshift/image/im90.png">
+        <entry file="file://$PROJECT_DIR$/camshift/image_test/img.jpg">
           <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/camshift/image/prueba.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/camshift/image_test/bird_contour.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="966">
-              <caret line="51" column="31" selection-start-line="51" selection-start-column="31" selection-end-line="51" selection-end-column="31" />
+            <state relative-caret-position="296">
+              <caret line="73" selection-end-line="99" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+                <element signature="e#89#93#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/camshift/image_test/contours_test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="281">
+              <caret line="60" column="25" selection-start-line="60" selection-start-column="22" selection-end-line="60" selection-end-column="25" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+                <element signature="e#115#119#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/camshift/image_test/bird_match_template.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="414">
+              <caret line="18" selection-start-line="4" selection-end-line="18" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -140,28 +72,35 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://C:/Program Files/Python37/Lib/codecs.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
-              <caret line="311" selection-start-line="311" selection-end-line="311" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/camshift/redbird-midflap.png">
+          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/camshift/redbird-downflap.png">
+          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/sprites/redbird-midflap.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/sprites/pipe-green.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/sprites/redbird-downflap.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/camshift/camshift.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-114">
-              <caret line="53" column="11" lean-forward="true" selection-start-line="53" selection-start-column="11" selection-end-line="53" selection-end-column="11" />
+            <state relative-caret-position="1304">
+              <caret line="157" column="84" selection-start-line="157" selection-start-column="84" selection-end-line="157" selection-end-column="84" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -188,12 +127,14 @@
       <find>libpng warning: iCCP: known incorrect sRGB profile</find>
       <find>cv</find>
       <find>exce</find>
+      <find>print</find>
     </findStrings>
     <replaceStrings>
       <replace>cv2</replace>
     </replaceStrings>
     <dirStrings>
       <dir>D:\tfg</dir>
+      <dir>D:\tfg\game</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -205,16 +146,23 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/game/flappy_bird_utils.py" />
         <option value="$PROJECT_DIR$/game/wrapped_flappy_bird.py" />
         <option value="$PROJECT_DIR$/camshift/image/prueba.py" />
+        <option value="$PROJECT_DIR$/camshift/image/bird_match_Template.py" />
+        <option value="$PROJECT_DIR$/camshift/image/pipe_contorn.py" />
+        <option value="$PROJECT_DIR$/camshift/image/contours_test.py" />
+        <option value="$PROJECT_DIR$/camshift/image/bird_contour.py" />
+        <option value="$PROJECT_DIR$/camshift/image/bird_match_template.py" />
+        <option value="$PROJECT_DIR$/camshift/image_test/contours_test.py" />
+        <option value="$PROJECT_DIR$/camshift/image_test/bird_match_template.py" />
+        <option value="$PROJECT_DIR$/game/flappy_bird_utils.py" />
         <option value="$PROJECT_DIR$/camshift/camshift.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1909" />
-    <option name="width" value="1940" />
+    <option name="x" value="-11" />
+    <option name="width" value="2531" />
     <option name="height" value="2124" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -239,8 +187,7 @@
             <path>
               <item name="tfg" type="b2602c69:ProjectViewProjectNode" />
               <item name="tfg" type="462c0819:PsiDirectoryNode" />
-              <item name="camshift" type="462c0819:PsiDirectoryNode" />
-              <item name="image" type="462c0819:PsiDirectoryNode" />
+              <item name="game" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -266,12 +213,13 @@
     </option>
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\tfg\camshift" />
-      <recent name="D:\tfg\camshift\image" />
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\tfg" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\tfg\camshift" />
+      <recent name="D:\tfg\camshift\image_test" />
+      <recent name="D:\tfg\camshift\image" />
       <recent name="D:\tfg" />
     </key>
   </component>
@@ -310,6 +258,25 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="bird_match_template" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="tfg" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/camshift/image_test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/camshift/image_test/bird_match_template.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="camshift" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="tfg" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -329,7 +296,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="prueba" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="contours_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="tfg" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -339,7 +306,26 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/camshift/image/prueba.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/camshift/image/contours_test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="flappy_bird_utils" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="tfg" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/game" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/game/flappy_bird_utils.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -352,11 +338,8 @@
       <module name="tfg" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/game" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
@@ -372,14 +355,18 @@
     </configuration>
     <list>
       <item itemvalue="Python.camshift" />
+      <item itemvalue="Python.contours_test" />
+      <item itemvalue="Python.bird_match_template" />
+      <item itemvalue="Python.flappy_bird_utils" />
       <item itemvalue="Python.wrapped_flappy_bird" />
-      <item itemvalue="Python.prueba" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.camshift" />
-        <item itemvalue="Python.prueba" />
         <item itemvalue="Python.wrapped_flappy_bird" />
+        <item itemvalue="Python.flappy_bird_utils" />
+        <item itemvalue="Python.bird_match_template" />
+        <item itemvalue="Python.contours_test" />
       </list>
     </recent_temporary>
   </component>
@@ -396,37 +383,38 @@
       <workItem from="1557083634742" duration="4115000" />
       <workItem from="1557176724122" duration="19981000" />
       <workItem from="1557949441888" duration="7463000" />
-      <workItem from="1558274117456" duration="3997000" />
+      <workItem from="1558274117456" duration="28640000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35556000" />
+    <option name="totallyTimeSpent" value="60199000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1273" y="0" width="1293" height="1416" extended-state="0" />
+    <frame x="-7" y="0" width="1687" height="1416" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1659919" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32943925" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.2936137" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32943925" />
-      <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5006954" side_tool="true" weight="0.32866043" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4993046" weight="0.37227413" />
-      <window_info active="true" anchor="bottom" id="Python Console" order="12" visible="true" weight="0.17211838" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49867022" visible="true" weight="0.20748925" />
+      <window_info id="Structure" order="1" sideWeight="0.5013298" side_tool="true" visible="true" weight="0.20748925" />
+      <window_info id="Favorites" order="2" sideWeight="0.5018094" side_tool="true" weight="0.13311689" />
+      <window_info anchor="bottom" id="Messages" order="0" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.32760364" />
+      <window_info anchor="bottom" id="Run" order="3" />
+      <window_info active="true" anchor="bottom" id="Debug" order="4" visible="true" weight="0.4143302" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="7" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32943925" />
+      <window_info anchor="bottom" id="Database Changes" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5006954" side_tool="true" weight="0.32866043" />
+      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.4993046" weight="0.37142858" />
+      <window_info anchor="bottom" id="Python Console" order="13" weight="0.13084112" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" weight="0.63724697" />
+      <window_info anchor="right" id="SciView" order="3" visible="true" weight="0.16513199" />
       <window_info anchor="right" id="R Graphics" order="4" />
       <window_info anchor="right" id="R Packages" order="5" />
       <window_info anchor="right" x="0" y="0" width="403" height="800" id="Documentation" order="6" side_tool="true" weight="0.3295325" />
@@ -436,13 +424,51 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/camshift/image_test/bird_contour.py</url>
+          <line>81</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/camshift/image_test/contours_test.py</url>
+          <line>85</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/camshift/camshift.py</url>
+          <line>157</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/tfg$camshift.coverage" NAME="camshift Coverage Results" MODIFIED="1557267309829" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/camshift" />
+    <SUITE FILE_PATH="coverage/tfg$pipe_contorn.coverage" NAME="pipe_contorn Coverage Results" MODIFIED="1558292229994" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/camshift/image" />
+    <SUITE FILE_PATH="coverage/tfg$camshift.coverage" NAME="camshift Coverage Results" MODIFIED="1558307239938" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/camshift" />
     <SUITE FILE_PATH="coverage/tfg$wrapped_flappy_bird.coverage" NAME="wrapped_flappy_bird Coverage Results" MODIFIED="1557094159252" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/tfg$prueba.coverage" NAME="prueba Coverage Results" MODIFIED="1558276484523" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/camshift/image" />
+    <SUITE FILE_PATH="coverage/tfg$bird_contour.coverage" NAME="bird_contour Coverage Results" MODIFIED="1558290706528" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/camshift/image" />
+    <SUITE FILE_PATH="coverage/tfg$prueba.coverage" NAME="prueba Coverage Results" MODIFIED="1558279623963" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/camshift/image" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>len(contours)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>img[x1,y1]</expression-string>
         <language-id>Python</language-id>
@@ -478,6 +504,57 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/camshift/image/im10.png" />
+    <entry file="file://$PROJECT_DIR$/camshift/image/im74.png" />
+    <entry file="file://$PROJECT_DIR$/camshift/image/im9.png" />
+    <entry file="file://$PROJECT_DIR$/camshift/image/im113.png" />
+    <entry file="file://$PROJECT_DIR$/camshift/image/im122.png" />
+    <entry file="file://$PROJECT_DIR$/camshift/image/im127.png" />
+    <entry file="file://$PROJECT_DIR$/camshift/image/im111.png" />
+    <entry file="file://$PROJECT_DIR$/camshift/image/im108.png" />
+    <entry file="file://$PROJECT_DIR$/camshift/image/im98.png" />
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_bundle/pydev_umd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="196" selection-start-line="196" selection-end-line="196" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/-394233648/cv2/cv2/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="2784" column="4" selection-start-line="2784" selection-start-column="4" selection-end-line="2784" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/camshift/image/im90.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://C:/Program Files/Python37/Lib/codecs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="311" selection-start-line="311" selection-end-line="311" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/camshift/image_test/bird_contour.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="73" selection-end-line="99" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+            <element signature="e#89#93#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/assets/sprites/pipe-green.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -493,60 +570,43 @@
     <entry file="file://$PROJECT_DIR$/assets/sprites/2.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/camshift/image/im10.png" />
-    <entry file="file://$PROJECT_DIR$/camshift/image/im74.png" />
-    <entry file="file://$PROJECT_DIR$/camshift/image/im9.png" />
-    <entry file="file://$PROJECT_DIR$/camshift/image/im113.png" />
-    <entry file="file://$PROJECT_DIR$/camshift/image/im122.png" />
-    <entry file="file://$PROJECT_DIR$/camshift/image/im127.png" />
-    <entry file="file://$PROJECT_DIR$/camshift/image/im111.png" />
-    <entry file="file://$PROJECT_DIR$/camshift/image/im108.png" />
-    <entry file="file://$PROJECT_DIR$/camshift/image/im98.png" />
-    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/-394233648/cv2/cv2/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="5910" column="4" selection-start-line="5910" selection-start-column="4" selection-end-line="5910" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_bundle/pydev_umd.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="196" selection-start-line="196" selection-end-line="196" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/camshift/image/im90.png">
+    <entry file="file://$PROJECT_DIR$/camshift/image_test/img.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
+    <entry file="file://$PROJECT_DIR$/camshift/image_test/contours_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="281">
+          <caret line="60" column="25" selection-start-line="60" selection-start-column="22" selection-end-line="60" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+            <element signature="e#115#119#0" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Program Files/Python37/Lib/codecs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="311" selection-start-line="311" selection-end-line="311" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/camshift/image_test/redbird-upflap.png">
+      <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/camshift/camshift.py">
+    <entry file="file://$PROJECT_DIR$/camshift/image_test/bird_match_template.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-114">
-          <caret line="53" column="11" lean-forward="true" selection-start-line="53" selection-start-column="11" selection-end-line="53" selection-end-column="11" />
+        <state relative-caret-position="414">
+          <caret line="18" selection-start-line="4" selection-end-line="18" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/camshift/image/prueba.py">
+    <entry file="file://$PROJECT_DIR$/camshift/redbird-midflap.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/camshift/redbird-downflap.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/camshift/camshift.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="966">
-          <caret line="51" column="31" selection-start-line="51" selection-start-column="31" selection-end-line="51" selection-end-column="31" />
+        <state relative-caret-position="1304">
+          <caret line="157" column="84" selection-start-line="157" selection-start-column="84" selection-end-line="157" selection-end-column="84" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>

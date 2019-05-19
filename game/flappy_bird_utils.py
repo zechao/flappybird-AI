@@ -18,7 +18,8 @@ def load():
     IMAGES, SOUNDS, HITMASKS = {}, {}, {}
 
     # numbers sprites for score display
-    print(os.chdir('..'))
+    current_dir = os.getcwd()
+    os.chdir('..')
     IMAGES['numbers'] = (
         pygame.image.load('assets/sprites/0.png').convert_alpha(),
         pygame.image.load('assets/sprites/1.png').convert_alpha(),
@@ -76,11 +77,11 @@ def load():
         getHitmask(IMAGES['player'][1]),
         getHitmask(IMAGES['player'][2]),
     )
-
+    os.chdir(current_dir)
     return IMAGES, SOUNDS, HITMASKS
 
 def getHitmask(image):
-    """returns a hitmask using an image's alpha."""
+    """returns a hitmask using an image_test's alpha."""
     mask = []
     for x in range(image.get_width()):
         mask.append([])
