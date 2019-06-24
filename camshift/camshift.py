@@ -119,15 +119,15 @@ while True:
     ret = True
     if run:
         hsv = cv2.cvtColor(bird_frame, cv2.COLOR_RGB2HSV)
-        #
-        # dst = cv2.calcBackProject([hsv], [0], roi_hist, [0, 180], 1)
-        # # apply CamShift to get the new location
-        # ret, track_window = cv2.CamShift(dst, track_window, term_crit)
-        # # expanded b  ird tracked size, and draw area
-        # (x, y, w, h) = (int(ret[0][0]), int(ret[0][1]), int(ret[1][0]), int(ret[1][1]))
-        # cv2.rectangle(bird_frame, (x - 10, y - 10), (x + w + 5, y + h - 5), (0, 255, 0), cv2.FILLED)
-        # draw_bird_tracked_area("bird", bird_frame, ret)
-        # # draw_bird_backProject("BackProject", dst)
+
+        dst = cv2.calcBackProject([hsv], [0], roi_hist, [0, 180], 1)
+        # apply CamShift to get the new location
+        ret, track_window = cv2.CamShift(dst, track_window, term_crit)
+        # expanded b  ird tracked size, and draw area
+        (x, y, w, h) = (int(ret[0][0]), int(ret[0][1]), int(ret[1][0]), int(ret[1][1]))
+        cv2.rectangle(bird_frame, (x - 10, y - 10), (x + w + 5, y + h - 5), (0, 255, 0), cv2.FILLED)
+        draw_bird_tracked_area("bird", bird_frame, ret)
+        # draw_bird_backProject("BackProject", dst)
 
         # Track bird with template matching
         img_gray = cv2.cvtColor(tamplate_frame, cv2.COLOR_BGR2GRAY)
