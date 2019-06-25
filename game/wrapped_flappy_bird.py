@@ -147,6 +147,11 @@ class GameState:
         return image_data, reward, terminal
 
     def next_frame(self, flap):
+        """
+        bird will flap if is true, otherwise the bird will move dropping
+        :param flap:
+        :return:
+        """
         action = np.zeros(2)
         if flap == True:
             action[1] = 1
