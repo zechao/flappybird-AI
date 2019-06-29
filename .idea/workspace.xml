@@ -1,13 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/camshift/discretization.py" line="30" />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="49a14c5b-883a-41bd-92c9-22c88916d7c5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/camshift/CamShift.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gameAI/discret_result.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gameAI/utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/camshift/discretization.py" beforeDir="false" afterPath="$PROJECT_DIR$/camshift/discretization.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/sprites/7.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sprites/7.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/sprites/8.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sprites/8.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/sprites/9.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sprites/9.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/sprites/background-black.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sprites/background-black.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/sprites/base.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sprites/base.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/sprites/pipe-green.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sprites/pipe-green.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/sprites/redbird-downflap.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sprites/redbird-downflap.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/sprites/redbird-midflap.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sprites/redbird-midflap.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/sprites/redbird-upflap.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sprites/redbird-upflap.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/camshift/camshift.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/camshift/discretization.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/camshift/image_test/bird_contour.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/camshift/image_test/bird_match_template.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/camshift/image_test/contours_test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/camshift/image_test/img.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/camshift/image_test/redbird-downflap.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/camshift/image_test/redbird-midflap.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/camshift/image_test/redbird-upflap.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/camshift/redbird-downflap.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/camshift/redbird-midflap.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/wrapped_flappy_bird.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/wrapped_flappy_bird.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,62 +36,22 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/camshift/image_test/bird_contour.py">
+        <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/-394233648/cv2/cv2/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1633">
-              <caret line="73" selection-end-line="99" />
+            <state relative-caret-position="23">
+              <caret line="1892" selection-start-line="1892" selection-end-line="1892" />
               <folding>
-                <element signature="e#0#10#0" expanded="true" />
-                <element signature="e#89#93#0" />
+                <element signature="e#186#283#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/camshift/image_test/bird_match_template.py">
+        <entry file="file://$PROJECT_DIR$/gameAI/camshift.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/camshift/redbird-midflap.png">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/camshift/redbird-downflap.png">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/sprites/redbird-downflap.png">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/camshift/discretization.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="54" selection-start-line="54" selection-end-line="54" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/camshift/CamShift.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="736">
-              <caret line="32" column="32" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
+            <state relative-caret-position="943">
+              <caret line="41" column="18" lean-forward="true" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="24" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -82,28 +60,76 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/-394233648/cv2/cv2/__init__.py">
+        <entry file="file://$PROJECT_DIR$/gameAI/utils.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/gameAI/discret_result.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="74566">
-              <caret line="3257" column="4" selection-start-line="3257" selection-start-column="4" selection-end-line="3257" selection-end-column="4" />
+            <state relative-caret-position="437">
+              <caret line="19" column="31" lean-forward="true" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://C:/Program Files/Python37/Lib/codecs.py">
+        <entry file="file://$USER_HOME$/.virtualenvs/tfg/Lib/site-packages/numpy/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7084">
-              <caret line="309" selection-start-line="309" selection-end-line="309" />
+            <state relative-caret-position="-2139" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/game/wrapped_flappy_bird.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2481">
+              <caret line="165" column="21" lean-forward="true" selection-start-line="165" selection-start-column="21" selection-end-line="165" selection-end-column="21" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/-394233648/pygame/event.py">
+        <entry file="file://$PROJECT_DIR$/gameAI/discretization_config.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="920">
-              <caret line="40" column="20" selection-start-line="40" selection-start-column="16" selection-end-line="40" selection-end-column="20" />
+            <state relative-caret-position="253">
+              <caret line="11" column="26" lean-forward="true" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gameAI/discretization.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="161">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://C:/Program Files/Python37/Lib/random.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="564">
+              <caret line="688" column="12" selection-start-line="688" selection-start-column="8" selection-end-line="688" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/game/flappy_bird_utils.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="69">
+              <caret line="3" column="6" lean-forward="true" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -129,6 +155,8 @@
       <find>exce</find>
       <find>print</find>
       <find>ret</find>
+      <find>seed</find>
+      <find>random</find>
     </findStrings>
     <replaceStrings>
       <replace>cv2</replace>
@@ -156,19 +184,24 @@
         <option value="$PROJECT_DIR$/camshift/image_test/contours_test.py" />
         <option value="$PROJECT_DIR$/camshift/image_test/bird_match_template.py" />
         <option value="$PROJECT_DIR$/game/flappy_bird_utils.py" />
+        <option value="$PROJECT_DIR$/camshift/discretize.py" />
+        <option value="$PROJECT_DIR$/camshift/CamShift.py" />
+        <option value="$PROJECT_DIR$/camshift/image_test/config.py" />
+        <option value="$PROJECT_DIR$/camshift/discretization.py" />
+        <option value="$PROJECT_DIR$/camshift/config.py" />
         <option value="$PROJECT_DIR$/camshift/camshift.py" />
         <option value="$PROJECT_DIR$/game/wrapped_flappy_bird.py" />
-        <option value="$PROJECT_DIR$/camshift/discretize.py" />
-        <option value="$PROJECT_DIR$/camshift/discretization.py" />
-        <option value="$PROJECT_DIR$/camshift/CamShift.py" />
+        <option value="$PROJECT_DIR$/gameAI/discretization_config.py" />
+        <option value="$PROJECT_DIR$/gameAI/camshift.py" />
+        <option value="$PROJECT_DIR$/gameAI/discretization.py" />
+        <option value="$PROJECT_DIR$/gameAI/discret_result.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1357" />
-    <option name="y" value="-11" />
-    <option name="width" value="837" />
-    <option name="height" value="2130" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-11" />
+    <option name="width" value="1940" />
+    <option name="height" value="2124" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -186,12 +219,12 @@
             <path>
               <item name="tfg" type="b2602c69:ProjectViewProjectNode" />
               <item name="tfg" type="462c0819:PsiDirectoryNode" />
-              <item name="camshift" type="462c0819:PsiDirectoryNode" />
+              <item name="game" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tfg" type="b2602c69:ProjectViewProjectNode" />
               <item name="tfg" type="462c0819:PsiDirectoryNode" />
-              <item name="game" type="462c0819:PsiDirectoryNode" />
+              <item name="gameAI" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -218,13 +251,14 @@
     </option>
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\tfg\camshift" />
+      <recent name="D:\tfg" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\tfg\camshift" />
       <recent name="D:\tfg\camshift\image_test" />
       <recent name="D:\tfg\camshift\image" />
-      <recent name="D:\tfg" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\tfg" />
     </key>
   </component>
@@ -240,7 +274,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.discretization">
+  <component name="RunManager" selected="Python.discretization (1)">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="tfg" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -307,20 +341,17 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="contours_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="discretization (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="tfg" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/camshift/image_test" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/gameAI" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/camshift/image_test/contours_test.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/gameAI/discretization.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -333,6 +364,9 @@
       <module name="tfg" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/camshift" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -373,17 +407,17 @@
     <list>
       <item itemvalue="Python.bird_match_template" />
       <item itemvalue="Python.bird_contour" />
-      <item itemvalue="Python.contours_test" />
       <item itemvalue="Python.discretize" />
       <item itemvalue="Python.discretization" />
+      <item itemvalue="Python.discretization (1)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.discretization (1)" />
         <item itemvalue="Python.discretization" />
         <item itemvalue="Python.discretize" />
         <item itemvalue="Python.bird_contour" />
         <item itemvalue="Python.bird_match_template" />
-        <item itemvalue="Python.contours_test" />
       </list>
     </recent_temporary>
   </component>
@@ -404,23 +438,24 @@
       <workItem from="1558461083698" duration="1728000" />
       <workItem from="1561389596337" duration="1144000" />
       <workItem from="1561403693969" duration="10943000" />
-      <workItem from="1561746393957" duration="2337000" />
+      <workItem from="1561746393957" duration="3482000" />
+      <workItem from="1561827334485" duration="3371000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76733000" />
+    <option name="totallyTimeSpent" value="81249000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="2575" height="1424" extended-state="6" />
+    <frame x="-7" y="0" width="1293" height="1416" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4938918" visible="true" weight="0.14898689" />
-      <window_info id="Structure" order="1" sideWeight="0.5061082" side_tool="true" visible="true" weight="0.14898689" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49307775" visible="true" weight="0.30607286" />
+      <window_info id="Structure" order="1" sideWeight="0.50692225" side_tool="true" visible="true" weight="0.30607286" />
       <window_info id="Favorites" order="2" sideWeight="0.5018094" side_tool="true" weight="0.13311689" />
       <window_info anchor="bottom" id="Messages" order="0" />
       <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Find" order="2" sideWeight="0.49900675" weight="0.32739937" />
+      <window_info anchor="bottom" id="Find" order="2" sideWeight="0.49860945" weight="0.32739937" />
       <window_info anchor="bottom" id="Run" order="3" />
       <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.6253476" weight="0.43034056" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
@@ -429,9 +464,9 @@
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32943925" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50297976" side_tool="true" visible="true" weight="0.1130031" />
-      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49702027" visible="true" weight="0.1130031" />
-      <window_info anchor="bottom" id="Python Console" order="13" sideWeight="0.49702027" weight="0.26702785" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5044534" side_tool="true" visible="true" weight="0.2686916" />
+      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49622566" weight="0.1129157" />
+      <window_info anchor="bottom" id="Python Console" order="13" sideWeight="0.49554655" visible="true" weight="0.2686916" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -470,12 +505,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/camshift/discretization.py</url>
-          <line>122</line>
+          <line>115</line>
           <option name="timeStamp" value="29" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/camshift/discretization.py</url>
-          <line>101</line>
+          <line>94</line>
           <option name="timeStamp" value="31" />
         </line-breakpoint>
       </breakpoints>
@@ -553,30 +588,11 @@
     <entry file="file://$PROJECT_DIR$/assets/sprites/pipe-green.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/game/wrapped_flappy_bird.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="61" column="22" selection-start-line="61" selection-start-column="22" selection-end-line="61" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/camshift/redbird-midflap.png">
+      <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/game/flappy_bird_utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="22" column="25" lean-forward="true" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.virtualenvs/tfg/Lib/site-packages/numpy/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4002" />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/camshift/redbird-downflap.png">
+      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/camshift/image_test/contours_test.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -590,8 +606,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/camshift/image_test/bird_contour.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1633">
-          <caret line="73" selection-end-line="99" />
+        <state relative-caret-position="1817">
+          <caret line="81" column="49" selection-start-line="81" selection-start-column="49" selection-end-line="81" selection-end-column="49" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
             <element signature="e#89#93#0" />
@@ -609,19 +625,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/camshift/redbird-midflap.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/camshift/redbird-downflap.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/sprites/redbird-downflap.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/-394233648/cv2/cv2/__init__.py">
+    <entry file="file://$PROJECT_DIR$/camshift/camshift.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="74566">
-          <caret line="3257" column="4" selection-start-line="3257" selection-start-column="4" selection-end-line="3257" selection-end-column="4" />
+        <state relative-caret-position="138">
+          <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/camshift/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="18" selection-start-column="18" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -641,21 +658,90 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/camshift/discretization.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="54" selection-start-line="54" selection-end-line="54" />
+        <state relative-caret-position="69">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/sprites/redbird-downflap.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/-394233648/cv2/cv2/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1892" selection-start-line="1892" selection-end-line="1892" />
+          <folding>
+            <element signature="e#186#283#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Python37/Lib/random.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="564">
+          <caret line="688" column="12" selection-start-line="688" selection-start-column="8" selection-end-line="688" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game/flappy_bird_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" column="6" lean-forward="true" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gameAI/discretization_config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" column="26" lean-forward="true" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.virtualenvs/tfg/Lib/site-packages/numpy/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2139" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game/wrapped_flappy_bird.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2481">
+          <caret line="165" column="21" lean-forward="true" selection-start-line="165" selection-start-column="21" selection-end-line="165" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gameAI/camshift.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="943">
+          <caret line="41" column="18" lean-forward="true" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gameAI/utils.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gameAI/discretization.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/camshift/CamShift.py">
+    <entry file="file://$PROJECT_DIR$/gameAI/discret_result.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="736">
-          <caret line="32" column="32" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="437">
+          <caret line="19" column="31" lean-forward="true" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="32" />
         </state>
       </provider>
     </entry>

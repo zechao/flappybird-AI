@@ -148,8 +148,8 @@ class GameState:
 
     def next_frame(self, flap):
         """
-        bird will flap if is true, otherwise the bird will move dropping
         :param flap:
+        bird will flap if is true, otherwise the bird will move dropping
         :return:
         """
         action = np.zeros(2)
