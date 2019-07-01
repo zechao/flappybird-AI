@@ -31,7 +31,10 @@ PLAYER_INDEX_GEN = cycle([0, 1, 2, 1])
 
 
 class GameState:
-    def __init__(self):
+
+    def __init__(self, seed):
+        self.seed=seed
+        random.seed(seed)
         self.score = self.playerIndex = self.loopIter = 0
         self.playerx = int(SCREENWIDTH * 0.2)
         self.playery = int((SCREENHEIGHT - PLAYER_HEIGHT) / 2)
@@ -123,7 +126,7 @@ class GameState:
             # SOUNDS['hit'].play()
             # SOUNDS['die'].play()
             terminal = True
-            self.__init__()
+            self.__init__(self.seed)
             reward = -1
 
         # draw sprites
@@ -135,7 +138,7 @@ class GameState:
 
         SCREEN.blit(IMAGES['base'], (self.basex, BASEY))
         # print score so player overlaps the score
-        # showScore(self.score)
+        showScore(self.score)
         SCREEN.blit(IMAGES['player'][self.playerIndex],
                     (self.playerx, self.playery))
 
@@ -167,6 +170,7 @@ class GameState:
 
     def quit(self):
         pygame.quit()
+
 
 def getRandomPipe():
     """returns a randomly generated pipe"""
@@ -251,7 +255,7 @@ def pixelCollision(rect1, rect2, hitmask1, hitmask2):
 
 
 if __name__ == '__main__':
-    game = GameState()
+    game = GameState(0)
     flap = False
     run = False
     frame = game.next_frame(flap)

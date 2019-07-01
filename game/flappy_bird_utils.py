@@ -81,7 +81,7 @@ def load():
     return IMAGES, SOUNDS, HITMASKS
 
 def getHitmask(image):
-    """returns a hitmask using an image_test's alpha."""
+    """returns a hitmask using an experiment's alpha."""
     mask = []
     for x in range(image.get_width()):
         mask.append([])

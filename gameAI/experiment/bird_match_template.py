@@ -15,6 +15,6 @@ while True:
     bottom_right = (top_left[0] + w, top_left[1] + h)
     cv2.rectangle(img_rgb, top_left, bottom_right, 255, 2)
 
-    cv2.imshow('image_test', img_rgb)
+    cv2.imshow('experiment', img_rgb)
 
 cv2.destroyAllWindows()
