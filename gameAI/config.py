@@ -10,7 +10,7 @@ def get_bird_hsv_high():
 
 
 def get_contour_hsv_low():
-    return np.array((0., 0., 95.))
+    return np.array((0., 37., 95.))
 
 
 def get_contour_hsv_high():

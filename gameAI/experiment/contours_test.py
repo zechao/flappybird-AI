@@ -71,7 +71,7 @@ while True:
     # build mask
     mask = cv2.inRange(hsv, lower_hsv, higher_hsv)
     # frame = cv2.bitwise_and(img, img, mask)
-    contours, hierarchy = cv2.findContours(image=mask, mode=cv2.RETR_EXTERNAL, method=cv2.CHAIN_APPROX_SIMPLE)
+    contours, hierarchy = cv2.findContours(image=mask, mode=cv2.RETR_EXTERNAL, method=cv2.CHAIN_APPROX_SIMPLE )
 
     all_cnt_img = cv2.drawContours(np.copy(img), contours, -1, (255, 255, 0), 2)
     final_result = np.copy(img)

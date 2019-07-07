@@ -42,7 +42,7 @@ class Vector:
 
     @staticmethod
     def fromAngle(a):
-        return Vector(cos(a),sin(a))
+        return Vector(cos(a), sin(a))
 
     @staticmethod
     def angleDeg(v1, v2):
@@ -51,6 +51,11 @@ class Vector:
     def set(self, x, y):
         self.x = x
         self.y = y
+
+    def getRotated(self, a):
+        x = self.x * cos(a) - self.y * sin(a)
+        y = self.x * sin(a) + self.y * cos(a)
+        return Vector(x, y)
 
     def toArr(self):
         return [self.x, self.y]
@@ -77,7 +82,7 @@ class Vector:
         if length != 0:
             return Vector(self.x / length, self.y / length)
         else:
-            return Vector(0.0, 0.0)
+            return NotImplemented
 
     def dot(self, other):
         if isinstance(other, Vector):

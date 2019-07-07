@@ -8,7 +8,7 @@ class CamShiftTracking:
     # hard code of the area which start the tracking
     BIRD_BODY_AREA = np.array((70, 5, 248, 10))
 
-    # Setup the termination criteria, either 10 iteration or move by at least 1 pt
+    # Setup the termination criteria, either 10 iteration or move by at least 1 intersectPoint
     TERM_CRITERIA = (cv2.TERM_CRITERIA_EPS | cv2.TERM_CRITERIA_COUNT, 10, 1)
 
     def __init__(self):
