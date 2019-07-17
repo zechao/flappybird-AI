@@ -3,7 +3,7 @@ import numpy as np
 import game.wrapped_flappy_bird as flappy
 import gameAI.camshift as camshift
 import gameAI.template_contour as tracker
-import gameAI.config as config
+import gameAI.sensor as sr
 
 # init game and get first frame
 game = flappy.GameState(0)
@@ -15,6 +15,7 @@ tracker = tracker.TemplateContour()
 run = True
 flap = False
 
+cv2.imshow("GameAIVision", game_frame)
 while True:
     flap = False
     k = cv2.waitKey(1) & 0xFF  # when using 64bit machine
@@ -35,19 +36,32 @@ while True:
     if run:
         game_frame = game.next_frame(flap)
 
-    # copy of game frame for bird tracking
-    bird_frame = np.copy(game_frame)
+
     # copy for contours tracking
     contours_frame = np.copy(game_frame)
     # copy for template tracking
     template_frame = np.copy(game_frame)
 
-    cv2.imshow("Flappy Bird", game_frame)
     ret = True
+    tracker.width = game_frame.shape[0]
+    tracker.height = game_frame.shape[1]
+    # copy of game frame for bird tracking
+    img = np.zeros((    tracker.width,tracker.height, 3), np.float)
     if run:
-        result_area = tracker.track_areas(game_frame)
-        bird_frame = result_area.getAreaImage(bird_frame, game_frame.shape[0], game_frame.shape[1])
-        cv2.imshow('Flappy Bird', bird_frame)
+        discRes = tracker.track_areas(game_frame)
+        # img = discRes.getAreaImage(img)
+        walls = discRes.getGameWalls(game_frame.shape[0], game_frame.shape[1])
+        for wall in walls:
+            wall.draw(img)
+        birdFrontCenter = discRes.getBirdFrontCenter()
+        sensor1 = sr.Sensor(birdFrontCenter.x, birdFrontCenter.y, 45)
+        sensor2 = sr.Sensor(birdFrontCenter.x, birdFrontCenter.y, 0)
+        sensor3 = sr.Sensor(birdFrontCenter.x, birdFrontCenter.y, -45)
+        cv2.rectangle(img,discRes.birdArea.leftTop.toIntTuple(),discRes.birdArea.rightDown.toIntTuple(),[255]*3)
+        sensor1.castAndDraw(walls, img)
+        sensor2.castAndDraw(walls, img)
+        sensor3.castAndDraw(walls, img)
+        cv2.imshow('GameAIVision', img)
 
 game.quit()
 cv2.destroyAllWindows()

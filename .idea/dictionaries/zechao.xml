@@ -5,7 +5,11 @@
       <w>deriv</w>
       <w>discretization</w>
       <w>downflap</w>
+      <w>drelu</w>
+      <w>dsigmoid</w>
+      <w>dtanh</w>
       <w>flappy</w>
+      <w>relu</w>
       <w>wname</w>
     </words>
   </dictionary>

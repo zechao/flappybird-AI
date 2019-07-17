@@ -44,7 +44,7 @@ class CamShiftTracking:
             ret, self.track_window = cv2.CamShift(dst, self.track_window, CamShiftTracking.TERM_CRITERIA)
             (x, y, w, h) = (int(ret[0][0]), int(ret[0][1]), int(ret[1][0]), int(ret[1][1]))
         # expanded bird tracked size, and draw area
-        # cv2.rectangle(bird_frame, (x - 10, y - 10), (x + w + 5, y + h - 5), (0, 255, 0), cv2.FILLED)
+        # cv2.rectangle(img, (x - 10, y - 10), (x + w + 5, y + h - 5), (0, 255, 0), cv2.FILLED)
         self.result_area = (x - 12, y - 12), (x + w + 7, y + h - 7)
         return result.DiscretizationResult(self.result_area)
 

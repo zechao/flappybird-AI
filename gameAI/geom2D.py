@@ -293,3 +293,91 @@ class Vector:
 
     def __neg__(self):
         return Vector(-self.x, -self.y)
+
+
+class Rect():
+    def __init__(self, leftTop, rightDown):
+        self._leftTop = leftTop
+
+        self._rightDown = rightDown
+
+        self._rightTop = Vector(rightDown.x, leftTop.y)
+
+        self._leftDown = Vector(leftTop.x, rightDown.y)
+
+        self._topCenter = Vector(leftTop.x + (rightDown.x - leftTop.x) / 2, leftTop.y)
+        self._downCenter = Vector(leftTop.x + (rightDown.x - leftTop.x) / 2, rightDown.y)
+        self._leftCenter = Vector(leftTop.x, leftTop.y + (rightDown.y - leftTop.y) / 2)
+        self._rightCenter = Vector(rightDown.x, leftTop.y + (rightDown.y - leftTop.y) / 2)
+        self._center = Vector(leftTop.x + (rightDown.x - leftTop.x) / 2, leftTop.y + (rightDown.y - leftTop.y) / 2)
+        self._width = rightDown.y - leftTop.y
+        self._height = rightDown.x - leftTop.x
+
+    @staticmethod
+    def fromPoints(x1, y1, x2, y2):
+        return Rect(Vector(x1, y1), Vector(x2, y2))
+
+    @staticmethod
+    def fromBoundingRect(x1, y1, width, height):
+        return Rect(Vector(x1, y1), Vector(x1 + width, y1 + height))
+
+    @property
+    def leftTop(self):
+        return self._leftTop
+
+    @property
+    def rightTop(self):
+        return self._rightTop
+
+    @property
+    def rightDown(self):
+        return self._rightDown
+
+    @property
+    def leftDown(self):
+        return self._leftDown
+
+    @property
+    def topCenter(self):
+        return self._topCenter
+
+    @property
+    def rightCenter(self):
+        return self._rightCenter
+
+    @property
+    def downCenter(self):
+        return self._downCenter
+
+    @property
+    def leftCenter(self):
+        return self._leftCenter
+
+    @property
+    def center(self):
+        return self._center
+
+    @property
+    def p1(self):
+        return self.leftTop.toIntTuple()
+
+    @property
+    def p2(self):
+        return self.rightDown.toIntTuple()
+
+    def overlapping(self, other):
+        """
+        Check if given two areas are overlapping
+        :param other: Rect
+        :return: bool
+        """
+        return not (self.rightTop.x < other.leftTop.x or
+                    self.rightDown.y < other.leftTop.y or
+                    self.leftTop.x > other.rightTop.x or
+                    self.leftTop.y > other.rightDown.y)
+
+    def __eq__(self, other):
+        if isinstance(other, Rect):
+            return self.leftTop == other.leftTop and self.rightDown == self.rightDown
+        else:
+            return False

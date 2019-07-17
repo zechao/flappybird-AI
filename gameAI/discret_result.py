@@ -4,49 +4,65 @@ bird and obstacles area list
 """
 import numpy as np
 import cv2
+import gameAI.geom2D as g2d
+import gameAI.sensor as sr
 
 
 class DiscretizationResult:
-    def __init__(self, bird_area=None, obstacles_area=None):
-        if obstacles_area is None:
-            obstacles_area = []
-        self._bird_area = bird_area
-        self._obstacles_area = obstacles_area
-
-
-    @property
-    def bird_area(self):
-        return self._bird_area
+    def __init__(self, birdArea=None, obstaclesArea=None, ):
+        if obstaclesArea is None:
+            obstaclesArea = []
+        self._birdArea = birdArea
+        self._obstaclesArea = obstaclesArea
 
     @property
-    def obstacle_area(self):
+    def birdArea(self):
+        return self._birdArea
+
+    @property
+    def obstacleArea(self):
         return self.obstacles_area
 
-    def getAreaImage(self, image, height, width):
-        cv2.rectangle(image, self._bird_area[0], self._bird_area[1], (255, 0, 0), cv2.FILLED)
-        for obstacle in self._obstacles_area:
-            cv2.rectangle(image, obstacle[0], obstacle[1], (0, 0, 255), cv2.FILLED)
+    @property
+    def width(self):
+        return self._width
+
+    @width.setter
+    def width(self, value):
+        self._width = value
+
+    @property
+    def height(self):
+        return self._height
+
+    @height.setter
+    def height(self, value):
+        self._height = value
+
+    def getAreaImage(self, image):
+        cv2.rectangle(image, self._birdArea.p1, self._birdArea.p2, (255, 0, 0), cv2.FILLED)
+        for obstacle in self._obstaclesArea:
+            cv2.rectangle(image, obstacle.p1, obstacle.p2, (0, 0, 255), cv2.FILLED)
         return image
 
+    def getGameWalls(self, width, height):
+        self.bounds = []
+        if len(self.bounds) == 0:
+            for obstacle in self._obstaclesArea:
+                self.bounds.append(
+                    sr.GameBoundary.fromVector(obstacle.leftTop, obstacle.rightTop, sr.BoundType.OBSTACLE))
+                self.bounds.append(
+                    sr.GameBoundary.fromVector(obstacle.rightTop, obstacle.rightDown, sr.BoundType.OBSTACLE))
+                self.bounds.append(
+                    sr.GameBoundary.fromVector(obstacle.rightDown, obstacle.leftDown, sr.BoundType.OBSTACLE))
+                self.bounds.append(
+                    sr.GameBoundary.fromVector(obstacle.leftDown, obstacle.leftTop, sr.BoundType.OBSTACLE))
 
-def isOverLapping(area1, area2):
-    """
-    Check if given two areas are overlapping
-    :param area1: np.array
-    :param area2: np.array
-    :return: bool
-    """
-    r1x = area1[0]
-    r1y = area1[1]
-    r1width = area1[2]
-    r1height = area1[3]
+            self.bounds.append(sr.GameBoundary(0, 0, width, 0, sr.BoundType.BORDER))
+            self.bounds.append(sr.GameBoundary(width, 0, width - 20, height + 20, sr.BoundType.BORDER))
+        return self.bounds
 
-    r2x = area2[0]
-    r2y = area2[1]
-    r2width = area2[2]
-    r2height = area2[3]
+    def getBirdFrontCenter(self):
+        return self._birdArea.rightCenter
 
-    return not (r1x + r1width < r2x or
-                r1y + r1height < r2y or
-                r1x > r2x + r2width or
-                r1y > r2y + r2height)
+

@@ -2,6 +2,7 @@ import cv2
 import numpy as np
 import gameAI.config as config
 import gameAI.discret_result as result
+import gameAI.geom2D as g2d
 
 
 class TemplateContour:
@@ -37,82 +38,52 @@ class TemplateContour:
         # frame = cv2.bitwise_and(img, img, mask)
         contours, hierarchy = cv2.findContours(image=contours_mask, mode=cv2.RETR_EXTERNAL,
                                                method=cv2.CHAIN_APPROX_SIMPLE)
+
+        # calc the fixed area of our contours
         # all_cnt_img = cv2.drawContours(contours_frame, contours, -1, (255, 255, 0), 2)
-        bird_area = (top_left, bottom_right)
+        bird_area = g2d.Rect(g2d.Vector(top_left), g2d.Vector(bottom_right))
         obstacle_area = []
         if len(contours) != 0:
             self._frame_count = self._frame_count + 1
             for cnt in contours:
                 area = cv2.contourArea(cnt)
                 cx, cy, cw, ch = cv2.boundingRect(cnt)
-                # cv2.rectangle(img, (x, y), (x + w, y + h), (255,0,0), 3)
-                if not overlapping((top_left[0], top_left[1], w, h), (cx, cy, cw, ch)):
-                    obstacle_area.append(((cx - 2, cy - 2), (cx + cw + 4, cy + ch + 4)))
+                if not bird_area.overlapping(g2d.Rect.fromBoundingRect(cx, cy, cw, ch)):
+                    # add extra pixel to ensure
+                    obstacle_area.append(g2d.Rect.fromBoundingRect(cx - 2, cy - 2, cw + 4, ch + 4))
         else:
             raise Exception("no result has been calculated")
-
-        # obstacle_area = simplifyArea(obstacle_area)
 
         return result.DiscretizationResult(bird_area, simplifyArea(obstacle_area))
 
 
 def simplifyArea(obstacles):
     newObstacle = []
-    for ob1 in obstacles:
-        if not isGround(ob1):
-            for ob2 in obstacles:
-                if not isGround(ob2) and not isEqual(ob1, ob2) and isBeside(ob1, ob2):
-                    newObstacle.append(computeNewArea(ob1, ob2))
+    for rec1 in obstacles:
+        if not isGround(rec1):
+            for rec2 in obstacles:
+                if not isGround(rec2) and not rec1 == rec2 and isBeside(rec1, rec2):
+                    newObstacle.append(computeNewArea(rec1, rec2))
         else:
-            newObstacle.append(ob1)
+            newObstacle.append(rec1)
     return newObstacle
 
 
-def computeNewArea(ob1, ob2):
-    return (
-        (
-            min(ob1[0][0], ob2[0][0]), min(ob1[0][1], ob2[0][1])
-        ),
-        (
-            max(ob1[1][0], ob2[1][0]), max(ob1[1][1], ob2[1][1])
-        )
+def computeNewArea(rect1, rect2):
+    return g2d.Rect.fromPoints(
+        min(rect1.leftTop.x, rect2.leftTop.x),
+        min(rect1.leftTop.y, rect2.leftTop.y),
+        max(rect1.rightDown.x, rect2.rightDown.x),
+        max(rect1.rightDown.y, rect2.rightDown.y)
     )
 
 
 def isGround(obstacle):
-    return (obstacle[1][0] - obstacle[0][0]) * (obstacle[1][1] - obstacle[0][1]) > 30000
+    return (obstacle.rightDown.x - obstacle.leftTop.x) * (obstacle.rightDown.y - obstacle.leftTop.y) > 30000
 
 
-def isEqual(ob1, ob2):
-    return ob1[0] == ob2[0] and ob1[1] == ob2[1]
-
-
-def isBeside(ob1, ob2):
-    wSpaceLeft = abs(ob1[0][0] - ob2[0][0])
-    wSpaceRight = abs(ob1[1][0] - ob2[1][0])
-    hSpace = min(abs(ob1[0][1] - ob2[1][1]),abs(ob2[1][1] - ob1[0][1]))
-    return wSpaceLeft < 4 and wSpaceRight < 4 and hSpace <6
-
-
-
-def overlapping(area1, area2):
-    """
-    Check if given two areas are overlapping
-    :param area1: np.array
-    :param area2: np.array
-    :return: bool
-    """
-    r1x = area1[0]
-    r1y = area1[1]
-    r1width = area1[2]
-    r1height = area1[3]
-
-    r2x = area2[0]
-    r2y = area2[1]
-    r2width = area2[2]
-    r2height = area2[3]
-
-    return not (r1x + r1width < r2x or
-                r1y + r1height < r2y or
-                r1x > r2x + r2width or
-                r1y > r2y + r2height)
+def isBeside(rec1, rec2):
+    wSpaceLeft = abs(rec1.leftTop.x - rec2.leftTop.x)
+    wSpaceRight = abs(rec1.rightDown.x - rec2.rightDown.x)
+    hSpace = min(abs(rec1.leftTop.y - rec2.rightDown.y), abs(rec2.rightDown.y - rec1.leftTop.y))
+    return wSpaceLeft < 4 and wSpaceRight < 4 and hSpace < 6

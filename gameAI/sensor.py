@@ -1,7 +1,6 @@
 import cv2
 import numpy as np
-from gameAI.experiment.Vector2d import Vector
-from decimal import *
+from gameAI.geom2D import Vector
 
 
 class Ray:
@@ -98,6 +97,19 @@ class GameBoundary(Boundary):
     def boundType(self):
         return self._boundType
 
+    @staticmethod
+    def fromVector(v1, v2, boundType=BoundType.BLANK):
+        return GameBoundary(v1.x, v1.y, v2.x, v2.y, boundType)
+
+    def draw(self, img, color=[255] * 3):
+        if not None:
+            if self._boundType == BoundType.BORDER:
+                cv2.line(img, self.a.toIntTuple(), self.b.toIntTuple(), [255, 255, 0], 2)
+            elif self._boundType == BoundType.OBSTACLE:
+                cv2.line(img, self.a.toIntTuple(), self.b.toIntTuple(), [255, 0, 0], 2)
+            elif self._boundType == BoundType.BLANK:
+                cv2.line(img, self.a.toIntTuple(), self.b.toIntTuple(), [255, 0, 0], 2)
+
 
 class SensorResult():
     """
@@ -161,7 +173,8 @@ class Sensor():
         if hitPoint == None:
             return None
         else:
-            return SensorResult(self.pos, self._ray.angle, hitPoint, Vector.distance(self.pos,hitPoint), wall.boundType)
+            return SensorResult(self.pos, self._ray.angle, hitPoint, Vector.distance(self.pos, hitPoint),
+                                wall.boundType)
 
     def castWalls(self, walls):
         """
@@ -188,18 +201,25 @@ class Sensor():
         else:
             NotImplemented
 
-    def draw(self, img, walls):
+    def castAndDraw(self, walls, img=None):
         res = self.castWalls(walls)
-        if not None:
-            if res.boundType == BoundType.BORDER:
-                cv2.line(img, res.pos.toIntTuple(), res.hitPoint.toIntTuple(), [255, 255, 0], 1)
-                cv2.circle(img, res.hitPoint.toIntTuple(), 3, [255, 255, 0], 2)
-            elif res.boundType == BoundType.OBSTACLE:
-                cv2.line(img, res.pos.toIntTuple(), res.hitPoint.toIntTuple(), [255, 0, 0], 1)
-                cv2.circle(img, res.hitPoint.toIntTuple(), 3, [255, 0, 0], 2)
-            elif res.boundType == BoundType.BLANK:
-                cv2.line(img, res.pos.toIntTuple(), res.hitPoint.toIntTuple(), [255, 255, 255], 1)
-                cv2.circle(img, res.toIntTuple(), 3, [255, 255, 255], 2)
+        if res is None:
+            return res
+        if img is None:
+            return res
+        if res.boundType == BoundType.BORDER:
+            cv2.line(img, res.pos.toIntTuple(), res.hitPoint.toIntTuple(), [255, 255, 0], 1)
+            cv2.circle(img, res.hitPoint.toIntTuple(), 3, [255, 255, 0], 2)
+            # cv2.putText(img, str(res.distance), res.hitPoint.toIntTuple(), cv2.FONT_HERSHEY_PLAIN, 1, [255, 255, 0])
+        elif res.boundType == BoundType.OBSTACLE:
+            cv2.line(img, res.pos.toIntTuple(), res.hitPoint.toIntTuple(), [0, 0, 255], 1)
+            cv2.circle(img, res.hitPoint.toIntTuple(), 3, [0, 0, 255], 2)
+            # cv2.putText(img, str(res.distance), res.hitPoint.toIntTuple(), cv2.FONT_HERSHEY_PLAIN, 1, [0, 0, 255])
+        elif res.boundType == BoundType.BLANK:
+            cv2.line(img, res.pos.toIntTuple(), res.hitPoint.toIntTuple(), [255, 255, 255], 1)
+            # cv2.circle(img, res.toIntTuple(), 3, [255, 255, 255], 2)
+
+        return res
 
 
 class SensorGroup():
@@ -221,23 +241,12 @@ class SensorGroup():
         for angle in self.angles:
             self.rays.append(Sensor(x, y, angle))
 
-    def castAllRay(self, walls):
-        res = {}
+    def castAllRayAndDraw(self, walls, img=None):
+        res = []
         for ray in self.rays:
-            r = self.rayCast(ray, walls)
-            res.update(ray.angle)
+            r = ray.castAndDraw(ray, walls, img)
+            res.append(r)
         return res
-
-
-def detectWall(self):
-    for ray in self.rays:
-        self.intersectPoint, self.distance = ray.cast(walls)
-
-
-def draw(self, image, walls, color=[255] * 3):
-    if len(self.intersectPoint):
-        cv2.line(image, self.pos.toIntTuple(), self.intersectPoint.toIntTuple(), color)
-        cv2.circle(image, self.intersectPoint.toIntTuple(), 5, color, cv2.FILLED)
 
 
 def create_blank(width, height, rgb_color=(0, 0, 0)):
@@ -296,14 +305,13 @@ if __name__ == '__main__':
         sensor1 = Sensor(center.x, center.y, 90)
         sensor2 = Sensor(center.x, center.y, -90)
         sensor3 = Sensor(center.x, center.y, 0)
-        sensor4 = Sensor(center.x, center.y, 180)
+        sensor5 = Sensor(center.x, center.y, 45)
+        sensor4 = Sensor(center.x, center.y, -45)
         for wall in walls:
             wall.draw(image)
-        sensor1.draw(image, walls)
-
-        sensor2.draw(image, walls)
-
-        sensor3.draw(image, walls)
-
-        sensor4.draw(image, walls)
+        sensor2.castAndDraw(walls, image)
+        sensor1.castAndDraw(walls, image)
+        sensor3.castAndDraw(walls, image)
+        sensor4.castAndDraw(walls, image)
+        sensor5.castAndDraw(walls, image)
         cv2.imshow("raycasting", image)

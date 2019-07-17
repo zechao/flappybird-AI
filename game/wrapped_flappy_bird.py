@@ -32,8 +32,8 @@ PLAYER_INDEX_GEN = cycle([0, 1, 2, 1])
 
 class GameState:
 
-    def __init__(self, seed):
-        self.seed=seed
+    def __init__(self, seed=0):
+        self.seed = seed
         random.seed(seed)
         self.score = self.playerIndex = self.loopIter = 0
         self.playerx = int(SCREENWIDTH * 0.2)
