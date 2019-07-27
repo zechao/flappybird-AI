@@ -87,6 +87,14 @@ class NeuralLayer():
     def createRandomLayer(inputNum, output, actFunction=af.sigmoid):
         return NeuralLayer(inputNum, output)
 
+    def __str__(self):
+        return format(self.weight)
+
+    def __eq__(self, other):
+        if other == None:
+            return False
+        return np.array_equal(self.weight, other.weight)
+
 
 class NeuralNet():
     def __init__(self, layers, **kwargs):
@@ -114,6 +122,9 @@ class NeuralNet():
             child.layers[i] = self.layer[i].crossover(other.layers[i])
         return child
 
+    def mutate(self, mutateRate):
+        for each in self.layers:
+            each.mutate(mutateRate)
 
     @staticmethod
     def createRandomNeuralNet(inputNum, hiddenNum, outputNum, hiddenLayerNum=5, actFunction=af.sigmoid, **kw):
@@ -135,53 +146,23 @@ class NeuralNet():
             layers.append(eachLayer.clone())
         return NeuralNet(layers)
 
+    def __str__(self):
+        s = ""
+        for i, eachLayer in enumerate(self.layers):
+            s += 'layer ' + str(i + 1) + "\t"
+            s += format(eachLayer) + '\n'
+        return s
+
+    def __eq__(self, other):
+        if other == None:
+            return False
+        if len(self.layers) != len(self.layers):
+            return False
+        for idx in range(len(self.layers)):
+            if self.layers[idx] != other.layers[idx]:
+                return False
+        return True
+
 
 if __name__ == '__main__':
-    np.random.seed(1)
-    layer1 = NeuralLayer.createCustomLayer(
-        3,
-        np.array([[0.5, 0.6],
-                  [-0.1, 0.1],
-                  [-0.2, 0.7]]),
-        af.sigmoid)
-    layer2 = NeuralLayer.createCustomLayer(
-        3,
-        np.array([[0.1, 0.2],
-                  [-0.1, 0.1],
-                  [-0.2, 0.1]]),
-        af.sigmoid)
-    print(layer1.weight)
-    print(layer2.weight)
-    child = layer1.crossover(layer2)
-    print(child.weight)
-    child.mutate(0.1)
-    print("mutate child", child.weight)
-
-    layers = [
-        NeuralLayer.createCustomLayer(
-            2,
-            np.array([[0.5, 0.6, -0.2],
-                      [-0.1, 0.1, 0.7]]),
-            af.sigmoid),
-        NeuralLayer.createCustomLayer(
-            3,
-            np.array([[0.5, 0.5, 0.6],
-                      [-0.1, -0.1, 0.1],
-                      [-0.2, -0.2, 0.7]]),
-            af.sigmoid),
-        NeuralLayer.createCustomLayer(
-            3,
-            np.array([[0.5], [0.6], [0.6]]),
-            af.sigmoid),
-    ]
-    customNet = NeuralNet(layers)
-    print(customNet)
-
-    ranNet = NeuralNet.createRandomNeuralNet(6, 3, 1, 0)
-    print(ranNet)
-
-    ranNet = NeuralNet.createRandomNeuralNet(6, 3, 1, 2)
-    print(ranNet)
-
-    cloneRandNet = ranNet.clone()
-    print(cloneRandNet)
+    pass
