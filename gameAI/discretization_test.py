@@ -61,6 +61,7 @@ while True:
         sensor1.castAndDraw(walls, img)
         sensor2.castAndDraw(walls, img)
         sensor3.castAndDraw(walls, img)
+        cv2.putText(img, 'Best fitness:'+str(game.fitness), (20,500), cv2.FONT_HERSHEY_COMPLEX,0.6, [0, 0, 255],1)
         cv2.imshow('GameAIVision', img)
 
 game.quit()

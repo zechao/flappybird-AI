@@ -7,6 +7,7 @@ import pygame.surfarray as surfarray
 from pygame.locals import *
 from itertools import cycle
 import cv2
+import os
 
 FPS = 30
 SCREENWIDTH = 288
@@ -26,8 +27,6 @@ PLAYER_HEIGHT = IMAGES['player'][0].get_height()
 PIPE_WIDTH = IMAGES['pipe'][0].get_width()
 PIPE_HEIGHT = IMAGES['pipe'][0].get_height()
 BACKGROUND_WIDTH = IMAGES['background'].get_width()
-
-PLAYER_INDEX_GEN = cycle([0, 1, 2, 1])
 
 
 class GameState:
@@ -61,22 +60,21 @@ class GameState:
         self.playerFlapAcc = -9  # players speed on flapping
         self.playerFlapped = False  # True when player flaps
 
-    def frame_step(self, input_actions):
+        # current game fitness with 50
+        self.fitness = 50
+
+    def frame_step(self, flap=False):
         pygame.event.pump()
 
-        reward = 0.1
-        terminal = False
-
-        # if sum(input_actions) != 1:
-        #     raise ValueError('Multiple input actions!')
-
+        self.fitness += 1
+        die = False
         # input_actions[0] == 1: do nothing
         # input_actions[1] == 1: flap the bird
-        if input_actions[1] == 1:
+        if flap:
             if self.playery > -2 * PLAYER_HEIGHT:
                 self.playerVelY = self.playerFlapAcc
                 self.playerFlapped = True
-                # SOUNDS['wing'].play()
+                SOUNDS['wing'].play()
 
         # check for score
         playerMidPos = self.playerx + PLAYER_WIDTH / 2
@@ -84,8 +82,8 @@ class GameState:
             pipeMidPos = pipe['x'] + PIPE_WIDTH / 2
             if pipeMidPos <= playerMidPos < pipeMidPos + 4:
                 self.score += 1
-                # SOUNDS['point'].play()
-                reward = 1
+                SOUNDS['point'].play()
+                self.fitness += 20
 
         # playerIndex basex change
         if (self.loopIter + 1) % 3 == 0:
@@ -123,12 +121,10 @@ class GameState:
                               'index': self.playerIndex},
                              self.upperPipes, self.lowerPipes)
         if isCrash:
-            # SOUNDS['hit'].play()
-            # SOUNDS['die'].play()
-            terminal = True
+            SOUNDS['hit'].play()
+            SOUNDS['die'].play()
+            die = True
             self.__init__(self.seed)
-            reward = -1
-
         # draw sprites
         SCREEN.blit(IMAGES['background'], (0, 0))
 
@@ -147,7 +143,7 @@ class GameState:
         pygame.display.update()
         FPSCLOCK.tick(FPS)
         # print self.upperPipes[0]['y'] + PIPE_HEIGHT - int(BASEY * 0.2)
-        return image_data, reward, terminal
+        return image_data, self.fitness, die
 
     def next_frame(self, flap):
         """
@@ -156,9 +152,7 @@ class GameState:
         :return:
         """
         action = np.zeros(2)
-        if flap == True:
-            action[1] = 1
-        image, r_0, terminal = self.frame_step(action)
+        image, r_0, die = self.frame_step(flap)
 
         #  convert from (width, height, channel) to (height, width, channel)
         image = image.transpose([1, 0, 2])
@@ -167,6 +161,8 @@ class GameState:
         img_bgr = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)
 
         return img_bgr
+
+
 
     def quit(self):
         pygame.quit()

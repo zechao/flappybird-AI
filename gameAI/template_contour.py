@@ -7,7 +7,7 @@ import gameAI.geom2D as g2d
 
 class TemplateContour:
     # A bird image to find in the image
-    TEMPLATE_IMAGE = cv2.imread('redbird-downflap.png', 0)
+    TEMPLATE_IMAGE = cv2.imread('./template/redbird-downflap.png', 0)
 
     def __init__(self):
         # indicate the actual frame
