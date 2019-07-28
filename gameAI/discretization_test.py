@@ -8,17 +8,20 @@ import gameAI.sensor as sr
 # init game and get first frame
 game = flappy.GameState(0)
 
-game_frame = game.next_frame(False)
-
 # camshift = camshift.CamShiftTracking()
 tracker = tracker.TemplateContour()
 run = True
 flap = False
-
-cv2.imshow("GameAIVision", game_frame)
-while True:
+game_frame = None
+# cv2.imshow("GameAIVision", game_frame)
+img = None
+die = False
+game.resetAndRun()
+while True and not game.crash:
     flap = False
     k = cv2.waitKey(1) & 0xFF  # when using 64bit machine
+    if die:
+        cv2.imshow('GameAIVision', img)
     if k == 27:  # wait for ESC key to exit
         break
     if k == ord('1'):
@@ -36,32 +39,30 @@ while True:
     if run:
         game_frame = game.next_frame(flap)
 
-
-    # copy for contours tracking
-    contours_frame = np.copy(game_frame)
-    # copy for template tracking
-    template_frame = np.copy(game_frame)
-
+    # # copy for contours tracking
+    # contours_frame = np.copy(game_frame)
+    # # copy for template tracking
+    # template_frame = np.copy(game_frame)
+    sensors = [
+        sr.Sensor.createBlankSensor(45),
+        sr.Sensor.createBlankSensor(0),
+        sr.Sensor.createBlankSensor(-45),
+    ]
     ret = True
-    tracker.width = game_frame.shape[0]
-    tracker.height = game_frame.shape[1]
     # copy of game frame for bird tracking
-    img = np.zeros((    tracker.width,tracker.height, 3), np.float)
+    img = np.zeros((flappy.getCV2ScreenWidth(), flappy.getCV2ScreenHeight(), 3), np.float)
     if run:
         discRes = tracker.track_areas(game_frame)
         # img = discRes.getAreaImage(img)
-        walls = discRes.getGameWalls(game_frame.shape[0], game_frame.shape[1])
+        walls = discRes.getGameWalls(flappy.getCV2ScreenWidth(), flappy.getCV2ScreenHeight())
         for wall in walls:
             wall.draw(img)
         birdFrontCenter = discRes.getBirdFrontCenter()
-        sensor1 = sr.Sensor(birdFrontCenter.x, birdFrontCenter.y, 45)
-        sensor2 = sr.Sensor(birdFrontCenter.x, birdFrontCenter.y, 0)
-        sensor3 = sr.Sensor(birdFrontCenter.x, birdFrontCenter.y, -45)
-        cv2.rectangle(img,discRes.birdArea.leftTop.toIntTuple(),discRes.birdArea.rightDown.toIntTuple(),[255]*3)
-        sensor1.castAndDraw(walls, img)
-        sensor2.castAndDraw(walls, img)
-        sensor3.castAndDraw(walls, img)
-        cv2.putText(img, 'Best fitness:'+str(game.fitness), (20,500), cv2.FONT_HERSHEY_COMPLEX,0.6, [0, 0, 255],1)
+
+        cv2.rectangle(img, discRes.birdArea.leftTop.toIntTuple(), discRes.birdArea.rightDown.toIntTuple(), [255] * 3)
+        for sensor in sensors:
+            sensor.customPositionCastAndDraw(birdFrontCenter.x, birdFrontCenter.y,walls, img)
+        cv2.putText(img, 'Best fitness:' + str(game.fitness), (20, 500), cv2.FONT_HERSHEY_COMPLEX, 0.6, [0, 0, 255], 1)
         cv2.imshow('GameAIVision', img)
 
 game.quit()

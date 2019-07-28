@@ -14,10 +14,10 @@ class TemplateContour:
         self._frame_count = 0
 
     def track_areas(self, frame):
-        self.current_frame = frame
+        self.current_frame = np.copy(frame)
         self._frame_count = self._frame_count + 1
         # Track bird with template matching
-        img_gray = cv2.cvtColor(self.current_frame, cv2.COLOR_BGR2GRAY)
+        img_gray = cv2.cvtColor(self.current_frame, cv2.COLOR_RGB2GRAY)
         w, h = TemplateContour.TEMPLATE_IMAGE.shape[::-1]
 
         res = cv2.matchTemplate(img_gray, TemplateContour.TEMPLATE_IMAGE, cv2.TM_CCOEFF_NORMED)

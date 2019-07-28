@@ -28,12 +28,21 @@ PIPE_WIDTH = IMAGES['pipe'][0].get_width()
 PIPE_HEIGHT = IMAGES['pipe'][0].get_height()
 BACKGROUND_WIDTH = IMAGES['background'].get_width()
 
+PLAYER_INDEX_GEN = cycle([0, 1, 2, 1])
+
 
 class GameState:
 
-    def __init__(self, seed=0):
+    def __init__(self, seed=0, enableSound=False):
         self.seed = seed
         random.seed(seed)
+        self.running = False
+        self.crash = False
+        self.reset()
+        self.enableSound = enableSound
+
+    def reset(self):
+        random.seed(self.seed)
         self.score = self.playerIndex = self.loopIter = 0
         self.playerx = int(SCREENWIDTH * 0.2)
         self.playery = int((SCREENHEIGHT - PLAYER_HEIGHT) / 2)
@@ -63,18 +72,41 @@ class GameState:
         # current game fitness with 50
         self.fitness = 50
 
+    def run(self):
+        self.running = True
+        self.crash = False
+
+    def isRunning(self):
+        return self.running
+
+    def resetAndRun(self):
+        self.reset()
+        self.crash = False
+        self.running = True
+
     def frame_step(self, flap=False):
         pygame.event.pump()
-
+        if not self.running:
+            return None
         self.fitness += 1
-        die = False
+        # check if crash here
+        isCrash = checkCrash({'x': self.playerx, 'y': self.playery,
+                              'index': self.playerIndex},
+                             self.upperPipes, self.lowerPipes)
+        if isCrash:
+            if self.enableSound:
+                SOUNDS['hit'].play()
+                # SOUNDS['crash'].play()
+            self.crash = True
+            self.running = False
         # input_actions[0] == 1: do nothing
         # input_actions[1] == 1: flap the bird
         if flap:
             if self.playery > -2 * PLAYER_HEIGHT:
                 self.playerVelY = self.playerFlapAcc
                 self.playerFlapped = True
-                SOUNDS['wing'].play()
+                if self.enableSound:
+                    SOUNDS['wing'].play()
 
         # check for score
         playerMidPos = self.playerx + PLAYER_WIDTH / 2
@@ -82,7 +114,8 @@ class GameState:
             pipeMidPos = pipe['x'] + PIPE_WIDTH / 2
             if pipeMidPos <= playerMidPos < pipeMidPos + 4:
                 self.score += 1
-                SOUNDS['point'].play()
+                if self.enableSound:
+                    SOUNDS['point'].play()
                 self.fitness += 20
 
         # playerIndex basex change
@@ -116,15 +149,6 @@ class GameState:
             self.upperPipes.pop(0)
             self.lowerPipes.pop(0)
 
-        # check if crash here
-        isCrash = checkCrash({'x': self.playerx, 'y': self.playery,
-                              'index': self.playerIndex},
-                             self.upperPipes, self.lowerPipes)
-        if isCrash:
-            SOUNDS['hit'].play()
-            SOUNDS['die'].play()
-            die = True
-            self.__init__(self.seed)
         # draw sprites
         SCREEN.blit(IMAGES['background'], (0, 0))
 
@@ -140,10 +164,10 @@ class GameState:
 
         image_data = pygame.surfarray.array3d(pygame.display.get_surface())
         pygame.sndarray
-        pygame.display.update()
-        FPSCLOCK.tick(FPS)
+        # pygame.display.update()
+        # FPSCLOCK.tick(FPS)
         # print self.upperPipes[0]['y'] + PIPE_HEIGHT - int(BASEY * 0.2)
-        return image_data, self.fitness, die
+        return image_data
 
     def next_frame(self, flap):
         """
@@ -151,22 +175,25 @@ class GameState:
         bird will flap if is true, otherwise the bird will move dropping
         :return:
         """
-        action = np.zeros(2)
-        image, r_0, die = self.frame_step(flap)
+        image = self.frame_step(flap)
 
         #  convert from (width, height, channel) to (height, width, channel)
-        image = image.transpose([1, 0, 2])
+        self.image = image.transpose([1, 0, 2])
 
         #  convert from rgb to bgr
-        img_bgr = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)
+        # self.img_bgr = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)
 
-        return img_bgr
-
-
+        return self.image
 
     def quit(self):
         pygame.quit()
 
+
+def getCV2ScreenWidth():
+    return SCREENHEIGHT
+
+def getCV2ScreenHeight():
+    return SCREENWIDTH
 
 def getRandomPipe():
     """returns a randomly generated pipe"""
@@ -252,9 +279,8 @@ def pixelCollision(rect1, rect2, hitmask1, hitmask2):
 
 if __name__ == '__main__':
     game = GameState(0)
+    game.resetAndRun()
     flap = False
-    run = False
-    frame = game.next_frame(flap)
     while (1):
         flap = False
         events = pygame.event.get()
@@ -272,5 +298,7 @@ if __name__ == '__main__':
                 if event.key == pygame.K_UP:
                     run = False
                     frame = game.next_frame(True)
-        if run:
+        if game.isRunning():
             frame = game.next_frame(flap)
+        else:
+            print("Game stopped")

@@ -116,6 +116,12 @@ class NeuralNet():
                 raise RuntimeError("layers input and output not matching")
         self.layers = layers
 
+    def feed_forward(self, X):
+        input = X
+        for eachLayer in self.layers:
+            input = eachLayer.feed_forward(input)
+        return input
+
     def crossover(self, other):
         child = self.clone()
         for i in range(len(self.layers)):

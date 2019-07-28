@@ -143,6 +143,10 @@ class SensorResult():
     def angle(self):
         return self._angle
 
+    @pos.setter
+    def pos(self, value):
+        self._rayPos = value
+
 
 class Sensor():
     def __init__(self, x, y, angle):
@@ -162,6 +166,10 @@ class Sensor():
     @property
     def angle(self):
         return self._angle
+
+    @staticmethod
+    def createBlankSensor(angle):
+        return Sensor(0, 0, angle)
 
     def __castWall(self, wall):
         """
@@ -185,7 +193,7 @@ class Sensor():
         if isinstance(walls, GameBoundary):
             return self.__castWall(walls)
         elif isinstance(walls, tuple) or isinstance(walls, list):
-            minDisHitSensor = None
+            minDisHitSensorR = None
             minDis = float("inf")
             for wall in walls:
                 if isinstance(wall, GameBoundary):
@@ -194,10 +202,15 @@ class Sensor():
                         continue
                     if sensorR.distance <= minDis:
                         minDis = sensorR.distance
-                        minDisHitSensor = sensorR
+                        minDisHitSensorR = sensorR
                 else:
                     return None
-            return minDisHitSensor
+            if minDisHitSensorR is None:
+                self.lastMinDisHitSensorR.pos = self.pos
+                return self.lastMinDisHitSensorR
+            else:
+                self.lastMinDisHitSensorR = minDisHitSensorR
+                return minDisHitSensorR
         else:
             NotImplemented
 
@@ -207,19 +220,30 @@ class Sensor():
             return res
         if img is None:
             return res
-        if res.boundType == BoundType.BORDER:
-            cv2.line(img, res.pos.toIntTuple(), res.hitPoint.toIntTuple(), [255, 255, 0], 1)
-            cv2.circle(img, res.hitPoint.toIntTuple(), 3, [255, 255, 0], 2)
-            # cv2.putText(img, str(res.distance), res.hitPoint.toIntTuple(), cv2.FONT_HERSHEY_PLAIN, 1, [255, 255, 0])
-        elif res.boundType == BoundType.OBSTACLE:
-            cv2.line(img, res.pos.toIntTuple(), res.hitPoint.toIntTuple(), [255, 0, 0], 1)
-            cv2.circle(img, res.hitPoint.toIntTuple(), 3, [0, 0, 255], 2)
-            # cv2.putText(img, str(res.distance), res.hitPoint.toIntTuple(), cv2.FONT_HERSHEY_PLAIN, 1, [0, 0, 255])
-        elif res.boundType == BoundType.BLANK:
-            cv2.line(img, res.pos.toIntTuple(), res.hitPoint.toIntTuple(), [255, 255, 255], 1)
-            # cv2.circle(img, res.toIntTuple(), 3, [255, 255, 255], 2)
-
+        self.draw(res, img)
         return res
+
+    def customPositionCastAndDraw(self, x, y, walls, img=None):
+        self._pos = Vector(x, y)
+        self._ray = Ray(x, y, self.angle)
+        self.res = self.castWalls(walls)
+        if img is not None:
+            self.draw(self.res, img)
+        return self.res
+
+    def draw(self, res, img):
+        if img is not None and res is not None:
+            if res.boundType == BoundType.BORDER:
+                cv2.line(img, res.pos.toIntTuple(), res.hitPoint.toIntTuple(), [255, 255, 0], 1)
+                cv2.circle(img, res.hitPoint.toIntTuple(), 3, [255, 255, 0], 2)
+                # cv2.putText(img, str(res.distance), res.hitPoint.toIntTuple(), cv2.FONT_HERSHEY_PLAIN, 1, [255, 255, 0])
+            elif res.boundType == BoundType.OBSTACLE:
+                cv2.line(img, res.pos.toIntTuple(), res.hitPoint.toIntTuple(), [255, 0, 0], 1)
+                cv2.circle(img, res.hitPoint.toIntTuple(), 3, [0, 0, 255], 2)
+                # cv2.putText(img, str(res.distance), res.hitPoint.toIntTuple(), cv2.FONT_HERSHEY_PLAIN, 1, [0, 0, 255])
+            elif res.boundType == BoundType.BLANK:
+                cv2.line(img, res.pos.toIntTuple(), res.hitPoint.toIntTuple(), [255, 255, 255], 1)
+                # cv2.circle(img, res.toIntTuple(), 3, [255, 255, 255], 2)
 
 
 class SensorGroup():
@@ -284,7 +308,7 @@ if __name__ == '__main__':
     cv2.setMouseCallback("raycasting", onMouse)
 
     while True:
-        cv2.waitKey(30)
+        cv2.waitKey(20)
         image = create_blank(1280, 720)
         walls = [GameBoundary(300, 0, 300, 300, BoundType.OBSTACLE),
                  GameBoundary(300, 300, 400, 300, BoundType.OBSTACLE),
@@ -306,12 +330,17 @@ if __name__ == '__main__':
         sensor2 = Sensor(center.x, center.y, -90)
         sensor3 = Sensor(center.x, center.y, 0)
         sensor5 = Sensor(center.x, center.y, 45)
+        sensor6 = Sensor.createBlankSensor(-135)
+        sensor7 = Sensor.createBlankSensor(135)
         sensor4 = Sensor(center.x, center.y, -45)
         for wall in walls:
             wall.draw(image)
+        sensor6.customPositionCastAndDraw(center.x, center.y, walls, image)
         sensor2.castAndDraw(walls, image)
         sensor1.castAndDraw(walls, image)
         sensor3.castAndDraw(walls, image)
         sensor4.castAndDraw(walls, image)
         sensor5.castAndDraw(walls, image)
+        sensor7.customPositionCastAndDraw(center.x, center.y, walls, image)
+
         cv2.imshow("raycasting", image)
