@@ -1,6 +1,6 @@
 import cv2
 import numpy as np
-from gameAI.geom2D import Vector
+from gameAI.discretization.geom2D import Vector
 
 
 class Ray:
@@ -104,9 +104,9 @@ class GameBoundary(Boundary):
     def draw(self, img, color=[255] * 3):
         if not None:
             if self._boundType == BoundType.BORDER:
-                cv2.line(img, self.a.toIntTuple(), self.b.toIntTuple(), [255, 255, 0], 2)
+                cv2.line(img, self.a.toIntTuple(), self.b.toIntTuple(), [255, 255, 255], 2)
             elif self._boundType == BoundType.OBSTACLE:
-                cv2.line(img, self.a.toIntTuple(), self.b.toIntTuple(), [255, 0, 0], 2)
+                cv2.line(img, self.a.toIntTuple(), self.b.toIntTuple(), [0, 0, 255], 2)
             elif self._boundType == BoundType.BLANK:
                 cv2.line(img, self.a.toIntTuple(), self.b.toIntTuple(), [255, 0, 0], 2)
 
@@ -146,6 +146,20 @@ class SensorResult():
     @pos.setter
     def pos(self, value):
         self._rayPos = value
+
+    def draw(self, img):
+        if img is not None:
+            if self._boundType == BoundType.BORDER:
+                cv2.line(img, self._rayPos.toIntTuple(), self._hitPoint.toIntTuple(), [255, 255, 0], 1)
+                cv2.circle(img, self._hitPoint.toIntTuple(), 3, [255, 255, 0], 2)
+                # cv2.putText(img, str(res.distance), res.hitPoint.toIntTuple(), cv2.FONT_HERSHEY_PLAIN, 1, [255, 255, 0])
+            elif self._boundType == BoundType.OBSTACLE:
+                cv2.line(img, self._rayPos.toIntTuple(), self._hitPoint.toIntTuple(), [255, 0, 0], 1)
+                cv2.circle(img, self._hitPoint.toIntTuple(), 3, [0, 0, 255], 2)
+                # cv2.putText(img, str(res.distance), res.hitPoint.toIntTuple(), cv2.FONT_HERSHEY_PLAIN, 1, [0, 0, 255])
+            elif self._boundType == BoundType.BLANK:
+                cv2.line(img, self._rayPos.toIntTuple(), self._hitPoint.toIntTuple(), [255, 255, 255], 1)
+                # cv2.circle(img, res.toIntTuple(), 3, [255, 255, 255], 2)
 
 
 class Sensor():
@@ -223,7 +237,7 @@ class Sensor():
         self.draw(res, img)
         return res
 
-    def customPositionCastAndDraw(self, x, y, walls, img=None):
+    def customPositionCast(self, x, y, walls, img=None):
         self._pos = Vector(x, y)
         self._ray = Ray(x, y, self.angle)
         self.res = self.castWalls(walls)
@@ -244,33 +258,6 @@ class Sensor():
             elif res.boundType == BoundType.BLANK:
                 cv2.line(img, res.pos.toIntTuple(), res.hitPoint.toIntTuple(), [255, 255, 255], 1)
                 # cv2.circle(img, res.toIntTuple(), 3, [255, 255, 255], 2)
-
-
-class SensorGroup():
-    def __init__(self, x, y, angles):
-        """
-        :param x: sensor pos.x
-        :param y: sensor pos.y
-        :param angles: an angle or list of angles between 0-360, it's direction of each ray
-        """
-        self.pos = Vector(x, y)
-        if isinstance(angles, int) or isinstance(angles, float):
-            self.angles = [angles]
-        elif isinstance(angles, tuple) or isinstance(angles, list):
-            self.angles = list(angles)
-        else:
-            NotImplemented
-
-        self.rays = [];
-        for angle in self.angles:
-            self.rays.append(Sensor(x, y, angle))
-
-    def castAllRayAndDraw(self, walls, img=None):
-        res = []
-        for ray in self.rays:
-            r = ray.castAndDraw(ray, walls, img)
-            res.append(r)
-        return res
 
 
 def create_blank(width, height, rgb_color=(0, 0, 0)):
@@ -335,12 +322,12 @@ if __name__ == '__main__':
         sensor4 = Sensor(center.x, center.y, -45)
         for wall in walls:
             wall.draw(image)
-        sensor6.customPositionCastAndDraw(center.x, center.y, walls, image)
+        sensor6.customPositionCast(center.x, center.y, walls, image)
         sensor2.castAndDraw(walls, image)
         sensor1.castAndDraw(walls, image)
         sensor3.castAndDraw(walls, image)
         sensor4.castAndDraw(walls, image)
         sensor5.castAndDraw(walls, image)
-        sensor7.customPositionCastAndDraw(center.x, center.y, walls, image)
-
+        res = sensor7.customPositionCast(center.x, center.y, walls)
+        res.draw(image)
         cv2.imshow("raycasting", image)

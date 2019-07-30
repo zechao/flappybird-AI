@@ -2,6 +2,8 @@ import numpy as np
 import gameAI.ANN.activation_funtion as af
 
 
+
+
 def buildVecFunc(mutateRate, mutateFunc):
     """
     :param mutateRate:
@@ -49,8 +51,8 @@ class NeuralLayer():
             self.bias = 0
 
         # init matrix of weight
-        self.weight = np.random.rand(self.iNode, self.oNode)
-
+        self.weight = np.random.randn(self.iNode, self.oNode)
+        # self.weight =(2 * np.random.random_sample((self.iNode, self.oNode)) - 1)
     def feed_forward(self, X):
         # Xi*Wij + bj
         z = np.dot(X, self.weight) + self.bias
@@ -67,7 +69,6 @@ class NeuralLayer():
         else:
             child = self.clone()
             [rows, cols] = child.weight.shape
-            print(rows, cols)
             for i in range(rows):
                 for j in range(cols):
                     if np.random.random() <= 0.5:

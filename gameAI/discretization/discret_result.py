@@ -2,10 +2,8 @@
 This class return the _result of the area found after image discretization, which contain an area of
 bird and obstacles area list
 """
-import numpy as np
 import cv2
-import gameAI.geom2D as g2d
-import gameAI.sensor as sr
+import gameAI.discretization.sensor as sr
 
 
 class DiscretizationResult:

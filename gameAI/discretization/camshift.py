@@ -1,7 +1,7 @@
 import numpy as np
 import cv2
-import gameAI.config as config
-import gameAI.discret_result as result
+import gameAI.discretization.config as config
+import gameAI.discretization.discret_result as result
 
 
 class CamShiftTracking:

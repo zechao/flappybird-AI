@@ -164,7 +164,7 @@ class GameState:
 
         image_data = pygame.surfarray.array3d(pygame.display.get_surface())
         pygame.sndarray
-        # pygame.display.update()
+        pygame.display.update()
         # FPSCLOCK.tick(FPS)
         # print self.upperPipes[0]['y'] + PIPE_HEIGHT - int(BASEY * 0.2)
         return image_data
@@ -192,8 +192,10 @@ class GameState:
 def getCV2ScreenWidth():
     return SCREENHEIGHT
 
+
 def getCV2ScreenHeight():
     return SCREENWIDTH
+
 
 def getRandomPipe():
     """returns a randomly generated pipe"""

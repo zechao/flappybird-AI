@@ -1,8 +1,8 @@
 import cv2
 import numpy as np
-import gameAI.config as config
-import gameAI.discret_result as result
-import gameAI.geom2D as g2d
+import gameAI.discretization.config as config
+import gameAI.discretization.discret_result as result
+import gameAI.discretization.geom2D as g2d
 
 
 class TemplateContour:

@@ -1,9 +1,8 @@
 import cv2
 import numpy as np
 import game.wrapped_flappy_bird as flappy
-import gameAI.camshift as camshift
-import gameAI.template_contour as tracker
-import gameAI.sensor as sr
+import gameAI.discretization.template_contour as tracker
+import gameAI.discretization.sensor as sr
 
 # init game and get first frame
 game = flappy.GameState(0)
@@ -61,7 +60,7 @@ while True and not game.crash:
 
         cv2.rectangle(img, discRes.birdArea.leftTop.toIntTuple(), discRes.birdArea.rightDown.toIntTuple(), [255] * 3)
         for sensor in sensors:
-            sensor.customPositionCastAndDraw(birdFrontCenter.x, birdFrontCenter.y,walls, img)
+            sensor.customPositionCast(birdFrontCenter.x, birdFrontCenter.y, walls, img)
         cv2.putText(img, 'Best fitness:' + str(game.fitness), (20, 500), cv2.FONT_HERSHEY_COMPLEX, 0.6, [0, 0, 255], 1)
         cv2.imshow('GameAIVision', img)
 
