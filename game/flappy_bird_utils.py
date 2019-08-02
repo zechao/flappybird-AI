@@ -19,6 +19,7 @@ def load():
 
     # numbers sprites for score display
     current_dir = os.getcwd()
+    os.chdir(os.path.dirname(__file__))
     os.chdir('..')
     IMAGES['numbers'] = (
         pygame.image.load('assets/sprites/0.png').convert_alpha(),

@@ -3,11 +3,12 @@ import numpy as np
 import gameAI.discretization.config as config
 import gameAI.discretization.discret_result as result
 import gameAI.discretization.geom2D as g2d
-
+import os
 
 class TemplateContour:
     # A bird image to find in the image
-    TEMPLATE_IMAGE = cv2.imread('./template/redbird-downflap.png', 0)
+    print(os.getcwd())
+    TEMPLATE_IMAGE = cv2.imread('discretization/template/redbird-downflap.png', 0)
 
     def __init__(self):
         # indicate the actual frame

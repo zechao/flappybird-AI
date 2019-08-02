@@ -33,31 +33,38 @@ class FlappyBirdAI():
 
     def restAndRun(self):
         self.game.resetAndRun()
+        self.action = False
+        self.die = False
+        self.computeInput()
         return
 
-    def computeInput(self, action):
-        if self.game.crash:
-            self.die = False
-        game_frame = self.game.next_frame(action)
+    def computeInput(self):
+        game_frame = self.game.next_frame(self.action)
+        self.die = self.game.crash
         game_frame = np.copy(game_frame)
         self.discRes = self.tracker.track_areas(game_frame)
-
         self.walls = self.discRes.getGameWalls(flappy.getCV2ScreenWidth(), flappy.getCV2ScreenHeight())
         self.birdFrontCenter = self.discRes.getBirdFrontCenter()
-
         self.inputs = []
         for sensor in self.sensors:
             res = sensor.customPositionCast(self.birdFrontCenter.x, self.birdFrontCenter.y, self.walls)
             self.inputs.append(res)
-        return False
 
     def draw(self, img):
-        img = self.discRes.getAreaImage(img)
-        cv2.rectangle(img, self.discRes.birdArea.leftTop.toIntTuple(), self.discRes.birdArea.rightDown.toIntTuple(),
-                      [255] * 3)
+        # img = self.discRes.getAreaImage(img)
+        self.drawWalls(img)
+        self.drawBird(img)
+        self.drawSensor(img)
+
+    def drawWalls(self, img):
         for wall in self.walls:
             wall.draw(img)
 
+    def drawBird(self, img):
+        cv2.rectangle(img, self.discRes.birdArea.leftTop.toIntTuple(), self.discRes.birdArea.rightDown.toIntTuple(),
+                      [255] * 3)
+
+    def drawSensor(self, img):
         for res in self.inputs:
             res.draw(img)
 
@@ -73,17 +80,20 @@ class FlappyBirdAI():
 
         return np.array([netInputs])
 
-    def computeOutput(self):
+    def activateNet(self):
         input = self._covertToNetInput()
         outPut = self.neuralNet.feed_forward(input)
         self.output = outPut
-        return outPut
+        return self.output
 
-    def getActionFromOutput(self):
+    def determineNextAction(self):
         if self.output > 0.6:
-            return True
+            self.action = True
         else:
-            return False
+            self.action = False
+
+    def flapWings(self, flap):
+        self.action = flap
 
 
 if __name__ == '__main__':
@@ -91,39 +101,21 @@ if __name__ == '__main__':
     ai = FlappyBirdAI([45, -45], net)
     ai.restAndRun()
 
-    action = False
     img = np.zeros((flappy.getCV2ScreenWidth(), flappy.getCV2ScreenHeight(), 3), np.float)
-    crash = ai.computeInput(action)
     ai.draw(img)
-    bestFitness = 50
-    bestNet = None
-    repeatCount = 0
     while True:
         if not ai.die:
             cv2.imshow('GameAIVision', img)
-            ai.computeOutput()
-            action = ai.getActionFromOutput()
             img = np.zeros((flappy.getCV2ScreenWidth(), flappy.getCV2ScreenHeight(), 3), np.float)
-            crash = ai.computeInput(action)
+            ai.computeInput()
+            ai.activateNet()
+            ai.determineNextAction()
             ai.draw(img)
-            cv2.putText(img, 'Best fitness:' + str(ai.getFitness()), (20, 500), cv2.FONT_HERSHEY_COMPLEX, 0.6,
-                        [0, 0, 255],
-                        1)
+            # cv2.putText(img, 'Best fitness:' + str(ai.getFitness()), (20, 500), cv2.FONT_HERSHEY_COMPLEX, 0.6,
+            #             [0, 0, 255],
+            #             1)
             k = cv2.waitKey(1) & 0xFF  # when using 64bit machine
         else:
             cv2.destroyAllWindows()
-            if ai.getFitness() > bestFitness:
-                repeatCount = 0
-                bestFitness = ai.getFitness()
-                bestNet = ai.neuralNet.clone()
-                ai.neuralNet.mutate(0.05)
-            elif ai.getFitness() == bestFitness:
-                repeatCount += 1
-                ai.neuralNet.mutate(0.05 * repeatCount)
-            elif ai.getFitness() < bestFitness:
-                repeatCount += 1
-                ai.neuralNet.mutate(0.05 * repeatCount)
-            else:
-                ai.neuralNet.mutate(0.5)
-
-            ai.game.resetAndRun()
+            ai.neuralNet.mutate(0.8)
+            ai.restAndRun()
