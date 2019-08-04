@@ -2,8 +2,6 @@ import numpy as np
 import gameAI.ANN.activation_funtion as af
 
 
-
-
 def buildVecFunc(mutateRate, mutateFunc):
     """
     :param mutateRate:
@@ -53,6 +51,7 @@ class NeuralLayer():
         # init matrix of weight
         self.weight = np.random.randn(self.iNode, self.oNode)
         # self.weight =(2 * np.random.random_sample((self.iNode, self.oNode)) - 1)
+
     def feed_forward(self, X):
         # Xi*Wij + bj
         z = np.dot(X, self.weight) + self.bias
@@ -71,7 +70,7 @@ class NeuralLayer():
             [rows, cols] = child.weight.shape
             for i in range(rows):
                 for j in range(cols):
-                    if np.random.random() <= 0.5:
+                    if np.random.random() <= 0.3:
                         child.weight[i, j] = otherLayer[i, j]
 
     def clone(self):
@@ -126,7 +125,7 @@ class NeuralNet():
     def crossover(self, other):
         child = self.clone()
         for i in range(len(self.layers)):
-            child.layers[i] = self.layer[i].crossover(other.layers[i])
+            child.layers[i] = self.layers[i].crossover(other.layers[i])
         return child
 
     def mutate(self, mutateRate):
@@ -134,7 +133,8 @@ class NeuralNet():
             each.mutate(mutateRate)
 
     @staticmethod
-    def createRandomNeuralNet(inputNum, hiddenNum, outputNum, hiddenLayerNum=5, actFunction=af.sigmoid, **kw):
+    def createRandomNeuralNet(inputNum, hiddenNum, outputNum, hiddenLayerNum=1, actFunction=af.sigmoid,
+                              outputActFunc=None, **kw):
         # the neural net has only one layer
         if hiddenLayerNum == 0:
             layer = NeuralLayer(inputNum, outputNum, actFunction=actFunction)
@@ -144,7 +144,10 @@ class NeuralNet():
             layers.append(NeuralLayer(inputNum, hiddenNum, actFunction=actFunction))
             for x in range(1, hiddenLayerNum):
                 layers.append(NeuralLayer(hiddenNum, hiddenNum, actFunction=actFunction))
-            layers.append(NeuralLayer(hiddenNum, outputNum, actFunction=actFunction))
+            if outputActFunc ==None:
+                layers.append(NeuralLayer(hiddenNum, outputNum, actFunction=actFunction))
+            else:
+                layers.append(NeuralLayer(hiddenNum, outputNum, actFunction=outputActFunc))
         return NeuralNet(layers)
 
     def clone(self):

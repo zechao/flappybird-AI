@@ -4,8 +4,9 @@ import gameAI.ANN.activation_funtion as af
 import game.wrapped_flappy_bird as flappy
 import cv2
 import numpy as np
-
-
+import random
+import time
+from multiprocessing import Pool
 class GenericAlgorithm():
 
     def __init__(self, max_population, top_units):
@@ -16,13 +17,16 @@ class GenericAlgorithm():
         self.bestFitness = 0
         self.bestScore = 0
 
-    def initPopulation(self):
+
+
+    def initPopulation(self, angles):
+        self.generationCount = 0
         self.population = []
         self.winner = []
         for x in range(self.max_population):
-            net = nn.NeuralNet.createRandomNeuralNet(6, 6, 1, 2, actFunction=af.relu)
+            net = nn.NeuralNet.createRandomNeuralNet(6, 10,1, 2, actFunction=af.tanh, outputActFunc=af.sigmoid)
             # create each AI and begin
-            eachAI = ai.FlappyBirdAI([90, -90, 0], net)
+            eachAI = ai.FlappyBirdAI(angles, net)
             eachAI.restAndRun()
             self.population.append(eachAI)
 
@@ -30,7 +34,7 @@ class GenericAlgorithm():
         for bird in self.population:
             if not bird.die:
                 outPut = bird.activateNet()
-                if bird.output > 0.6:
+                if bird.output > 0.5:
                     bird.flapWings(True)
                 else:
                     bird.flapWings(False)
@@ -62,27 +66,53 @@ class GenericAlgorithm():
                 count += 1
         return count == self.max_population
 
-
     def selection(self):
-        self.population.sort(key=lambda bird:bird.game.fitness,reverse=True)
-        #select the best
+        """
+        select best without doing anything
+        :return:
+        """
+        self.generationCount += 1
+        # sort desc with fitness
+        self.population.sort(key=lambda bird: bird.game.fitness, reverse=True)
+        # select the best top units
         self.best = self.population[0]
         self.bestFitness = self.best.getFitness()
         self.bestScore = self.best.getScore()
+
+        print("Generation:{}->Best with score:{}, with fitness:{}".format(self.generationCount, self.bestScore,
+                                                                          self.bestFitness))
+
+        # select the top for the crossover and mutation
+        self.interMediatePopulation = self.population[:self.top_units]
+
+        # the best will store directly to ensure the best result
+        self.population = [self.best]
 
     def restAndRun(self):
         self.lifeCount = len(self.population)
         for bird in self.population:
             bird.restAndRun()
 
-    def mutate(self):
-        for bird in self.population:
-            bird.neuralNet.mutate(0.8)
+    def selectParent(self):
+        idx = random.randint(0, self.top_units - 1)
+        return self.interMediatePopulation[idx].clone()
+
+    def crossover(self):
+        while len(self.population) < self.max_population:
+            parent1 = self.selectParent()
+            parent2 = self.selectParent()
+            parent1.crossover(parent2)
+            self.population.append(parent1)
+
+    def mutate(self, mutationRate):
+        for bird in self.population[1:]:
+            bird.neuralNet.mutate(mutationRate)
 
 
 if __name__ == '__main__':
+    np.random.seed(1)
     generic = GenericAlgorithm(10, 3)
-    generic.initPopulation()
+    generic.initPopulation([0, 60, -60])
 
     img = np.zeros((flappy.getCV2ScreenWidth(), flappy.getCV2ScreenHeight(), 3), np.float)
     generic.draw(img)
@@ -90,13 +120,20 @@ if __name__ == '__main__':
         cv2.imshow('GameAIVision', img)
         k = cv2.waitKey(1) & 0xFF  # when using 64bit machine
         if not generic.areAllDied():
+            start = time.time()
             generic.computeInput()
+            print("time spend input:", time.time() - start, "s")
+            start = time.time()
             generic.activeAll()
+            print("time spend active:", time.time() - start, "s")
             generic.determineNextAction()
             img = np.zeros((flappy.getCV2ScreenWidth(), flappy.getCV2ScreenHeight(), 3), np.float)
+            start = time.time()
             generic.draw(img)
+            print("time spend draw:", time.time() - start, "s")
         else:
-            generic.generic()
             cv2.destroyAllWindows()
-            generic.mutate()
+            generic.selection()
+            generic.crossover()
+            generic.mutate(0.2)
             generic.restAndRun()

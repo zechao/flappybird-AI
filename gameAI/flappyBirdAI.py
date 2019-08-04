@@ -28,6 +28,13 @@ class FlappyBirdAI():
     def getScore(self):
         return self.game.score
 
+    def crossover(self, other):
+        self.neuralNet.clone()
+        self.neuralNet.crossover(other.neuralNet)
+
+    def clone(self):
+        return FlappyBirdAI(self.angles, self.neuralNet.clone())
+
     def gameRunning(self):
         return self.game.running
 
@@ -87,7 +94,7 @@ class FlappyBirdAI():
         return self.output
 
     def determineNextAction(self):
-        if self.output > 0.6:
+        if self.output > 0.5:
             self.action = True
         else:
             self.action = False
@@ -97,8 +104,8 @@ class FlappyBirdAI():
 
 
 if __name__ == '__main__':
-    net = nn.NeuralNet.createRandomNeuralNet(4, 6, 1, 2, actFunction=af.relu)
-    ai = FlappyBirdAI([45, -45], net)
+    net = nn.NeuralNet.createRandomNeuralNet(6, 12, 1, 2, actFunction=af.relu)
+    ai = FlappyBirdAI([45, -45,0], net)
     ai.restAndRun()
 
     img = np.zeros((flappy.getCV2ScreenWidth(), flappy.getCV2ScreenHeight(), 3), np.float)
