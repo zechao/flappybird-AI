@@ -20,14 +20,8 @@ def buildVecFunc(mutateRate, mutateFunc):
 
 
 def defaultMutateFunc(x):
-    x += np.random.normal() / 5
-    if x > 1:
-        return 1
-    if x < -1:
-        return -1
-    else:
-        return x
-
+    x += np.random.normal()
+    return x
 
 class NeuralLayer():
     def __init__(self, inputNum, outputNum, actFunction=af.sigmoid, **kw):

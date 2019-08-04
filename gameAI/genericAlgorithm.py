@@ -7,6 +7,8 @@ import numpy as np
 import random
 import time
 from multiprocessing import Pool
+
+
 class GenericAlgorithm():
 
     def __init__(self, max_population, top_units):
@@ -17,16 +19,16 @@ class GenericAlgorithm():
         self.bestFitness = 0
         self.bestScore = 0
 
-
-
-    def initPopulation(self, angles):
+    def initPopulation(self, angles, inputNum, hiddenNum, outputNum, hiddenLayerNum, actFunction=af.sigmoid,
+                       outputActFunc=None, **kw):
         self.generationCount = 0
         self.population = []
         self.winner = []
         for x in range(self.max_population):
-            net = nn.NeuralNet.createRandomNeuralNet(6, 10,1, 2, actFunction=af.tanh, outputActFunc=af.sigmoid)
+            self.net = nn.NeuralNet.createRandomNeuralNet(inputNum, hiddenNum, outputNum, hiddenLayerNum, actFunction,
+                                                          outputActFunc)
             # create each AI and begin
-            eachAI = ai.FlappyBirdAI(angles, net)
+            eachAI = ai.FlappyBirdAI(angles, self.net)
             eachAI.restAndRun()
             self.population.append(eachAI)
 
@@ -111,8 +113,8 @@ class GenericAlgorithm():
 
 if __name__ == '__main__':
     np.random.seed(1)
-    generic = GenericAlgorithm(10, 3)
-    generic.initPopulation([0, 60, -60])
+    generic = GenericAlgorithm(10,  3)
+    generic.initPopulation([ 90, -90,-45,45], 8, 16, 1, 2, actFunction=af.relu, outputActFunc=af.sigmoid)
 
     img = np.zeros((flappy.getCV2ScreenWidth(), flappy.getCV2ScreenHeight(), 3), np.float)
     generic.draw(img)
@@ -120,17 +122,12 @@ if __name__ == '__main__':
         cv2.imshow('GameAIVision', img)
         k = cv2.waitKey(1) & 0xFF  # when using 64bit machine
         if not generic.areAllDied():
-            start = time.time()
             generic.computeInput()
-            print("time spend input:", time.time() - start, "s")
-            start = time.time()
             generic.activeAll()
-            print("time spend active:", time.time() - start, "s")
             generic.determineNextAction()
             img = np.zeros((flappy.getCV2ScreenWidth(), flappy.getCV2ScreenHeight(), 3), np.float)
             start = time.time()
             generic.draw(img)
-            print("time spend draw:", time.time() - start, "s")
         else:
             cv2.destroyAllWindows()
             generic.selection()
