@@ -92,13 +92,10 @@ class GameState:
                               'index': self.playerIndex},
                              self.upperPipes, self.lowerPipes)
         if isCrash:
-            if self.enableSound:
-                SOUNDS['hit'].play()
-                # SOUNDS['crash'].play()
+            self.playSound()
             self.crash = True
             self.running = False
-        # input_actions[0] == 1: do nothing
-        # input_actions[1] == 1: flap the bird
+
         if flap:
             if self.playery > -2 * PLAYER_HEIGHT:
                 self.playerVelY = self.playerFlapAcc
@@ -166,6 +163,11 @@ class GameState:
         # FPSCLOCK.tick(FPS)
         # print self.upperPipes[0]['y'] + PIPE_HEIGHT - int(BASEY * 0.2)
         return image_data
+
+    def playSound(self):
+        if self.enableSound:
+            SOUNDS['hit'].play()
+            # SOUNDS['crash'].play()
 
     def next_frame(self, flap):
         """

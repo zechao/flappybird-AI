@@ -21,9 +21,11 @@ class FlappyBirdAI():
             self.sensors.append(sr.Sensor.createBlankSensor(angle))
         self.neuralNet = neuralNet
         self.die = False
+        self.fitness = 0
 
     def getFitness(self):
-        return self.game.fitness
+        self.fitness = self.game.fitness
+        return self.fitness
 
     def getScore(self):
         return self.game.score
@@ -40,6 +42,7 @@ class FlappyBirdAI():
 
     def restAndRun(self):
         self.game.resetAndRun()
+        self.fitness = 0
         self.action = False
         self.die = False
         self.computeInput()
@@ -94,7 +97,7 @@ class FlappyBirdAI():
         return self.output
 
     def determineNextAction(self):
-        if self.output > 0.5:
+        if self.output > 0.6:
             self.action = True
         else:
             self.action = False
@@ -105,7 +108,7 @@ class FlappyBirdAI():
 
 if __name__ == '__main__':
     net = nn.NeuralNet.createRandomNeuralNet(6, 12, 1, 2, actFunction=af.relu)
-    ai = FlappyBirdAI([45, -45,0], net)
+    ai = FlappyBirdAI([45, -45, 0], net)
     ai.restAndRun()
 
     img = np.zeros((flappy.getCV2ScreenWidth(), flappy.getCV2ScreenHeight(), 3), np.float)

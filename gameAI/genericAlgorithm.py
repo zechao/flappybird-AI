@@ -15,9 +15,11 @@ class GenericAlgorithm():
         self.max_population = max_population
         self.top_units = top_units
         self.currentIterCount = 1
-        self.initMutateRate = 0.1  # [0.0,1.0]
+        self.initMutateRate = 0.1
         self.bestFitness = 0
+        self.lastBestFitness = 0
         self.bestScore = 0
+        self.bestFitnessUnchangedCount = 0
 
     def initPopulation(self, angles, inputNum, hiddenNum, outputNum, hiddenLayerNum, actFunction=af.sigmoid,
                        outputActFunc=None, **kw):
@@ -36,7 +38,7 @@ class GenericAlgorithm():
         for bird in self.population:
             if not bird.die:
                 outPut = bird.activateNet()
-                if bird.output > 0.5:
+                if bird.output[0, 0] > bird.output[0, 1]:
                     bird.flapWings(True)
                 else:
                     bird.flapWings(False)
@@ -81,6 +83,9 @@ class GenericAlgorithm():
         self.bestFitness = self.best.getFitness()
         self.bestScore = self.best.getScore()
 
+        if self.lastBestFitness == self.bestFitness:
+            self.bestFitnessUnchangedCount += 1
+
         print("Generation:{}->Best with score:{}, with fitness:{}".format(self.generationCount, self.bestScore,
                                                                           self.bestFitness))
 
@@ -89,6 +94,7 @@ class GenericAlgorithm():
 
         # the best will store directly to ensure the best result
         self.population = [self.best]
+        self.lastBestFitness = self.bestFitness
 
     def restAndRun(self):
         self.lifeCount = len(self.population)
@@ -106,15 +112,19 @@ class GenericAlgorithm():
             parent1.crossover(parent2)
             self.population.append(parent1)
 
-    def mutate(self, mutationRate):
+    def mutate(self, mutationRate, maxMutationRate):
         for bird in self.population[1:]:
-            bird.neuralNet.mutate(mutationRate)
+            if self.bestFitnessUnchangedCount == 5:
+                bird.neuralNet.mutate(np.random.uniform(mutationRate, maxMutationRate))
+                self.bestFitnessUnchangedCount = 0
+            else:
+                bird.neuralNet.mutate(mutationRate)
 
 
 if __name__ == '__main__':
-    np.random.seed(1)
-    generic = GenericAlgorithm(10,  3)
-    generic.initPopulation([ 90, -90,-45,45], 8, 16, 1, 2, actFunction=af.relu, outputActFunc=af.sigmoid)
+    np.random.seed(0)
+    generic = GenericAlgorithm(20, 3)
+    generic.initPopulation([80, -80, -45, 45,0], 10, 20, 2, 1, actFunction=af.tanh, outputActFunc=af.tanh)
 
     img = np.zeros((flappy.getCV2ScreenWidth(), flappy.getCV2ScreenHeight(), 3), np.float)
     generic.draw(img)
@@ -124,7 +134,7 @@ if __name__ == '__main__':
         if not generic.areAllDied():
             generic.computeInput()
             generic.activeAll()
-            generic.determineNextAction()
+            # generic.determineNextAction()
             img = np.zeros((flappy.getCV2ScreenWidth(), flappy.getCV2ScreenHeight(), 3), np.float)
             start = time.time()
             generic.draw(img)
@@ -132,5 +142,5 @@ if __name__ == '__main__':
             cv2.destroyAllWindows()
             generic.selection()
             generic.crossover()
-            generic.mutate(0.2)
+            generic.mutate(0.2, 0.6)
             generic.restAndRun()

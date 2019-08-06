@@ -43,8 +43,8 @@ class NeuralLayer():
             self.bias = 0
 
         # init matrix of weight
-        self.weight = np.random.randn(self.iNode, self.oNode)
-        # self.weight =(2 * np.random.random_sample((self.iNode, self.oNode)) - 1)
+        # self.weight = np.random.randn(self.iNode, self.oNode)
+        self.weight =(2 * np.random.random_sample((self.iNode, self.oNode)) - 1)
 
     def feed_forward(self, X):
         # Xi*Wij + bj
@@ -64,7 +64,7 @@ class NeuralLayer():
             [rows, cols] = child.weight.shape
             for i in range(rows):
                 for j in range(cols):
-                    if np.random.random() <= 0.3:
+                    if np.random.random() <= 0.5:
                         child.weight[i, j] = otherLayer[i, j]
 
     def clone(self):
@@ -83,7 +83,6 @@ class NeuralLayer():
 
     def __str__(self):
         return format(self.weight)
-
     def __eq__(self, other):
         if other == None:
             return False
