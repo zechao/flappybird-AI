@@ -3,8 +3,7 @@ import numpy as np
 import game.wrapped_flappy_bird as flappy
 import gameAI.discretization.template_contour as tracker
 import gameAI.discretization.sensor as sr
-import gameAI.ANN.neuralnetwork as nn
-import gameAI.ANN.activation_funtion as af
+import gameAI.trainData as td
 
 
 # init game and get first frame
@@ -12,8 +11,8 @@ import gameAI.ANN.activation_funtion as af
 
 class FlappyBirdAI():
 
-    def __init__(self, angles, neuralNet):
-        self.game = flappy.GameState(0)
+    def __init__(self, angles, neuralNet,gameRandomSeed=0):
+        self.game = flappy.GameState(gameRandomSeed)
         self.tracker = tracker.TemplateContour()
         self.angles = angles
         self.sensors = []
@@ -36,9 +35,6 @@ class FlappyBirdAI():
 
     def clone(self):
         return FlappyBirdAI(self.angles, self.neuralNet.clone())
-
-    def gameRunning(self):
-        return self.game.running
 
     def restAndRun(self):
         self.game.resetAndRun()
@@ -78,7 +74,7 @@ class FlappyBirdAI():
         for res in self.inputs:
             res.draw(img)
 
-    def _covertToNetInput(self):
+    def __covertToNetInput(self):
         netInputs = []
         for each in self.inputs:
             if each.boundType.OBSTACLE:
@@ -91,24 +87,26 @@ class FlappyBirdAI():
         return np.array([netInputs])
 
     def activateNet(self):
-        input = self._covertToNetInput()
+        input = self.__covertToNetInput()
         outPut = self.neuralNet.feed_forward(input)
         self.output = outPut
         return self.output
 
     def determineNextAction(self):
-        if self.output > 0.6:
-            self.action = True
+        outPut = self.activateNet()
+        if self.output[0, 0] > self.output[0, 1]:
+            self.flapWings(True)
         else:
-            self.action = False
+            self.flapWings(False)
 
     def flapWings(self, flap):
         self.action = flap
 
 
 if __name__ == '__main__':
-    net = nn.NeuralNet.createRandomNeuralNet(6, 12, 1, 2, actFunction=af.relu)
-    ai = FlappyBirdAI([45, -45, 0], net)
+    # net = nn.NeuralNet.createRandomNeuralNet(6, 12, 1, 2, actFunction=af.relu)
+    net = td.loadNet("data/train20191312_19_13_52/generation85")
+    ai = FlappyBirdAI([-90, 90, 45, -45, 0], net,0)
     ai.restAndRun()
 
     img = np.zeros((flappy.getCV2ScreenWidth(), flappy.getCV2ScreenHeight(), 3), np.float)
@@ -121,11 +119,7 @@ if __name__ == '__main__':
             ai.activateNet()
             ai.determineNextAction()
             ai.draw(img)
-            # cv2.putText(img, 'Best fitness:' + str(ai.getFitness()), (20, 500), cv2.FONT_HERSHEY_COMPLEX, 0.6,
-            #             [0, 0, 255],
-            #             1)
             k = cv2.waitKey(1) & 0xFF  # when using 64bit machine
         else:
             cv2.destroyAllWindows()
-            ai.neuralNet.mutate(0.8)
             ai.restAndRun()

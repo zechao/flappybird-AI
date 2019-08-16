@@ -37,18 +37,18 @@ class GameState:
         self.crash = False
         self.reset()
         self.enableSound = enableSound
-        self.rnd = random.Random(self.seed)
+        random.seed(self.seed)
 
     def reset(self):
-        self.rnd = random.Random(self.seed)
+        random.seed(self.seed)
         self.score = self.playerIndex = self.loopIter = 0
         self.playerx = int(SCREENWIDTH * 0.2)
         self.playery = int((SCREENHEIGHT - PLAYER_HEIGHT) / 2)
         self.basex = 0
         self.baseShift = IMAGES['base'].get_width() - BACKGROUND_WIDTH
 
-        newPipe1 = getRandomPipe(self.rnd)
-        newPipe2 = getRandomPipe(self.rnd)
+        newPipe1 = getRandomPipe()
+        newPipe2 = getRandomPipe()
         self.upperPipes = [
             {'x': SCREENWIDTH, 'y': newPipe1[0]['y']},
             {'x': SCREENWIDTH + (SCREENWIDTH / 2), 'y': newPipe2[0]['y']},
@@ -135,7 +135,7 @@ class GameState:
 
         # add new pipe when first pipe is about to touch left of screen
         if 0 < self.upperPipes[0]['x'] < 5:
-            newPipe = getRandomPipe(self.rnd)
+            newPipe = getRandomPipe()
             self.upperPipes.append(newPipe[0])
             self.lowerPipes.append(newPipe[1])
 
@@ -159,9 +159,9 @@ class GameState:
 
         image_data = pygame.surfarray.array3d(SCREEN)
         # pygame.sndarray
-        # pygame.display.update()
+        pygame.display.update()
         # FPSCLOCK.tick(FPS)
-        # print self.upperPipes[0]['y'] + PIPE_HEIGHT - int(BASEY * 0.2)
+
         return image_data
 
     def playSound(self):
@@ -197,11 +197,11 @@ def getCV2ScreenHeight():
     return SCREENWIDTH
 
 
-def getRandomPipe(rnd):
+def getRandomPipe():
     """returns a randomly generated pipe"""
     # y of gap between upper and lower pipe
     gapYs = [20, 30, 40, 50, 60, 70, 80, 90]
-    index = rnd.randint(0, len(gapYs) - 1)
+    index = random.randint(0, len(gapYs) - 1)
     gapY = gapYs[index]
 
     gapY += int(BASEY * 0.2)

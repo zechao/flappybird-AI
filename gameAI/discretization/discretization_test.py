@@ -7,7 +7,7 @@ import gameAI.discretization.sensor as sr
 # init game and get first frame
 game = flappy.GameState(0)
 
-# camshift = camshift.CamShiftTracking()
+
 tracker = tracker.TemplateContour()
 run = True
 flap = False
@@ -32,11 +32,11 @@ while True and not game.crash:
         game_frame = game.next_frame(True)
     if k == ord('s'):
         run = False
-        game_frame = game.next_frame(False)
+        game_frame = game.next_frame(True)
     if k == 32:
         flap = True
     if run:
-        game_frame = game.next_frame(flap)
+        game_frame = game.next_frame(True)
 
     # # copy for contours tracking
     # contours_frame = np.copy(game_frame)
@@ -49,7 +49,7 @@ while True and not game.crash:
     ]
     ret = True
     # copy of game frame for bird tracking
-    img = np.zeros((flappy.getCV2ScreenWidth(), flappy.getCV2ScreenHeight(), 3), np.float)
+    img = np.zeros((flappy.getCV2ScreenWidth(), flappy.getCV2ScreenHeight()+200, 3), np.float)
     if run:
         discRes = tracker.track_areas(game_frame)
         # img = discRes.getAreaImage(img)
@@ -61,7 +61,6 @@ while True and not game.crash:
         cv2.rectangle(img, discRes.birdArea.leftTop.toIntTuple(), discRes.birdArea.rightDown.toIntTuple(), [255] * 3)
         for sensor in sensors:
             sensor.customPositionCast(birdFrontCenter.x, birdFrontCenter.y, walls, img)
-        cv2.putText(img, 'Best fitness:' + str(game.fitness), (20, 500), cv2.FONT_HERSHEY_COMPLEX, 0.6, [0, 0, 255], 1)
         cv2.imshow('GameAIVision', img)
 
 game.quit()

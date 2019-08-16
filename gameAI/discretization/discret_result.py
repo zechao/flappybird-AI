@@ -57,7 +57,7 @@ class DiscretizationResult:
                     sr.GameBoundary.fromVector(obstacle.leftDown, obstacle.leftTop, sr.BoundType.OBSTACLE))
 
             self.bounds.append(sr.GameBoundary(0, 0, width, 0, sr.BoundType.BORDER))
-            self.bounds.append(sr.GameBoundary(width, 0, width - 20, height + 20, sr.BoundType.BORDER))
+            self.bounds.append(sr.GameBoundary(height, 0, height, width, sr.BoundType.BORDER))
         return self.bounds
 
     def getBirdFrontCenter(self):

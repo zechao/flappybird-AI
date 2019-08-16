@@ -2,7 +2,7 @@ from unittest import TestCase
 import numpy as np
 import gameAI.ANN.activation_funtion as af
 import gameAI.ANN.neuralnetwork as nn
-
+import pickle
 
 class TestNeuralLayer(TestCase):
 
@@ -12,17 +12,18 @@ class TestNeuralLayer(TestCase):
             np.array([[0.5, 0.6],
                       [-0.1, 0.1],
                       [-0.2, 0.7]]),
-            lambda x: x)
+            lambda x: x,bias=0)
         r = layer.feed_forward(np.array([[1, -1, 2]]))
         expected = np.array([[0.2, 1.9]])
         self.assertTrue(np.allclose(r, expected))
+
 
         layer = nn.NeuralLayer.createCustomLayer(
             3,
             np.array([[0.5, 0.6],
                       [-0.1, 0.1],
                       [-0.2, 0.7]]),
-            lambda x: x - 0.1)
+            lambda x: x - 0.1,bias=0)
         r = layer.feed_forward(np.array([[1, -1, 2]]))
         expected = np.array([[0.1, 1.8]])
         self.assertTrue(np.allclose(r, expected))
@@ -32,9 +33,9 @@ class TestNeuralLayer(TestCase):
             np.array([[0.5, 0.6],
                       [-0.1, 0.1],
                       [-0.2, 0.7]]),
-            af.sigmoid)
+            af.sigmoid,bias=1)
         r = layer.feed_forward(np.array([[1, -1, 2]]))
-        expected = np.array([af.sigmoid(0.2), af.sigmoid(1.9)])
+        expected = np.array([af.sigmoid(1.2), af.sigmoid(2.9)])
         self.assertTrue(np.allclose(r, expected))
 
     def test_clone_equal(self):
@@ -112,3 +113,32 @@ class TestNeuralNet(TestCase):
         net = nn.NeuralNet(layers)
         result = net.feed_forward(input)
         expected = np.array([[0.476]])
+
+    def test_pickle(self):
+        input = np.array([[1, -1, 2]])
+        layer1 = nn.NeuralLayer.createCustomLayer(
+            3,
+            np.array([[0.5, 0.6],
+                      [-0.1, 0.1],
+                      [-0.2, 0.7]]), af.relu,bias=0)
+        layer2 = nn.NeuralLayer.createCustomLayer(
+            2,
+            np.array([[0.1, 0.1],
+                      [1, 1]]), af.relu,bias=0)
+        layer3 = nn.NeuralLayer.createCustomLayer(
+            2,
+            np.array([[0.1],
+                      [0.2]]), af.relu,bias=0)
+        layers = [layer1, layer2, layer3]
+        net = nn.NeuralNet(layers)
+        result = net.feed_forward(input)
+        expected = np.array([[0.576]])
+        self.assertTrue(np.allclose(result, expected))
+
+        with open("net", "wb") as f:
+            pickle.dump(net, f)
+
+        with open("net", "rb") as f:
+            loadedNet = pickle.load(f)
+            loadedResult= loadedNet.feed_forward(input)
+            self.assertTrue(np.allclose(loadedResult, expected))
