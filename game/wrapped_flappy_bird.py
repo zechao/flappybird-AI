@@ -160,7 +160,7 @@ class GameState:
         image_data = pygame.surfarray.array3d(SCREEN)
         # pygame.sndarray
         pygame.display.update()
-        # FPSCLOCK.tick(FPS)
+        FPSCLOCK.tick(10)
 
         return image_data
 
@@ -303,4 +303,4 @@ if __name__ == '__main__':
         if game.isRunning():
             frame = game.next_frame(flap)
         else:
-            print("Game stopped")
+            game.resetAndRun()
