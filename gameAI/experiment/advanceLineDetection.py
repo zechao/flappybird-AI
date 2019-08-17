@@ -1,6 +1,5 @@
 import cv2
 import numpy as np
-from matplotlib import pyplot as plt
 from random import randint
 
 
@@ -50,16 +49,57 @@ def setDefaultHSVValue():
 
 createHSVTrackBars()
 
-x1 = 0
-y1 = 0
-
-img = cv2.imread('day2.png')
-hsv = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+imgName = 'frame.png'
+img = cv2.imread(imgName)
+rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 setDefaultHSVValue()
+
+
+def isProcessed(lines, p):
+    for start, end in lines:
+        if start[0] <= p[0] and p[0] <= end[0] and p[1] == start[1] or\
+                start[1] <= p[1] and p[1] <= end[1] and start[0]==p[0]:
+            return True
+    return False
+
+
+def computeLine(edges, minLength=5, maxSeparation=0,transpose=True):
+    img = edges.copy()
+    rows = img.shape[0]
+    cols = img.shape[1]
+    lines = []
+
+    for x in range(0, rows):
+        for y in range(0, cols):
+            # check if the current point it's already included in other line
+            if img[x, y] == 255 and not isProcessed(lines, [x, y]):
+                startPoint = (x, y)
+                xInc = x + 1
+                # search for horizontal line
+                while xInc < rows and img[xInc, y] > 0:
+                    xInc += 1
+                if np.abs(xInc - x) >= minLength:
+                    lines.append([startPoint, (xInc, y)])
+
+                 # search for vertical line
+                yInc = y + 1
+                while yInc < cols and img[x, yInc] > 0:
+                    yInc += 1
+                if np.abs(yInc - y) >= minLength:
+                    lines.append([startPoint, (x, yInc)])
+
+    if transpose:
+        tLines = []
+        for start, end in lines:
+            tLines.append([(start[1],start[0]), (end[1], end[0])])
+        return tLines
+    else:
+        return lines
+
+
 while True:
     cv2.waitKey(int(1000 / 60))
-    img = cv2.imread('day2.png')
-    hsv = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)  # convert to hsv space experiment
+    img = cv2.imread(imgName) # convert to hsv space experiment
     # get value from bars
     lower_rgb = np.array(getHSVValue(rl, gl, bl))
     higher_rgb = np.array(getHSVValue(rh, gh, bh))
@@ -69,32 +109,17 @@ while True:
     higher_rgb = np.array(higher_rgb)
 
     # build mask
-    edges = cv2.inRange(hsv, lower_rgb, higher_rgb)
-    # mask = cv2.bitwise_not(mask)
-    rho =1  # distance resolution in pixels of the Hough grid
-    theta = 1  # angular resolution in radians of the Hough grid
-    threshold = 0  # minimum number of votes (intersections in Hough grid cell)
-    min_line_length = 0  # minimum number of pixels making up a line
-    max_line_gap = 0  # maximum gap in pixels between connectable line segments
-    line_image = np.copy(img) * 0  # creating a blank to draw lines on
+    edges = cv2.inRange(rgb, lower_rgb, higher_rgb)
 
-    # Run Hough on edge detected image
-    # Output "lines" is an array containing endpoints of detected line segments
-    lines =  cv2.HoughLines(edges, 1, np.pi/120, 70, None,2, 0)
+    # in order to get line with 1 pixel thickness
+    kernel = np.ones((2, 2), np.uint8)
+    erosion = cv2.erode(edges, kernel, iterations=1)
 
-    if lines is not None:
-        for i in range(0, len(lines)):
-            rho = lines[i][0][0]
-            theta = lines[i][0][1]
-            a = np.cos(theta)
-            b = np.sin(theta)
-            x0 = a * rho
-            y0 = b * rho
-            pt1 = (int(x0 + 1000 * (-b)), int(y0 + 1000 * (a)))
-            pt2 = (int(x0 - 1000 * (-b)), int(y0 - 1000 * (a)))
-            cv2.line(line_image, pt1, pt2, (0, 0, 255), 3, cv2.LINE_AA)
+    lines = computeLine(erosion)
+    for start, end in lines:
+        cv2.line(img, start, end, (255, 0, 0), 2)
 
-    cv2.imshow('line_image', line_image)
+    cv2.imshow('erosion', erosion)
     cv2.imshow('mask', edges)
     cv2.imshow('experiment', img)
 cv2.destroyAllWindows()

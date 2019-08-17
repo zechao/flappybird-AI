@@ -176,13 +176,12 @@ class GameState:
         :return:
         """
         image = self.frame_step(flap)
-
         #  convert from (width, height, channel) to (height, width, channel)
         self.image = image.transpose([1, 0, 2])
 
         #  convert from rgb to bgr
-        # self.img_bgr = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)
-
+        self.img_bgr = cv2.cvtColor(self.image, cv2.COLOR_RGB2BGR)
+        cv2.imwrite('frameImages/frame{}.png'.format(self.fitness),self.img_bgr)
         return self.image
 
     def quit(self):
