@@ -108,7 +108,7 @@ class GameState:
         for pipe in self.upperPipes:
             pipeMidPos = pipe['x'] + PIPE_WIDTH / 2
             if pipeMidPos <= playerMidPos < pipeMidPos + 4:
-                self.score += 1
+                self.score += 10000
                 if self.enableSound:
                     SOUNDS['point'].play()
                 self.fitness += 20
