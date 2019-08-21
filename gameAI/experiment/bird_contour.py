@@ -65,7 +65,7 @@ setDefaultHSVValue()
 while True:
     cv2.waitKey(int(1000 / 60))
     img = cv2.imread('img.jpg')
-    hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)  # convert to hsv space experiment
+    hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)  # convert to imgData space experiment
 
     # get value from bars
     lower_hsv = np.array(getTrackBarValues(hl, sl, vl))
@@ -92,7 +92,7 @@ while True:
         box = np.int0(box)
         cv2.drawContours(img, [box], 0, (0, 0, 255), 2)
 
-    cv2.imshow('contours', all_cnt_img)
+    cv2.imshow('pipeContours', all_cnt_img)
     cv2.imshow('mask', mask)
     cv2.imshow('experiment', img)
 cv2.destroyAllWindows()

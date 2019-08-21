@@ -1,14 +1,14 @@
 import cv2
 import numpy as np
 import game.wrapped_flappy_bird as flappy
-import gameAI.discretization.template_contour as tracker
+import gameAI.discretization.area_finder as af
 import gameAI.discretization.sensor as sr
 
 # init game and get first frame
 game = flappy.GameState(0)
 
 
-tracker = tracker.TemplateContour()
+areaFinder = af.AreaFinder()
 run = True
 flap = False
 game_frame = None
@@ -38,7 +38,7 @@ while True and not game.crash:
     if run:
         game_frame = game.next_frame(True)
 
-    # # copy for contours tracking
+    # # copy for pipeContours tracking
     # contours_frame = np.copy(game_frame)
     # # copy for template tracking
     # template_frame = np.copy(game_frame)
@@ -51,7 +51,7 @@ while True and not game.crash:
     # copy of game frame for bird tracking
     img = np.zeros((flappy.getCV2ScreenWidth(), flappy.getCV2ScreenHeight()+200, 3), np.float)
     if run:
-        discRes = tracker.track_areas(game_frame)
+        discRes = areaFinder.track_areas(game_frame)
         # img = discRes.getAreaImage(img)
         walls = discRes.getGameWalls(flappy.getCV2ScreenWidth(), flappy.getCV2ScreenHeight())
         for wall in walls:

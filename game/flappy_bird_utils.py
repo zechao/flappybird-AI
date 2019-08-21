@@ -10,8 +10,8 @@ def load():
     )
 
     # path of background
-    BACKGROUND_PATH = 'assets/sprites/background-day.png'
-
+    BACKGROUND_DAY_PATH = 'assets/sprites/background-day.png'
+    BACKGROUND_NIGHT_PATH = 'assets/sprites/background-night.png'
     # path of pipe
     PIPE_PATH = 'assets/sprites/pipe-green.png'
 
@@ -50,7 +50,8 @@ def load():
     SOUNDS['wing']   = pygame.mixer.Sound('assets/audio/wing' + soundExt)
 
     # select background
-    IMAGES['background'] = pygame.image.load(BACKGROUND_PATH).convert()
+    IMAGES['background_day'] = pygame.image.load(BACKGROUND_DAY_PATH).convert()
+    IMAGES['background_night'] = pygame.image.load(BACKGROUND_NIGHT_PATH).convert()
 
     # select player sprites
     IMAGES['player'] = (

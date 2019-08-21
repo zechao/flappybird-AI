@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 import game.wrapped_flappy_bird as flappy
-import gameAI.discretization.template_contour as tracker
+import gameAI.discretization.area_finder as af
 import gameAI.discretization.sensor as sr
 import gameAI.trainData as td
 
@@ -11,9 +11,9 @@ import gameAI.trainData as td
 
 class FlappyBirdAI():
 
-    def __init__(self, angles, neuralNet,gameRandomSeed=0):
+    def __init__(self, angles, neuralNet, gameRandomSeed=0):
         self.game = flappy.GameState(gameRandomSeed)
-        self.tracker = tracker.TemplateContour()
+        self.tracker = af.AreaFinder()
         self.angles = angles
         self.sensors = []
         for angle in self.angles:
@@ -47,7 +47,6 @@ class FlappyBirdAI():
     def computeInput(self):
         game_frame = self.game.next_frame(self.action)
         self.die = self.game.crash
-        game_frame = np.copy(game_frame)
         self.discRes = self.tracker.track_areas(game_frame)
         self.walls = self.discRes.getGameWalls(flappy.getCV2ScreenWidth(), flappy.getCV2ScreenHeight())
         self.birdFrontCenter = self.discRes.getBirdFrontCenter()
@@ -105,8 +104,8 @@ class FlappyBirdAI():
 
 if __name__ == '__main__':
     # net = nn.NeuralNet.createRandomNeuralNet(6, 12, 1, 2, actFunction=af.relu)
-    net = td.loadNet("data/train20191312_19_13_52/generation85")
-    ai = FlappyBirdAI([-90, 90, 45, -45, 0], net,0)
+    net = td.loadNet("data/train20191312_19_13_52/generation90")
+    ai = FlappyBirdAI([-90, 90, 45, -45, 0], net, 0)
     ai.restAndRun()
 
     img = np.zeros((flappy.getCV2ScreenWidth(), flappy.getCV2ScreenHeight(), 3), np.float)

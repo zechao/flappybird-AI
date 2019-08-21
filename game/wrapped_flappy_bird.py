@@ -25,7 +25,7 @@ PLAYER_WIDTH = IMAGES['player'][0].get_width()
 PLAYER_HEIGHT = IMAGES['player'][0].get_height()
 PIPE_WIDTH = IMAGES['pipe'][0].get_width()
 PIPE_HEIGHT = IMAGES['pipe'][0].get_height()
-BACKGROUND_WIDTH = IMAGES['background'].get_width()
+BACKGROUND_WIDTH = IMAGES['background_day'].get_width()
 
 PLAYER_INDEX_GEN = cycle([0, 1, 2, 1])
 
@@ -37,18 +37,18 @@ class GameState:
         self.crash = False
         self.reset()
         self.enableSound = enableSound
-        random.seed(self.seed)
+        self.rnd = random.Random(self.seed)
 
     def reset(self):
-        random.seed(self.seed)
+        self.rnd = random.Random(self.seed)
         self.score = self.playerIndex = self.loopIter = 0
         self.playerx = int(SCREENWIDTH * 0.2)
         self.playery = int((SCREENHEIGHT - PLAYER_HEIGHT) / 2)
         self.basex = 0
         self.baseShift = IMAGES['base'].get_width() - BACKGROUND_WIDTH
 
-        newPipe1 = getRandomPipe()
-        newPipe2 = getRandomPipe()
+        newPipe1 = getRandomPipe(self.rnd)
+        newPipe2 = getRandomPipe(self.rnd)
         self.upperPipes = [
             {'x': SCREENWIDTH, 'y': newPipe1[0]['y']},
             {'x': SCREENWIDTH + (SCREENWIDTH / 2), 'y': newPipe2[0]['y']},
@@ -108,7 +108,7 @@ class GameState:
         for pipe in self.upperPipes:
             pipeMidPos = pipe['x'] + PIPE_WIDTH / 2
             if pipeMidPos <= playerMidPos < pipeMidPos + 4:
-                self.score += 10000
+                self.score += 1
                 if self.enableSound:
                     SOUNDS['point'].play()
                 self.fitness += 20
@@ -135,7 +135,7 @@ class GameState:
 
         # add new pipe when first pipe is about to touch left of screen
         if 0 < self.upperPipes[0]['x'] < 5:
-            newPipe = getRandomPipe()
+            newPipe = getRandomPipe(self.rnd)
             self.upperPipes.append(newPipe[0])
             self.lowerPipes.append(newPipe[1])
 
@@ -145,8 +145,10 @@ class GameState:
             self.lowerPipes.pop(0)
 
         # draw sprites
-        SCREEN.blit(IMAGES['background'], (0, 0))
-
+        if (self.score//100)%2 ==0:
+            SCREEN.blit(IMAGES['background_day'], (0, 0))
+        else:
+            SCREEN.blit(IMAGES['background_night'], (0, 0))
         for uPipe, lPipe in zip(self.upperPipes, self.lowerPipes):
             SCREEN.blit(IMAGES['pipe'][0], (uPipe['x'], uPipe['y']))
             SCREEN.blit(IMAGES['pipe'][1], (lPipe['x'], lPipe['y']))
@@ -159,15 +161,14 @@ class GameState:
 
         image_data = pygame.surfarray.array3d(SCREEN)
         # pygame.sndarray
-        pygame.display.update()
-        FPSCLOCK.tick(10)
+        # pygame.display.update()
 
         return image_data
 
     def playSound(self):
         if self.enableSound:
             SOUNDS['hit'].play()
-            # SOUNDS['crash'].play()
+            SOUNDS['crash'].play()
 
     def next_frame(self, flap):
         """
@@ -181,7 +182,6 @@ class GameState:
 
         #  convert from rgb to bgr
         self.img_bgr = cv2.cvtColor(self.image, cv2.COLOR_RGB2BGR)
-        cv2.imwrite('frameImages/frame{}.png'.format(self.fitness),self.img_bgr)
         return self.image
 
     def quit(self):
@@ -196,11 +196,11 @@ def getCV2ScreenHeight():
     return SCREENWIDTH
 
 
-def getRandomPipe():
+def getRandomPipe(rnd):
     """returns a randomly generated pipe"""
     # y of gap between upper and lower pipe
     gapYs = [20, 30, 40, 50, 60, 70, 80, 90]
-    index = random.randint(0, len(gapYs) - 1)
+    index = rnd.randint(0, len(gapYs) - 1)
     gapY = gapYs[index]
 
     gapY += int(BASEY * 0.2)

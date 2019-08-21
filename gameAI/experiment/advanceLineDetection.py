@@ -1,3 +1,4 @@
+import time
 import cv2
 import numpy as np
 import gameAI.discretization.geom2D as g2d
@@ -75,16 +76,16 @@ rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 setDefaultHSVValue()
 
 
-def isProcessed(lines, p):
+def isProcessed(lines, x,y):
     for start, end in lines:
-        vertical = start[0] <= p[0] and p[0] <= end[0] and p[1] == start[1]
-        horizontal = start[1] <= p[1] and p[1] <= end[1] and start[0] == p[0]
+        vertical = start[0] <= x and x <= end[0] and y== start[1]
+        horizontal = start[1] <= y and y <= end[1] and start[0] == x
         if vertical or horizontal:
             return True
     return False
 
 
-def findLines(edges, minLength=5, transpose=True, heightStart=0, heightEnd=None, widthStart=0, widthEnd=None):
+def findLines(edges, minLength=0, transpose=True, heightStart=0, heightEnd=None, widthStart=0, widthEnd=None):
     """
     :param edges: the edge of image, must contain line of one pixel
     :param minLength: the minim length of line allowed
@@ -106,7 +107,7 @@ def findLines(edges, minLength=5, transpose=True, heightStart=0, heightEnd=None,
     for x in range(heightStart, rows):
         for y in range(widthStart, cols):
             # check if the current point it's already included in other line
-            if edges[x, y] == 255 and not isProcessed(lines, [x, y]):
+            if edges[x, y] == 255 and not isProcessed(lines, x, y):
                 startPoint = (x, y)
                 xInc = x
                 # search for horizontal line
@@ -176,7 +177,7 @@ def findRect(birdLines):
 
 while True:
     cv2.waitKey(int(1000 / 60))
-    img = cv2.imread(imgName)  # convert to hsv space experiment
+    img = cv2.imread(imgName)  # convert to imgData space experiment
 
     # get value from bars
     pipe_lower_rgb = np.array(getRGBValue(rl, gl, bl))
@@ -207,9 +208,9 @@ while True:
     # in order to get line with 1 pixel thickness
     kernel = np.ones((2, 2), np.uint8)
     birdErosion = cv2.erode(birdEdge, kernel, iterations=1)
-
+    start =time.time()
     pipeLines = findLines(pipeErosion, heightEnd=410)
-
+    print("time spent:", time.time()-start)
     birdLines = findLines(birdErosion, heightEnd=410, widthStart=50, widthEnd=100)
     birdRect = findRect(birdLines)
 

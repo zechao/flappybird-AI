@@ -176,7 +176,7 @@ class GenericAlgorithm():
 
 if __name__ == '__main__':
     np.random.seed(1)
-    generic = GenericAlgorithm(30, 5)
+    generic = GenericAlgorithm(40, 5)
     generic.initPopulation([-90, 90, 45, -45, 0], 10, 10, 2, 2, actFunction=af.relu, outputActFunc=af.relu)
 
     img = np.zeros((flappy.getCV2ScreenWidth(), flappy.getCV2ScreenHeight() + 300, 3), np.float)
@@ -186,11 +186,16 @@ if __name__ == '__main__':
         cv2.imshow('GameAIVision', img)
         k = cv2.waitKey(1) & 0xFF  # when using 64bit machine
         if not generic.areAllDied():
-            generic.computeInput()
-            generic.activeAll()
-            img = np.zeros((flappy.getCV2ScreenWidth(), flappy.getCV2ScreenHeight() + 300, 3), np.float)
-            generic.draw(img)
-            generic.drawGenerationInfo(img)
+            if generic.generationCount <=150:
+                generic.computeInput()
+                generic.activeAll()
+                img = np.zeros((flappy.getCV2ScreenWidth(), flappy.getCV2ScreenHeight() + 300, 3), np.float)
+                generic.draw(img)
+                generic.drawGenerationInfo(img)
+            else:
+                np.random.seed(np.random.randint(100))
+                generic = GenericAlgorithm(40, 5)
+                generic.initPopulation([-90, 90, 45, -45, 0], np.random.randint(20), np.random.randint(20), 2, 2, actFunction=af.relu, outputActFunc=af.relu)
         else:
             cv2.destroyAllWindows()
             generic.selection()

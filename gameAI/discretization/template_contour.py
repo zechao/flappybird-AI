@@ -27,7 +27,7 @@ class TemplateContour:
         bottom_right = (top_left[0] + w, top_left[1] + h)
         cv2.rectangle(TemplateContour.TEMPLATE_IMAGE, top_left, bottom_right, (255, 0, 0), cv2.FILLED)
 
-        # Track for area with contours detection
+        # Track for area with pipeContours detection
         lower_hsv = np.array(config.get_contour_hsv_low())
         higher_hsv = np.array(config.get_contour_hsv_high())
         contour_hsv = cv2.cvtColor(self.current_frame, cv2.COLOR_RGB2HSV)
@@ -39,8 +39,8 @@ class TemplateContour:
         contours, hierarchy = cv2.findContours(image=contours_mask, mode=cv2.RETR_EXTERNAL,
                                                method=cv2.CHAIN_APPROX_SIMPLE)
 
-        # calc the fixed area of our contours
-        # all_cnt_img = cv2.drawContours(contours_frame, contours, -1, (255, 255, 0), 2)
+        # calc the fixed area of our pipeContours
+        # all_cnt_img = cv2.drawContours(contours_frame, pipeContours, -1, (255, 255, 0), 2)
         bird_area = g2d.Rect(g2d.Vector(top_left), g2d.Vector(bottom_right))
         obstacle_area = []
         if len(contours) != 0:
