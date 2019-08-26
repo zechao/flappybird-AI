@@ -5,7 +5,7 @@ import gameAI.discretization.area_finder as af
 import gameAI.discretization.sensor as sr
 
 # init game and get first frame
-game = flappy.GameState(0)
+game = flappy.FlappyBird(0)
 
 
 areaFinder = af.AreaFinder()

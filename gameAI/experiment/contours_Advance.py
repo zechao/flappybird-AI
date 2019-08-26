@@ -3,7 +3,7 @@ import numpy as np
 from matplotlib import pyplot as plt
 from random import randint
 import time
-
+import math
 
 def nothing(x):
     pass
@@ -68,17 +68,45 @@ def setDefaultHSVValue():
     cv2.setTrackbarPos(birdBl, barsWindow, 70)
     cv2.setTrackbarPos(birdBh, barsWindow, 70)
 
+def fixRect(pipeRect):
+    length = len(pipeRect)
+    res=[]
+    discard=[]
+    for i in range(length):
+        findDisconnection=False
+        for j in range (i+1,length):
+            if i not in discard and j not in discard:
+                h1 = abs(pipeRect[i][0][1] - pipeRect[i][1][1])
+                h2 = abs(pipeRect[j][0][1] - pipeRect[j][1][1])
+                w1 = abs(pipeRect[i][0][0] - pipeRect[i][1][0])
+                w2 = abs(pipeRect[i][0][0] - pipeRect[i][1][0])
+                if h1 == h2 and w1 == w2 and w1 == 2:
+                    findDisconnection = True
+                    x1 = min(pipeRect[i][0][0], pipeRect[j][0][0])
+                    y1 = min(pipeRect[i][0][1], pipeRect[j][0][1])
+                    x2 = max(pipeRect[i][1][0], pipeRect[j][1][0])
+                    y2 = max(pipeRect[i][1][1], pipeRect[j][1][1])
+                    res.append([(x1, y1), (x2, y2)])
+                    discard.append(i)
+                    discard.append(j)
+        if not findDisconnection and i not in discard and j not in discard:
+            res.append(pipeRect[i])
+    points =np.array([[[126,0]], [[128,51]],[[172, 0]],[[174, 51]],[[176,160]]],np.float32)
+    x, y, w, h = cv2.boundingRect(points)
+    res.append([(x,y),(x + w, y + h)])
+    return res
+
 
 createRGBTrackerBar()
 
-imgName = 'night.png'
+imgName = 'frame1000.png'
 img = cv2.imread(imgName)
 rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 setDefaultHSVValue()
 
 while True:
     cv2.waitKey(int(1000 / 60))
-    img = cv2.imread('night.png')
+    img = cv2.imread('frame1000.png')
     imgData = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)  # convert to imgData space experiment
     # get value from bars
 
@@ -106,12 +134,17 @@ while True:
 
     all_cnt_img = cv2.drawContours(np.copy(img), pipeContours, -1, (0,0 , 255), 2)
     all_cnt_img = cv2.drawContours(all_cnt_img, birdContours, -1, (255, 0,0 ), 2)
-    final_result = np.copy(img)
+    pipeRect=[]
+    final_result =  np.zeros((img.shape[0], img.shape[1], 3), np.float)
     if len(pipeContours) != 0:
         for cnt in pipeContours:
             area = cv2.contourArea(cnt)
             x, y, w, h = cv2.boundingRect(cnt)
-            cv2.rectangle(final_result, (x, y), (x + w, y + h), (0, 0, 255), thickness=2)
+            pipeRect.append([(x,y),(x + w, y + h)])
+        pipeRect = fixRect(pipeRect)
+
+    for each in pipeRect:
+        cv2.rectangle(final_result, each[0], each[1], (0, 0, 255), thickness=1)
 
     if len(birdContours) != 0:
         for cnt in birdContours:
@@ -119,7 +152,7 @@ while True:
             x, y, w, h = cv2.boundingRect(cnt)
             cv2.rectangle(final_result, (x, y), (x + w, y + h), (0, 0, 255), thickness=2)
 
-    cv2.rectangle(final_result, (0, 405), (288, 512), (0, 0, 255), thickness=2)
+    cv2.rectangle(final_result, (0, 405), (288, 512), (0, 255, 255), thickness=1)
 
     print("time spend:",time.time()-start)
     cv2.imshow('Contours', all_cnt_img)
@@ -127,3 +160,4 @@ while True:
     cv2.imshow('experiment', img)
     cv2.imshow('final_result', final_result)
 cv2.destroyAllWindows()
+

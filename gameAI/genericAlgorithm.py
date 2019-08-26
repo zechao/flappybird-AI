@@ -176,7 +176,7 @@ class GenericAlgorithm():
 
 if __name__ == '__main__':
     np.random.seed(1)
-    generic = GenericAlgorithm(40, 5)
+    generic = GenericAlgorithm(20, 5)
     generic.initPopulation([-90, 90, 45, -45, 0], 10, 10, 2, 2, actFunction=af.relu, outputActFunc=af.relu)
 
     img = np.zeros((flappy.getCV2ScreenWidth(), flappy.getCV2ScreenHeight() + 300, 3), np.float)

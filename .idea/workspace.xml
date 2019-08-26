@@ -10,294 +10,51 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="49a14c5b-883a-41bd-92c9-22c88916d7c5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/gameAI/discretization/area_finder.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gameAI/experiment/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gameAI/experiment/contours_Advance.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gameAI/experiment/night.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gameAI/experiment/frame1000.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/flappy_bird_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/flappy_bird_utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame100.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame101.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame102.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame103.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame104.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame105.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame106.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame107.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame108.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame109.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame110.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame131.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame132.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame133.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame134.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame135.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame136.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame137.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame138.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame139.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame140.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame141.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame142.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame143.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame144.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame145.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame146.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame147.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame148.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame149.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame150.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame151.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame152.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame153.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame154.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame155.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame156.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame157.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame158.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame159.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame160.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame161.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame162.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame163.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame164.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame165.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame166.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame187.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame188.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame189.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame190.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame191.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame193.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame194.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame195.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame196.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame197.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame198.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame199.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame200.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame201.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame202.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame203.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame204.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame205.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame206.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame207.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame208.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame209.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame210.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame211.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame212.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame213.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame214.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame215.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame216.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame217.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame218.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame219.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame220.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame221.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame222.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame223.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame224.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame245.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame246.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame247.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame248.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame249.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame250.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame251.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame252.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame253.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame254.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame255.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame256.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame257.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame258.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame259.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame260.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame261.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame262.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame263.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame264.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame265.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame266.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame267.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame268.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame269.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame270.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame271.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame272.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame273.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame274.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame275.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame276.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame277.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame278.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame279.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame280.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame301.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame302.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame303.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame304.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame305.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame306.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame307.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame308.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame309.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame310.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame311.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame312.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame313.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame314.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame315.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame316.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame317.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame318.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame319.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame320.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame321.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame322.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame323.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame324.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame325.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame326.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame327.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame328.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame329.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame330.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame331.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame332.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame333.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame334.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame335.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame336.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame337.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame338.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame359.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame360.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame361.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame362.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame363.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame364.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame365.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame366.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame367.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame368.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame369.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame370.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame371.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame372.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame373.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame374.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame375.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame376.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame377.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame378.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame379.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame380.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame381.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame382.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame383.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame384.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame385.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame386.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame387.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame388.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame389.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame390.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame391.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame392.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame393.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame394.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame415.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame416.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame417.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame418.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame419.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame420.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame421.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame422.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame423.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame424.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame425.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame427.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame428.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame429.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame430.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame431.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame432.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame433.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame434.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame435.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame436.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame437.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame438.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame439.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame440.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame441.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame442.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame443.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame444.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame445.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame51.png" beforeDir="false" afterPath="$PROJECT_DIR$/game/frameImages/frame51.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame52.png" beforeDir="false" afterPath="$PROJECT_DIR$/game/frameImages/frame52.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame53.png" beforeDir="false" afterPath="$PROJECT_DIR$/game/frameImages/frame53.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame54.png" beforeDir="false" afterPath="$PROJECT_DIR$/game/frameImages/frame54.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame55.png" beforeDir="false" afterPath="$PROJECT_DIR$/game/frameImages/frame55.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame56.png" beforeDir="false" afterPath="$PROJECT_DIR$/game/frameImages/frame56.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame57.png" beforeDir="false" afterPath="$PROJECT_DIR$/game/frameImages/frame57.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame58.png" beforeDir="false" afterPath="$PROJECT_DIR$/game/frameImages/frame58.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame59.png" beforeDir="false" afterPath="$PROJECT_DIR$/game/frameImages/frame59.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame60.png" beforeDir="false" afterPath="$PROJECT_DIR$/game/frameImages/frame60.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame61.png" beforeDir="false" afterPath="$PROJECT_DIR$/game/frameImages/frame61.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame62.png" beforeDir="false" afterPath="$PROJECT_DIR$/game/frameImages/frame62.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame63.png" beforeDir="false" afterPath="$PROJECT_DIR$/game/frameImages/frame63.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame64.png" beforeDir="false" afterPath="$PROJECT_DIR$/game/frameImages/frame64.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame65.png" beforeDir="false" afterPath="$PROJECT_DIR$/game/frameImages/frame65.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame66.png" beforeDir="false" afterPath="$PROJECT_DIR$/game/frameImages/frame66.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame67.png" beforeDir="false" afterPath="$PROJECT_DIR$/game/frameImages/frame67.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame68.png" beforeDir="false" afterPath="$PROJECT_DIR$/game/frameImages/frame68.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame69.png" beforeDir="false" afterPath="$PROJECT_DIR$/game/frameImages/frame69.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame70.png" beforeDir="false" afterPath="$PROJECT_DIR$/game/frameImages/frame70.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame71.png" beforeDir="false" afterPath="$PROJECT_DIR$/game/frameImages/frame71.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame72.png" beforeDir="false" afterPath="$PROJECT_DIR$/game/frameImages/frame72.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame73.png" beforeDir="false" afterPath="$PROJECT_DIR$/game/frameImages/frame73.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame74.png" beforeDir="false" afterPath="$PROJECT_DIR$/game/frameImages/frame74.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame75.png" beforeDir="false" afterPath="$PROJECT_DIR$/game/frameImages/frame75.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame76.png" beforeDir="false" afterPath="$PROJECT_DIR$/game/frameImages/frame76.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame77.png" beforeDir="false" afterPath="$PROJECT_DIR$/game/frameImages/frame77.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame78.png" beforeDir="false" afterPath="$PROJECT_DIR$/game/frameImages/frame78.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame79.png" beforeDir="false" afterPath="$PROJECT_DIR$/game/frameImages/frame79.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame80.png" beforeDir="false" afterPath="$PROJECT_DIR$/game/frameImages/frame80.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame81.png" beforeDir="false" afterPath="$PROJECT_DIR$/game/frameImages/frame81.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame82.png" beforeDir="false" afterPath="$PROJECT_DIR$/game/frameImages/frame82.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame83.png" beforeDir="false" afterPath="$PROJECT_DIR$/game/frameImages/frame83.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame84.png" beforeDir="false" afterPath="$PROJECT_DIR$/game/frameImages/frame84.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame85.png" beforeDir="false" afterPath="$PROJECT_DIR$/game/frameImages/frame85.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame86.png" beforeDir="false" afterPath="$PROJECT_DIR$/game/frameImages/frame86.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame87.png" beforeDir="false" afterPath="$PROJECT_DIR$/game/frameImages/frame87.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame88.png" beforeDir="false" afterPath="$PROJECT_DIR$/game/frameImages/frame88.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame89.png" beforeDir="false" afterPath="$PROJECT_DIR$/game/frameImages/frame89.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame90.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame91.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame92.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame93.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame94.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame95.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame96.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame97.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame98.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/frameImages/frame99.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/frameImages/frame51.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/frameImages/frame52.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/frameImages/frame53.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/frameImages/frame54.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/frameImages/frame55.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/frameImages/frame56.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/frameImages/frame57.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/frameImages/frame58.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/frameImages/frame59.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/frameImages/frame60.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/frameImages/frame61.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/frameImages/frame62.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/frameImages/frame63.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/frameImages/frame64.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/frameImages/frame65.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/frameImages/frame66.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/frameImages/frame67.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/frameImages/frame68.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/frameImages/frame69.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/frameImages/frame70.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/frameImages/frame71.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/frameImages/frame72.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/frameImages/frame73.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/frameImages/frame74.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/frameImages/frame75.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/frameImages/frame76.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/frameImages/frame77.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/frameImages/frame78.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/frameImages/frame79.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/frameImages/frame80.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/frameImages/frame81.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/frameImages/frame82.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/frameImages/frame83.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/frameImages/frame84.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/frameImages/frame85.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/frameImages/frame86.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/frameImages/frame87.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/frameImages/frame88.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/frameImages/frame89.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/game/wrapped_flappy_bird.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/wrapped_flappy_bird.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gameAI/discretization/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/gameAI/discretization/config.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gameAI/discretization/discretization_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/gameAI/discretization/discretization_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gameAI/discretization/template_contour.py" beforeDir="false" afterPath="$PROJECT_DIR$/gameAI/discretization/template_contour.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gameAI/experiment/advanceLineDetection.py" beforeDir="false" afterPath="$PROJECT_DIR$/gameAI/experiment/advanceLineDetection.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gameAI/experiment/bird_contour.py" beforeDir="false" afterPath="$PROJECT_DIR$/gameAI/experiment/bird_contour.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gameAI/experiment/contours_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/gameAI/experiment/contours_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gameAI/experiment/contours_Advance.py" beforeDir="false" afterPath="$PROJECT_DIR$/gameAI/experiment/contours_Advance.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gameAI/flappyBirdAI.py" beforeDir="false" afterPath="$PROJECT_DIR$/gameAI/flappyBirdAI.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gameAI/genericAlgorithm.py" beforeDir="false" afterPath="$PROJECT_DIR$/gameAI/genericAlgorithm.py" afterDir="false" />
     </list>
@@ -313,10 +70,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gameAI/flappyBirdAI.py">
+        <entry file="file://$PROJECT_DIR$/gameAI/experiment/contours_Advance.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="31" column="14" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
+            <state relative-caret-position="-917">
+              <caret line="93" column="76" selection-start-line="93" selection-start-column="76" selection-end-line="93" selection-end-column="76" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -325,12 +82,21 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gameAI/discretization/geom2D.py">
+        <entry file="file://$USER_HOME$/.virtualenvs/tfg/Lib/site-packages/numpy/core/fromnumeric.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="337">
-              <caret line="309" column="30" selection-start-line="309" selection-start-column="30" selection-end-line="309" selection-end-column="30" />
+            <state relative-caret-position="277">
+              <caret line="85" selection-start-line="85" selection-end-line="85" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gameAI/experiment/bird_contour.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="575">
+              <caret line="85" column="27" selection-start-line="85" selection-start-column="27" selection-end-line="85" selection-end-column="27" />
               <folding>
-                <element signature="e#0#20#0" expanded="true" />
+                <element signature="e#0#10#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -349,67 +115,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gameAI/discretization/discret_result.py">
+        <entry file="file://$PROJECT_DIR$/gameAI/flappyBirdAI.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gameAI/experiment/advanceLineDetection.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2485">
-              <caret line="216" column="21" selection-start-line="216" selection-start-column="21" selection-end-line="216" selection-end-column="21" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/gameAI/genericAlgorithm.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="667">
-              <caret line="196" column="49" selection-start-line="196" selection-start-column="49" selection-end-line="196" selection-end-column="49" />
-              <folding>
-                <element signature="e#0#32#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/game/wrapped_flappy_bird.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="161" column="41" selection-start-line="161" selection-start-column="41" selection-end-line="161" selection-end-column="41" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gameAI/data/train20194821_23_48_01/data.csv">
-          <provider selected="true" editor-type-id="csv-text-editor">
-            <state relative-caret-position="705">
-              <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
-            </state>
-          </provider>
-          <provider editor-type-id="csv-table-editor">
-            <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gameAI/experiment/contours_Advance.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2829">
-              <caret line="123" column="4" selection-start-line="123" selection-start-column="4" selection-end-line="123" selection-end-column="42" />
+            <state relative-caret-position="297">
+              <caret line="103" lean-forward="true" selection-start-line="103" selection-end-line="103" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -418,12 +127,52 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/game/wrapped_flappy_bird.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="302">
+              <caret line="31" column="11" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="16" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/game/flappy_bird_utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="421">
+            <state relative-caret-position="690">
               <caret line="53" column="72" selection-start-line="53" selection-start-column="72" selection-end-line="53" selection-end-column="72" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gameAI/experiment/night.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gameAI/experiment/advanceLineDetection.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="188">
+              <caret line="72" column="20" selection-start-line="72" selection-start-column="20" selection-end-line="72" selection-end-column="20" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gameAI/experiment/bird_match_template.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -441,16 +190,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>generation</find>
-      <find>mutation</find>
-      <find>bias</find>
-      <find>generic</find>
-      <find>currentIterCount</find>
-      <find>bestFitness</find>
-      <find>neural</find>
-      <find>nextA</find>
-      <find>determineNextAction</find>
-      <find>rnd</find>
       <find>ded</find>
       <find>edge</find>
       <find>plt</find>
@@ -458,7 +197,6 @@
       <find>lines</find>
       <find>PLAYER_PATH</find>
       <find>namedWindow</find>
-      <find>score</find>
       <find>1000</find>
       <find>BACKGROUND</find>
       <find>background</find>
@@ -471,15 +209,27 @@
       <find>seed</find>
       <find>sou</find>
       <find>sound</find>
+      <find>fitness</find>
+      <find>total</find>
+      <find>self.last</find>
+      <find>af2f0e61-2f1a-4e9e-ac82-9c0cf77e62f4</find>
+      <find>previewBestAgent</find>
+      <find>aliveCount</find>
+      <find>best</find>
+      <find>clone</find>
+      <find>fitne</find>
+      <find>score</find>
+      <find>zero</find>
     </findStrings>
     <replaceStrings>
       <replace>cv2</replace>
     </replaceStrings>
     <dirStrings>
       <dir>D:\tfg\game</dir>
-      <dir>D:\tfg\gameAI</dir>
       <dir>D:\tfg\gameAI\template</dir>
       <dir>D:\tfg</dir>
+      <dir>D:\tfg\gameAI\experiment</dir>
+      <dir>D:\tfg\gameAI</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -530,26 +280,26 @@
         <option value="$PROJECT_DIR$/gameAI/experiment/setup.py" />
         <option value="$PROJECT_DIR$/gameAI/experiment/cmodule/lineFinder.pyx" />
         <option value="$PROJECT_DIR$/gameAI/experiment/advanceLineDetectionCyphon.py" />
-        <option value="$PROJECT_DIR$/gameAI/experiment/advanceLineDetection.py" />
         <option value="$PROJECT_DIR$/gameAI/discretization/config.py" />
         <option value="$PROJECT_DIR$/gameAI/discretization/maskContour.py" />
         <option value="$PROJECT_DIR$/gameAI/discretization/discretization_test.py" />
         <option value="$PROJECT_DIR$/gameAI/discretization/areaFinder.py" />
-        <option value="$PROJECT_DIR$/gameAI/experiment/contours_Advance.py" />
         <option value="$PROJECT_DIR$/game/flappy_bird_utils.py" />
         <option value="$PROJECT_DIR$/gameAI/discretization/geom2D.py" />
         <option value="$PROJECT_DIR$/gameAI/discretization/area_finder.py" />
-        <option value="$PROJECT_DIR$/gameAI/flappyBirdAI.py" />
-        <option value="$PROJECT_DIR$/game/wrapped_flappy_bird.py" />
         <option value="$PROJECT_DIR$/gameAI/genericAlgorithm.py" />
+        <option value="$PROJECT_DIR$/gameAI/flappyBirdAI.py" />
+        <option value="$PROJECT_DIR$/gameAI/experiment/advanceLineDetection.py" />
+        <option value="$PROJECT_DIR$/gameAI/experiment/contours_Advance.py" />
+        <option value="$PROJECT_DIR$/game/wrapped_flappy_bird.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="283" />
-    <option name="y" value="-27" />
-    <option name="width" value="3417" />
-    <option name="height" value="2145" />
+    <option name="x" value="-213" />
+    <option name="y" value="-32" />
+    <option name="width" value="3860" />
+    <option name="height" value="2121" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -585,13 +335,7 @@
               <item name="tfg" type="b2602c69:ProjectViewProjectNode" />
               <item name="tfg" type="462c0819:PsiDirectoryNode" />
               <item name="gameAI" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tfg" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tfg" type="462c0819:PsiDirectoryNode" />
-              <item name="gameAI" type="462c0819:PsiDirectoryNode" />
-              <item name="discretization" type="462c0819:PsiDirectoryNode" />
+              <item name="experiment" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -639,7 +383,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.genericAlgorithm">
+  <component name="RunManager" selected="Python.advanceLineDetection">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="tfg" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -662,6 +406,25 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="advanceLineDetection" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="tfg" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/gameAI/experiment" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/gameAI/experiment/advanceLineDetection.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="contours_Advance" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="tfg" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -673,25 +436,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/gameAI/experiment/contours_Advance.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="discretization_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="tfg" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/gameAI/discretization" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/gameAI/discretization/discretization_test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -759,18 +503,18 @@
     </configuration>
     <list>
       <item itemvalue="Python.contours_Advance" />
-      <item itemvalue="Python.discretization_test" />
       <item itemvalue="Python.flappyBirdAI" />
       <item itemvalue="Python.wrapped_flappy_bird" />
       <item itemvalue="Python.genericAlgorithm" />
+      <item itemvalue="Python.advanceLineDetection" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.genericAlgorithm" />
-        <item itemvalue="Python.flappyBirdAI" />
+        <item itemvalue="Python.advanceLineDetection" />
         <item itemvalue="Python.contours_Advance" />
+        <item itemvalue="Python.flappyBirdAI" />
         <item itemvalue="Python.wrapped_flappy_bird" />
-        <item itemvalue="Python.discretization_test" />
+        <item itemvalue="Python.genericAlgorithm" />
       </list>
     </recent_temporary>
   </component>
@@ -806,7 +550,7 @@
       <workItem from="1566168228921" duration="1030000" />
       <workItem from="1566240127752" duration="9580000" />
       <workItem from="1566336934942" duration="4609000" />
-      <workItem from="1566414496358" duration="10506000" />
+      <workItem from="1566414496358" duration="41141000" />
     </task>
     <task id="LOCAL-00001" summary="sensor approach">
       <created>1562543400527</created>
@@ -885,7 +629,14 @@
       <option name="project" value="LOCAL" />
       <updated>1565988380146</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="release version">
+      <created>1566428338241</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1566428338241</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -921,7 +672,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="453527000" />
+    <option name="totallyTimeSpent" value="484162000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -933,30 +684,29 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="2575" height="1424" extended-state="6" />
-    <editor active="true" />
+    <frame x="-518" y="777" width="2573" height="1414" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8035516" visible="true" weight="0.1716329" />
-      <window_info id="Structure" order="1" sideWeight="0.19644839" side_tool="true" visible="true" weight="0.1716329" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.80363226" visible="true" weight="0.17176938" />
+      <window_info id="Structure" order="1" sideWeight="0.19636777" side_tool="true" visible="true" weight="0.17176938" />
       <window_info id="Favorites" order="2" sideWeight="0.18023887" side_tool="true" weight="0.22685736" />
       <window_info anchor="bottom" id="Messages" order="0" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" sideWeight="0.47755265" weight="0.27399382" />
       <window_info anchor="bottom" id="Run" order="3" sideWeight="0.8734344" weight="0.2236842" />
-      <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.6587207" weight="0.26348227" />
+      <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.6587207" weight="0.26365054" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="7" sideWeight="0.49463648" weight="0.32788163" />
+      <window_info anchor="bottom" id="TODO" order="7" sideWeight="0.49463648" weight="0.32761312" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.4902662" weight="0.17523365" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.3412793" side_tool="true" weight="0.28947368" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="12" sideWeight="0.5756853" visible="true" weight="0.3026316" />
-      <window_info anchor="bottom" id="Python Console" order="13" sideWeight="0.65117204" weight="0.30727553" />
+      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.5756853" weight="0.30421218" />
+      <window_info active="true" anchor="bottom" id="Python Console" order="13" sideWeight="0.65117204" visible="true" weight="0.3127925" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" weight="0.58785427" />
+      <window_info anchor="right" id="SciView" order="3" visible="true" weight="0.2166998" />
       <window_info anchor="right" id="R Graphics" order="4" />
       <window_info anchor="right" id="R Packages" order="5" />
       <window_info anchor="right" x="0" y="0" width="403" height="800" id="Documentation" order="6" side_tool="true" weight="0.3295325" />
@@ -1104,39 +854,9 @@
           <option name="timeStamp" value="238" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/gameAI/genericAlgorithm.py</url>
-          <line>77</line>
-          <option name="timeStamp" value="263" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/gameAI/ANN/test_neuralLayer.py</url>
           <line>15</line>
           <option name="timeStamp" value="272" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/gameAI/ANN/neuralnetwork.py</url>
-          <line>67</line>
-          <option name="timeStamp" value="273" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/gameAI/ANN/neuralnetwork.py</url>
-          <line>69</line>
-          <option name="timeStamp" value="274" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/gameAI/ANN/neuralnetwork.py</url>
-          <line>75</line>
-          <option name="timeStamp" value="277" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/gameAI/ANN/neuralnetwork.py</url>
-          <line>151</line>
-          <option name="timeStamp" value="278" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/gameAI/ANN/neuralnetwork.py</url>
-          <line>157</line>
-          <option name="timeStamp" value="279" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/gameAI/ANN/neuralnetwork.py</url>
@@ -1189,11 +909,6 @@
           <option name="timeStamp" value="306" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/gameAI/flappyBirdAI.py</url>
-          <line>14</line>
-          <option name="timeStamp" value="307" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/gameAI/experiment/contours_test.py</url>
           <line>57</line>
           <option name="timeStamp" value="309" />
@@ -1210,8 +925,23 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/gameAI/experiment/contours_Advance.py</url>
-          <line>90</line>
-          <option name="timeStamp" value="323" />
+          <line>154</line>
+          <option name="timeStamp" value="344" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/gameAI/experiment/contours_Advance.py</url>
+          <line>145</line>
+          <option name="timeStamp" value="347" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/gameAI/experiment/contours_Advance.py</url>
+          <line>96</line>
+          <option name="timeStamp" value="361" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/gameAI/experiment/contours_Advance.py</url>
+          <line>91</line>
+          <option name="timeStamp" value="362" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -1223,11 +953,11 @@
     <SUITE FILE_PATH="coverage/tfg$Unittests_for_test_neuralLayer_TestNeuralNet.coverage" NAME="Unittests for test_neuralLayer.TestNeuralNet Coverage Results" MODIFIED="1565623790792" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gameAI/ANN" />
     <SUITE FILE_PATH="coverage/tfg$discretization_test.coverage" NAME="discretization_test Coverage Results" MODIFIED="1566417641514" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gameAI/discretization" />
     <SUITE FILE_PATH="coverage/tfg$bird_contour.coverage" NAME="bird_contour Coverage Results" MODIFIED="1558290706528" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/camshift/image" />
-    <SUITE FILE_PATH="coverage/tfg$genericAlgorithm.coverage" NAME="genericAlgorithm Coverage Results" MODIFIED="1566421036548" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gameAI" />
+    <SUITE FILE_PATH="coverage/tfg$genericAlgorithm.coverage" NAME="genericAlgorithm Coverage Results" MODIFIED="1566517233333" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gameAI" />
     <SUITE FILE_PATH="coverage/tfg$discretization__1_.coverage" NAME="discretization (1) Coverage Results" MODIFIED="1561917310059" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gameAI" />
     <SUITE FILE_PATH="coverage/tfg$raycasting.coverage" NAME="raycasting Coverage Results" MODIFIED="1562523278998" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gameAI/experiment" />
     <SUITE FILE_PATH="coverage/tfg$Unittests_for_test_neuralLayer_TestNeuralLayer.coverage" NAME="Unittests for test_neuralLayer.TestNeuralLayer Coverage Results" MODIFIED="1565466616136" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gameAI/ANN" />
-    <SUITE FILE_PATH="coverage/tfg$contours_Advance.coverage" NAME="contours_Advance Coverage Results" MODIFIED="1566341312419" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gameAI/experiment" />
+    <SUITE FILE_PATH="coverage/tfg$contours_Advance.coverage" NAME="contours_Advance Coverage Results" MODIFIED="1566777563676" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gameAI/experiment" />
     <SUITE FILE_PATH="coverage/tfg$pipe_contorn.coverage" NAME="pipe_contorn Coverage Results" MODIFIED="1558292229994" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/camshift/image" />
     <SUITE FILE_PATH="coverage/tfg$Unittests_for_test_neuralLayer_TestNeuralNet_test_clone_equal.coverage" NAME="Unittests for test_neuralLayer.TestNeuralNet.test_clone_equal Coverage Results" MODIFIED="1564229184041" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gameAI/ANN" />
     <SUITE FILE_PATH="coverage/tfg$Unittests_for_test_neuralLayer_TestNeuralLayer_test_equal.coverage" NAME="Unittests for test_neuralLayer.TestNeuralLayer.test_equal Coverage Results" MODIFIED="1564252136271" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gameAI/ANN" />
@@ -1281,6 +1011,31 @@
     </expressions>
     <expressions id="evaluateExpression">
       <expression>
+        <expression-string>pipeRect[i][0][0]</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>pipeRect[0]</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>pipeRect[i]</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>pipeRect[j][0][0]</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>pipeRect[0][0]</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
         <expression-string>bird.output[0,0]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
@@ -1300,96 +1055,10 @@
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
-      <expression>
-        <expression-string>result_area</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>len(contours)</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>img[x1,y1]</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/assets/sprites/3.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/sprites/4.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/sprites/5.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/sprites/7.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/sprites/pipe-green.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/sprites/base.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gameAI/experiment/bird_match_template.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="10" column="27" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/sprites/9.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game/frameImages/frame64.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game/frameImages/frame73.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game/frameImages/frame133.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game/frameImages/frame151.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game/frameImages/frame153.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game/frameImages/frame191.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game/frameImages/frame142.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game/frameImages/frame139.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game/frameImages/frame137.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game/frameImages/frame131.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/python-skeletons/numpy/core/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="3469" column="6" selection-start-line="3469" selection-start-column="6" selection-end-line="3469" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gameAI/experiment/lineFinder.c" />
-    <entry file="file://$PROJECT_DIR$/gameAI/experiment/frame.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/gameAI/experiment/cmodule/lineFinder.c" />
     <entry file="file://$USER_HOME$/.virtualenvs/tfg/Lib/site-packages/IPython/core/interactiveshell.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -1448,15 +1117,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gameAI/experiment/bird_contour.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1304">
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gameAI/discretization/config.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
@@ -1504,40 +1164,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/game/flappy_bird_utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="53" column="72" selection-start-line="53" selection-start-column="72" selection-end-line="53" selection-end-column="72" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gameAI/discretization/discret_result.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
           <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gameAI/experiment/contours_Advance.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2829">
-          <caret line="123" column="4" selection-start-line="123" selection-start-column="4" selection-end-line="123" selection-end-column="42" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gameAI/experiment/advanceLineDetection.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2485">
-          <caret line="216" column="21" selection-start-line="216" selection-start-column="21" selection-end-line="216" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1551,6 +1181,93 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/gameAI/data/train20194821_23_48_01/data.csv">
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="705">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gameAI/ANN/neuralnetwork.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="461">
+          <caret line="68" column="19" selection-start-line="68" selection-start-column="19" selection-end-line="68" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gameAI/genericAlgorithm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="463">
+          <caret line="187" column="36" selection-start-line="187" selection-start-column="36" selection-end-line="187" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gameAI/experiment/frame.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game/frameImages/frame62.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game/frameImages/frame81.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game/frameImages/frame87.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game/frameImages/frame88.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game/frameImages/frame55.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game/frameImages/frame56.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game/frameImages/frame57.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game/frameImages/frame58.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game/frameImages/frame89.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game/frameImages/frame64.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game/frameImages/frame70.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game/frameImages/frame136.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game/frameImages/frame141.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game/frameImages/frame146.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game/frameImages/frame147.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gameAI/experiment/bird_match_template.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gameAI/experiment/night.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/gameAI/discretization/area_finder.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
@@ -1563,40 +1280,67 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gameAI/flappyBirdAI.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="31" column="14" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
+        <state relative-caret-position="297">
+          <caret line="103" lean-forward="true" selection-start-line="103" selection-end-line="103" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/gameAI/experiment/bird_contour.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="85" column="27" selection-start-line="85" selection-start-column="27" selection-end-line="85" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.virtualenvs/tfg/Lib/site-packages/numpy/core/fromnumeric.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="85" selection-start-line="85" selection-end-line="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gameAI/experiment/contours_Advance.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-917">
+          <caret line="93" column="76" selection-start-line="93" selection-start-column="76" selection-end-line="93" selection-end-column="76" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gameAI/experiment/advanceLineDetection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="72" column="20" selection-start-line="72" selection-start-column="20" selection-end-line="72" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/game/wrapped_flappy_bird.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="161" column="41" selection-start-line="161" selection-start-column="41" selection-end-line="161" selection-end-column="41" />
+        <state relative-caret-position="302">
+          <caret line="31" column="11" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="16" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gameAI/data/train20194821_23_48_01/data.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="705">
-          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
-        </state>
-      </provider>
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gameAI/genericAlgorithm.py">
+    <entry file="file://$PROJECT_DIR$/game/flappy_bird_utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="667">
-          <caret line="196" column="49" selection-start-line="196" selection-start-column="49" selection-end-line="196" selection-end-column="49" />
+        <state relative-caret-position="690">
+          <caret line="53" column="72" selection-start-line="53" selection-start-column="72" selection-end-line="53" selection-end-column="72" />
           <folding>
-            <element signature="e#0#32#0" expanded="true" />
+            <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>

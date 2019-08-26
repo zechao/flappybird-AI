@@ -12,7 +12,7 @@ import gameAI.trainData as td
 class FlappyBirdAI():
 
     def __init__(self, angles, neuralNet, gameRandomSeed=0):
-        self.game = flappy.GameState(gameRandomSeed)
+        self.game = flappy.FlappyBird(gameRandomSeed)
         self.tracker = af.AreaFinder()
         self.angles = angles
         self.sensors = []
@@ -104,8 +104,8 @@ class FlappyBirdAI():
 
 if __name__ == '__main__':
     # net = nn.NeuralNet.createRandomNeuralNet(6, 12, 1, 2, actFunction=af.relu)
-    net = td.loadNet("data/train20191312_19_13_52/generation90")
-    ai = FlappyBirdAI([-90, 90, 45, -45, 0], net, 0)
+    net = td.loadNet("data/train20192423_02_24_42/generation95")
+    ai = FlappyBirdAI([-90, 90, 45, -45, 0], net, 1)
     ai.restAndRun()
 
     img = np.zeros((flappy.getCV2ScreenWidth(), flappy.getCV2ScreenHeight(), 3), np.float)

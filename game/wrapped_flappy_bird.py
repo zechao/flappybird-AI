@@ -29,7 +29,7 @@ BACKGROUND_WIDTH = IMAGES['background_day'].get_width()
 
 PLAYER_INDEX_GEN = cycle([0, 1, 2, 1])
 
-class GameState:
+class FlappyBird:
 
     def __init__(self, seed=0, enableSound=False):
         self.seed = seed
@@ -161,7 +161,7 @@ class GameState:
 
         image_data = pygame.surfarray.array3d(SCREEN)
         # pygame.sndarray
-        # pygame.display.update()
+        pygame.display.update()
 
         return image_data
 
@@ -279,7 +279,7 @@ def pixelCollision(rect1, rect2, hitmask1, hitmask2):
 
 
 if __name__ == '__main__':
-    game = GameState(0)
+    game = FlappyBird(0)
     game.resetAndRun()
     flap = False
     while (1):
