@@ -12,6 +12,30 @@ BIRD_LOWER_RGB = np.array([83, 56, 70])
 BIRD_HIGHER_RGB = np.array([83, 56, 70])
 
 
+def fixRect(pipeRects):
+    #select all rect with startPoint y = 0
+    candidate = []
+    result = []
+    for rect in pipeRects :
+        if rect[0][1] ==0 and rect[1][1]<53 and rect[1][0]-rect[0][0]<=2:
+            candidate.append(rect)
+        else:
+            result.append(rect)
+    if len(candidate):
+        minX = candidate[0][0][0]
+        minY = candidate[0][0][1]
+        maxY = candidate[0][1][1]
+        for start,end in candidate[1:]:
+            minX = min(minX,start[0])
+            minY = min(minY,start[1])
+            maxY = max(maxY,end[1])
+        for i,rect in enumerate(result):
+            if abs(minX -rect[0][0])<=3 and abs(rect[0][1] - maxY)<=37:
+                result[i]=[(rect[0][0],minY),rect[1]]
+
+    return result
+
+
 class AreaFinder:
     def __init__(self):
         pass
@@ -29,11 +53,16 @@ class AreaFinder:
         pipeContours, hierarchy = cv2.findContours(image=pipeEdge, mode=cv2.RETR_EXTERNAL,
                                                    method=cv2.CHAIN_APPROX_SIMPLE)
         obstacle_area = []
-        if len(pipeContours) != 0:
+        if len(pipeContours):
+            rects = []
             for cnt in pipeContours:
                 area = cv2.contourArea(cnt)
                 x, y, w, h = cv2.boundingRect(cnt)
-                obstacle_area.append(g2d.Rect.fromBoundingRect( x, y, w, h))
+                rects.append([(x,y),(x+w,y+h)])
+            rects =fixRect(rects)
+            for start,end in rects:
+                obstacle_area.append(g2d.Rect.fromPoints( start[0], start[1], end[0], end[1]))
+
         obstacle_area.append(g2d.Rect.fromPoints(0, 405, 288, 512))
 
         return obstacle_area

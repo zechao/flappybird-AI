@@ -68,33 +68,28 @@ def setDefaultHSVValue():
     cv2.setTrackbarPos(birdBl, barsWindow, 70)
     cv2.setTrackbarPos(birdBh, barsWindow, 70)
 
-def fixRect(pipeRect):
-    length = len(pipeRect)
-    res=[]
-    discard=[]
-    for i in range(length):
-        findDisconnection=False
-        for j in range (i+1,length):
-            if i not in discard and j not in discard:
-                h1 = abs(pipeRect[i][0][1] - pipeRect[i][1][1])
-                h2 = abs(pipeRect[j][0][1] - pipeRect[j][1][1])
-                w1 = abs(pipeRect[i][0][0] - pipeRect[i][1][0])
-                w2 = abs(pipeRect[i][0][0] - pipeRect[i][1][0])
-                if h1 == h2 and w1 == w2 and w1 == 2:
-                    findDisconnection = True
-                    x1 = min(pipeRect[i][0][0], pipeRect[j][0][0])
-                    y1 = min(pipeRect[i][0][1], pipeRect[j][0][1])
-                    x2 = max(pipeRect[i][1][0], pipeRect[j][1][0])
-                    y2 = max(pipeRect[i][1][1], pipeRect[j][1][1])
-                    res.append([(x1, y1), (x2, y2)])
-                    discard.append(i)
-                    discard.append(j)
-        if not findDisconnection and i not in discard and j not in discard:
-            res.append(pipeRect[i])
-    points =np.array([[[126,0]], [[128,51]],[[172, 0]],[[174, 51]],[[176,160]]],np.float32)
-    x, y, w, h = cv2.boundingRect(points)
-    res.append([(x,y),(x + w, y + h)])
-    return res
+def fixRect(pipeRects):
+    #select all rect with startPoint y = 0
+    candidate = []
+    result = []
+    for rect in pipeRects :
+        if rect[0][1] ==0 and rect[1][1]<53 and rect[1][0]-rect[0][0]<=2:
+            candidate.append(rect)
+        else:
+            result.append(rect)
+    if len(candidate):
+        minX = candidate[0][0][0]
+        minY = candidate[0][0][1]
+        maxY = candidate[0][1][1]
+        for start,end in candidate[1:]:
+            minX = min(minX,start[0])
+            minY = min(minY,start[1])
+            maxY = max(maxY,end[1])
+        for i,rect in enumerate(result):
+            if abs(minX -rect[0][0])<=3 and abs(rect[0][1] - maxY)<=37:
+                result[i]=[(rect[0][0],minY),rect[1]]
+
+    return result
 
 
 createRGBTrackerBar()
@@ -106,7 +101,7 @@ setDefaultHSVValue()
 
 while True:
     cv2.waitKey(int(1000 / 60))
-    img = cv2.imread('frame1000.png')
+    img = cv2.imread(imgName)
     imgData = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)  # convert to imgData space experiment
     # get value from bars
 

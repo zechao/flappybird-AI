@@ -136,7 +136,7 @@ def fixDisconnectedLines(lines, maxDisconnection):
         return lines
     linesCopy = lines[:]
     for i, line1 in enumerate(linesCopy):
-        # search pipeLines with same x position
+        # search pipeRects with same x position
         for j, line2 in enumerate(linesCopy):
             if line1 != line2 and line1[1][0] == line2[1][0] == line1[0][0] == line2[0][0]:
                 distance = np.abs(line1[1][1] - line2[0][1])

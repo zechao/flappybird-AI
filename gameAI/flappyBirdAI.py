@@ -104,7 +104,7 @@ class FlappyBirdAI():
 
 if __name__ == '__main__':
     # net = nn.NeuralNet.createRandomNeuralNet(6, 12, 1, 2, actFunction=af.relu)
-    net = td.loadNet("data/train20192423_02_24_42/generation95")
+    net = td.loadNet("data/train20192423_02_24_42/generation100")
     ai = FlappyBirdAI([-90, 90, 45, -45, 0], net, 1)
     ai.restAndRun()
 
