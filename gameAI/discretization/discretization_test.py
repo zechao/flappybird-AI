@@ -38,14 +38,12 @@ while True and not game.crash:
     if run:
         game_frame = game.next_frame(True)
 
-    # # copy for pipeContours tracking
-    # contours_frame = np.copy(game_frame)
-    # # copy for template tracking
-    # template_frame = np.copy(game_frame)
     sensors = [
         sr.Sensor.createBlankSensor(45),
         sr.Sensor.createBlankSensor(0),
         sr.Sensor.createBlankSensor(-45),
+        sr.Sensor.createBlankSensor(90),
+        sr.Sensor.createBlankSensor(-90),
     ]
     ret = True
     # copy of game frame for bird tracking
@@ -63,5 +61,4 @@ while True and not game.crash:
             sensor.customPositionCast(birdFrontCenter.x, birdFrontCenter.y, walls, img)
         cv2.imshow('GameAIVision', img)
 
-game.quit()
 cv2.destroyAllWindows()

@@ -261,9 +261,13 @@ while True:
     for start, end in pipeRects:
         cv2.rectangle(fixRectResult, start, end, (255, 125, 0), 1)
 
+    for start, end in birdRects:
+        cv2.rectangle(fixRectResult, start, end, (255, 0, 255), 1)
+
     print("time speed", time.time() - startTime)
     cv2.imshow('only pipe', pipeEdge)
+    cv2.imshow('only bird', birdEdge)
     cv2.imshow('findRect', result)
     cv2.imshow('image', img)
-    cv2.imshow('fixRect',fixRectResult)
+    cv2.imshow('Final result',fixRectResult)
 cv2.destroyAllWindows()

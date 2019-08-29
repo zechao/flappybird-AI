@@ -55,11 +55,11 @@ def getRGBValue(*barNames):
 
 def setDefaultHSVValue():
     cv2.setTrackbarPos(rl, barsWindow, 84)
-    cv2.setTrackbarPos(rh, barsWindow, 85)
+    cv2.setTrackbarPos(rh, barsWindow, 84)
     cv2.setTrackbarPos(gl, barsWindow, 56)
-    cv2.setTrackbarPos(gh, barsWindow, 58)
+    cv2.setTrackbarPos(gh, barsWindow, 56)
     cv2.setTrackbarPos(bl, barsWindow, 71)
-    cv2.setTrackbarPos(bh, barsWindow, 73)
+    cv2.setTrackbarPos(bh, barsWindow, 71)
 
     cv2.setTrackbarPos(birdRl, barsWindow, 83)
     cv2.setTrackbarPos(birdRh, barsWindow, 83)
@@ -139,15 +139,15 @@ while True:
         pipeRect = fixRect(pipeRect)
 
     for each in pipeRect:
-        cv2.rectangle(final_result, each[0], each[1], (0, 0, 255), thickness=1)
+        cv2.rectangle(final_result, each[0], each[1], (0 ,0, 255), thickness=2)
 
     if len(birdContours) != 0:
         for cnt in birdContours:
             area = cv2.contourArea(cnt)
             x, y, w, h = cv2.boundingRect(cnt)
-            cv2.rectangle(final_result, (x, y), (x + w, y + h), (0, 0, 255), thickness=2)
+            cv2.rectangle(final_result, (x, y), (x + w, y + h), (255, 0, 0), thickness=2)
 
-    cv2.rectangle(final_result, (0, 405), (288, 512), (0, 255, 255), thickness=1)
+    cv2.rectangle(final_result, (0, 405), (288, 512), (0, 0, 255), thickness=2)
 
     print("time spend:",time.time()-start)
     cv2.imshow('Contours', all_cnt_img)

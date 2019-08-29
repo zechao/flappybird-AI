@@ -248,11 +248,11 @@ class Sensor():
     def draw(self, res, img):
         if img is not None and res is not None:
             if res.boundType == BoundType.BORDER:
-                cv2.line(img, res.pos.toIntTuple(), res.hitPoint.toIntTuple(), [255, 255, 0], 1)
+                cv2.line(img, res.pos.toIntTuple(), res.hitPoint.toIntTuple(), [255, 255, 255], 1)
                 cv2.circle(img, res.hitPoint.toIntTuple(), 3, [255, 255, 0], 2)
                 # cv2.putText(img, str(res.distance), res.hitPoint.toIntTuple(), cv2.FONT_HERSHEY_PLAIN, 1, [255, 255, 0])
             elif res.boundType == BoundType.OBSTACLE:
-                cv2.line(img, res.pos.toIntTuple(), res.hitPoint.toIntTuple(), [255, 0, 0], 1)
+                cv2.line(img, res.pos.toIntTuple(), res.hitPoint.toIntTuple(), [0, 0, 255], 1)
                 cv2.circle(img, res.hitPoint.toIntTuple(), 3, [0, 0, 255], 2)
                 # cv2.putText(img, str(res.distance), res.hitPoint.toIntTuple(), cv2.FONT_HERSHEY_PLAIN, 1, [0, 0, 255])
             elif res.boundType == BoundType.BLANK:

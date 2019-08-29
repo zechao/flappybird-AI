@@ -6,7 +6,7 @@ import time
 
 # build color range for mask
 PIPE_LOWER_RGB = np.array([84, 56, 71])
-PIPE_HIGHER_RGB = np.array([85, 58, 73])
+PIPE_HIGHER_RGB = np.array([84, 56, 71])
 
 BIRD_LOWER_RGB = np.array([83, 56, 70])
 BIRD_HIGHER_RGB = np.array([83, 56, 70])
