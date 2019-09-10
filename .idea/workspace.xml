@@ -1,24 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/gameAI/discretization/sensor.py" line="230" />
+    <bookmark url="file://$PROJECT_DIR$/gameAI/discretization/sensor.py" line="239" />
     <bookmark url="file://$PROJECT_DIR$/gameAI/flappyBirdAI.py" line="113" />
     <bookmark url="file://$PROJECT_DIR$/gameAI/ANN/test_neuralLayer.py" line="134" />
     <bookmark url="file://$PROJECT_DIR$/gameAI/experiment/line_searcher.py" line="167" />
-    <bookmark url="file://$PROJECT_DIR$/game/wrapped_flappy_bird.py" line="147" />
-    <bookmark url="file://$PROJECT_DIR$/gameAI/experiment/rect_searcher.py" line="146" />
+    <bookmark url="file://$PROJECT_DIR$/game/wrapped_flappy_bird.py" line="148" />
+    <bookmark url="file://$PROJECT_DIR$/gameAI/experiment/rect_searcher.py" line="144" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="49a14c5b-883a-41bd-92c9-22c88916d7c5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/gameAI/experiment/ray_casting.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gameAI/discretization/area_finder.py" beforeDir="false" afterPath="$PROJECT_DIR$/gameAI/discretization/area_finder.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gameAI/discretization/discretization_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/gameAI/discretization/discretization_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gameAI/discretization/sensor.py" beforeDir="false" afterPath="$PROJECT_DIR$/gameAI/discretization/sensor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gameAI/discretization/template_contour.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gameAI/experiment/advanceLineDetection.py" beforeDir="false" afterPath="$PROJECT_DIR$/gameAI/experiment/line_searcher.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gameAI/experiment/advanceRectSearcher.py" beforeDir="false" afterPath="$PROJECT_DIR$/gameAI/experiment/rect_searcher.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gameAI/experiment/contours_Advance.py" beforeDir="false" afterPath="$PROJECT_DIR$/gameAI/experiment/contours_advance.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/wrapped_flappy_bird.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/wrapped_flappy_bird.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gameAI/ANN/activation_funtion.py" beforeDir="false" afterPath="$PROJECT_DIR$/gameAI/ANN/activation_funtion.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gameAI/experiment/ray_casting.py" beforeDir="false" afterPath="$PROJECT_DIR$/gameAI/experiment/ray_casting.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gameAI/experiment/rect_searcher.py" beforeDir="false" afterPath="$PROJECT_DIR$/gameAI/experiment/rect_searcher.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gameAI/flappyBirdAI.py" beforeDir="false" afterPath="$PROJECT_DIR$/gameAI/flappyBirdAI.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gameAI/genericAlgorithm.py" beforeDir="false" afterPath="$PROJECT_DIR$/gameAI/genericAlgorithm.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,97 +30,91 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gameAI/experiment/contours_advance.py">
+        <entry file="file://$PROJECT_DIR$/gameAI/data/train20194431_13_44_52/data.csv">
+          <provider selected="true" editor-type-id="csv-text-editor" />
+          <provider editor-type-id="csv-table-editor">
+            <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gameAI/data/train20194531_13_45_48/data.csv">
+          <provider selected="true" editor-type-id="csv-text-editor" />
+          <provider editor-type-id="csv-table-editor">
+            <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gameAI/data/train20194821_23_48_01/data.csv">
+          <provider selected="true" editor-type-id="csv-text-editor" />
+          <provider editor-type-id="csv-table-editor">
+            <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gameAI/data/train20192423_02_24_42/data.csv">
+          <provider selected="true" editor-type-id="csv-text-editor">
+            <state relative-caret-position="1725">
+              <caret line="75" column="2" selection-start-line="75" selection-end-line="75" selection-end-column="2" />
+            </state>
+          </provider>
+          <provider editor-type-id="csv-table-editor">
+            <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gameAI/genericAlgorithm.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="98" selection-start-line="98" selection-end-line="98" selection-end-column="42" />
+            <state relative-caret-position="245">
+              <caret line="47" column="11" selection-start-line="47" selection-start-column="11" selection-end-line="47" selection-end-column="11" />
               <folding>
-                <element signature="e#0#10#0" expanded="true" />
+                <element signature="e#0#32#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gameAI/experiment/line_searcher.py">
+        <entry file="file://$PROJECT_DIR$/game/wrapped_flappy_bird.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1840">
-              <caret line="100" selection-start-line="100" selection-end-line="100" />
+            <state relative-caret-position="400">
+              <caret line="166" column="12" selection-start-line="166" selection-start-column="12" selection-end-line="166" selection-end-column="12" />
               <folding>
-                <element signature="e#0#11#0" expanded="true" />
+                <element signature="e#0#18#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gameAI/discretization/discret_result.py">
+        <entry file="file://$PROJECT_DIR$/gameAI/ANN/neuralnetwork.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="696">
-              <caret line="63" selection-start-line="63" selection-end-line="63" />
+            <state relative-caret-position="345">
+              <caret line="161" column="77" selection-start-line="161" selection-start-column="77" selection-end-line="161" selection-end-column="78" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gameAI/discretization/geom2D.py">
+        <entry file="file://$PROJECT_DIR$/gameAI/ANN/activation_funtion.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="345" selection-start-line="345" selection-end-line="345" />
+            <state relative-caret-position="677">
+              <caret line="39" column="21" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="21" />
               <folding>
-                <element signature="e#0#20#0" expanded="true" />
+                <element signature="e#0#18#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gameAI/flappyBirdAI.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="309">
-              <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gameAI/discretization/discretization_test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="673">
-              <caret line="59" column="30" selection-start-line="59" selection-start-column="30" selection-end-line="59" selection-end-column="30" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gameAI/experiment/ray_casting.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="650">
-              <caret line="36" column="30" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/gameAI/discretization/sensor.py">
+        <entry file="file://$PROJECT_DIR$/gameAI/flappyBirdAI.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="254" column="89" selection-start-line="254" selection-start-column="89" selection-end-line="254" selection-end-column="89" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gameAI/discretization/area_finder.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="386">
-              <caret line="69" selection-start-line="69" selection-end-line="69" />
+            <state relative-caret-position="377">
+              <caret line="20" column="34" lean-forward="true" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -131,14 +123,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gameAI/experiment/rect_searcher.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="347">
-              <caret line="216" column="66" selection-start-line="216" selection-start-column="66" selection-end-line="216" selection-end-column="66" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
-            </state>
+        <entry file="file://$PROJECT_DIR$/gameAI/data/train20195722_00_57_39/data.csv">
+          <provider selected="true" editor-type-id="csv-text-editor" />
+          <provider editor-type-id="csv-table-editor">
+            <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
           </provider>
         </entry>
       </file>
@@ -154,18 +142,9 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>1000</find>
-      <find>BACKGROUND</find>
-      <find>background</find>
-      <find>load</find>
-      <find>pipe_lower_rgb</find>
-      <find>_width</find>
-      <find>back</find>
-      <find>open</find>
       <find>random</find>
       <find>seed</find>
       <find>sou</find>
-      <find>sound</find>
       <find>fitness</find>
       <find>total</find>
       <find>self.last</find>
@@ -184,6 +163,15 @@
       <find>(255, 0,</find>
       <find>fix</find>
       <find>fixRect</find>
+      <find>cv2.FILLED</find>
+      <find>mutati</find>
+      <find>bird</find>
+      <find>fixrec</find>
+      <find>fi</find>
+      <find>radian</find>
+      <find>sound</find>
+      <find>FP</find>
+      <find>pri</find>
     </findStrings>
     <replaceStrings>
       <replace>cv2</replace>
@@ -193,8 +181,8 @@
       <dir>D:\tfg\game</dir>
       <dir>D:\tfg\gameAI\template</dir>
       <dir>D:\tfg\gameAI\experiment</dir>
-      <dir>D:\tfg\gameAI</dir>
       <dir>D:\tfg</dir>
+      <dir>D:\tfg\gameAI</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -206,7 +194,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/gameAI/test_discretizationResult.py" />
         <option value="$PROJECT_DIR$/gameAI/camshift.py" />
         <option value="$PROJECT_DIR$/gameAI/neural.py" />
         <option value="$PROJECT_DIR$/gameAI/2d.py" />
@@ -218,7 +205,6 @@
         <option value="$PROJECT_DIR$/gameAI/raycasting.py" />
         <option value="$PROJECT_DIR$/gameAI/discret_result.py" />
         <option value="$PROJECT_DIR$/gameAI/geom2D.py" />
-        <option value="$PROJECT_DIR$/gameAI/ANN/activation_funtion.py" />
         <option value="$PROJECT_DIR$/gameAI/ANN/nn.ipynb" />
         <option value="$PROJECT_DIR$/gameAI/discretization.py" />
         <option value="$PROJECT_DIR$/gameAI/gameinstance.py" />
@@ -231,7 +217,6 @@
         <option value="$PROJECT_DIR$/gameAI/experiment/bird_match_template.py" />
         <option value="$PROJECT_DIR$/gameAI/discretization/discret_result.py" />
         <option value="$PROJECT_DIR$/gameAI/generationData.csv" />
-        <option value="$PROJECT_DIR$/gameAI/ANN/neuralnetwork.py" />
         <option value="$PROJECT_DIR$/gameAI/ANN/test_neuralLayer.py" />
         <option value="$PROJECT_DIR$/gameAI/trainData.py" />
         <option value="$PROJECT_DIR$/gameAI/experiment/contours_test.py" />
@@ -246,25 +231,27 @@
         <option value="$PROJECT_DIR$/gameAI/discretization/areaFinder.py" />
         <option value="$PROJECT_DIR$/game/flappy_bird_utils.py" />
         <option value="$PROJECT_DIR$/gameAI/discretization/geom2D.py" />
-        <option value="$PROJECT_DIR$/gameAI/genericAlgorithm.py" />
-        <option value="$PROJECT_DIR$/game/wrapped_flappy_bird.py" />
         <option value="$PROJECT_DIR$/gameAI/experiment/advanceLineDetection.py" />
-        <option value="$PROJECT_DIR$/gameAI/flappyBirdAI.py" />
         <option value="$PROJECT_DIR$/gameAI/experiment/advanceRectSearcher.py" />
         <option value="$PROJECT_DIR$/gameAI/experiment/rayCasting.py" />
         <option value="$PROJECT_DIR$/gameAI/experiment/contours_Advance.py" />
         <option value="$PROJECT_DIR$/gameAI/discretization/area_finder.py" />
         <option value="$PROJECT_DIR$/gameAI/discretization/discretization_test.py" />
-        <option value="$PROJECT_DIR$/gameAI/experiment/ray_casting.py" />
+        <option value="$PROJECT_DIR$/gameAI/experiment/rect_searcher.py" />
         <option value="$PROJECT_DIR$/gameAI/discretization/sensor.py" />
+        <option value="$PROJECT_DIR$/gameAI/experiment/ray_casting.py" />
+        <option value="$PROJECT_DIR$/gameAI/ANN/activation_funtion.py" />
+        <option value="$PROJECT_DIR$/gameAI/ANN/neuralnetwork.py" />
+        <option value="$PROJECT_DIR$/gameAI/genericAlgorithm.py" />
+        <option value="$PROJECT_DIR$/game/wrapped_flappy_bird.py" />
+        <option value="$PROJECT_DIR$/gameAI/flappyBirdAI.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-53" />
-    <option name="y" value="43" />
-    <option name="width" value="3861" />
-    <option name="height" value="2121" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="33" />
+    <option name="width" value="1905" />
+    <option name="height" value="2109" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -274,6 +261,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -284,35 +272,12 @@
             <path>
               <item name="tfg" type="b2602c69:ProjectViewProjectNode" />
               <item name="tfg" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tfg" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tfg" type="462c0819:PsiDirectoryNode" />
-              <item name="game" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tfg" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tfg" type="462c0819:PsiDirectoryNode" />
               <item name="gameAI" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tfg" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tfg" type="462c0819:PsiDirectoryNode" />
-              <item name="gameAI" type="462c0819:PsiDirectoryNode" />
-              <item name="discretization" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tfg" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tfg" type="462c0819:PsiDirectoryNode" />
-              <item name="gameAI" type="462c0819:PsiDirectoryNode" />
-              <item name="experiment" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -361,7 +326,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.genericAlgorithm">
+  <component name="RunManager" selected="Python.flappyBirdAI">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="tfg" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -384,17 +349,20 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="advanceRectSearcher" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="activation_funtion" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="tfg" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/gameAI/experiment" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/gameAI/ANN" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="D:\tfg\gameAI\experiment\rect_searcher.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/gameAI/ANN/activation_funtion.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -403,17 +371,17 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="discretization_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="flappyBirdAI" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="tfg" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/gameAI/discretization" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/gameAI" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/gameAI/discretization/discretization_test.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/gameAI/flappyBirdAI.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -426,6 +394,9 @@
       <module name="tfg" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/gameAI" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -445,6 +416,9 @@
       <module name="tfg" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/gameAI/experiment" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -464,6 +438,9 @@
       <module name="tfg" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/gameAI/experiment" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -480,19 +457,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.advanceRectSearcher" />
       <item itemvalue="Python.rect_searcher" />
       <item itemvalue="Python.ray_casting" />
-      <item itemvalue="Python.discretization_test" />
       <item itemvalue="Python.genericAlgorithm" />
+      <item itemvalue="Python.activation_funtion" />
+      <item itemvalue="Python.flappyBirdAI" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.flappyBirdAI" />
         <item itemvalue="Python.genericAlgorithm" />
+        <item itemvalue="Python.activation_funtion" />
         <item itemvalue="Python.ray_casting" />
-        <item itemvalue="Python.discretization_test" />
         <item itemvalue="Python.rect_searcher" />
-        <item itemvalue="Python.advanceRectSearcher" />
       </list>
     </recent_temporary>
   </component>
@@ -528,7 +505,10 @@
       <workItem from="1566168228921" duration="1030000" />
       <workItem from="1566240127752" duration="9580000" />
       <workItem from="1566336934942" duration="4609000" />
-      <workItem from="1566414496358" duration="69466000" />
+      <workItem from="1566414496358" duration="70728000" />
+      <workItem from="1567101953853" duration="34735000" />
+      <workItem from="1567456265724" duration="10591000" />
+      <workItem from="1568138906631" duration="326000" />
     </task>
     <task id="LOCAL-00001" summary="sensor approach">
       <created>1562543400527</created>
@@ -635,7 +615,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567072295480</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="release version">
+      <created>1567083746691</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1567083746691</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -671,7 +658,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="512487000" />
+    <option name="totallyTimeSpent" value="559401000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -683,29 +670,29 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-35" y="29" width="2574" height="1414" extended-state="0" />
+    <frame x="-7" y="-7" width="2575" height="1424" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.804133" visible="true" weight="0.17170112" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.804133" visible="true" weight="0.17759237" />
       <window_info id="Structure" order="1" sideWeight="0.19586703" side_tool="true" weight="0.1716329" />
       <window_info id="Favorites" order="2" sideWeight="0.18023887" side_tool="true" weight="0.22685736" />
       <window_info anchor="bottom" id="Messages" order="0" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" sideWeight="0.47755265" weight="0.27399382" />
       <window_info anchor="bottom" id="Run" order="3" sideWeight="0.8734344" weight="0.2236842" />
-      <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.6587207" weight="0.31903276" />
+      <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.6587207" weight="0.35164836" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" sideWeight="0.49463648" weight="0.32739937" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.4902662" weight="0.174727" />
+      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.4902662" weight="0.18602826" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.3412793" side_tool="true" weight="0.28947368" />
-      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.5756853" weight="0.30417958" />
-      <window_info active="true" anchor="bottom" id="Python Console" order="13" sideWeight="0.65117204" visible="true" weight="0.25663027" />
+      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.5756853" weight="0.30343214" />
+      <window_info active="true" anchor="bottom" id="Python Console" order="13" sideWeight="0.65117204" visible="true" weight="0.40634674" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" visible="true" weight="0.28775835" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.28630364" />
       <window_info anchor="right" id="R Graphics" order="4" />
       <window_info anchor="right" id="R Packages" order="5" />
       <window_info anchor="right" x="0" y="0" width="403" height="800" id="Documentation" order="6" side_tool="true" weight="0.3295325" />
@@ -831,12 +818,6 @@
           <option name="timeStamp" value="201" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <condition expression="self.res is None" language="Python" />
-          <url>file://$PROJECT_DIR$/gameAI/discretization/sensor.py</url>
-          <line>243</line>
-          <option name="timeStamp" value="210" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <condition expression="wall.boundType is None" language="Python" />
           <url>file://$PROJECT_DIR$/gameAI/discretization/sensor.py</url>
           <line>196</line>
@@ -866,11 +847,6 @@
           <url>file://$PROJECT_DIR$/gameAI/discretization/discretization_test.py</url>
           <line>61</line>
           <option name="timeStamp" value="284" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/gameAI/discretization/sensor.py</url>
-          <line>222</line>
-          <option name="timeStamp" value="285" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/gameAI/ANN/test_neuralLayer.py</url>
@@ -934,43 +910,43 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/gameAI/experiment/rect_searcher.py</url>
-          <line>166</line>
+          <line>164</line>
           <option name="timeStamp" value="413" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/gameAI/discretization/area_finder.py</url>
-          <line>55</line>
-          <option name="timeStamp" value="417" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/gameAI/discretization/area_finder.py</url>
-          <line>69</line>
-          <option name="timeStamp" value="421" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/gameAI/discretization/area_finder.py</url>
-          <line>71</line>
-          <option name="timeStamp" value="422" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/gameAI/experiment/ray_casting.py</url>
-          <line>27</line>
-          <option name="timeStamp" value="423" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/gameAI/discretization/area_finder.py</url>
-          <line>76</line>
-          <option name="timeStamp" value="424" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/gameAI/discretization/area_finder.py</url>
-          <line>67</line>
-          <option name="timeStamp" value="425" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/gameAI/discretization/discretization_test.py</url>
           <line>56</line>
           <option name="timeStamp" value="426" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/gameAI/experiment/rect_searcher.py</url>
+          <line>80</line>
+          <option name="timeStamp" value="429" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/gameAI/experiment/rect_searcher.py</url>
+          <line>227</line>
+          <option name="timeStamp" value="430" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/gameAI/experiment/rect_searcher.py</url>
+          <line>230</line>
+          <option name="timeStamp" value="431" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/gameAI/experiment/rect_searcher.py</url>
+          <line>258</line>
+          <option name="timeStamp" value="432" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/gameAI/experiment/ray_casting.py</url>
+          <line>38</line>
+          <option name="timeStamp" value="437" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/gameAI/experiment/ray_casting.py</url>
+          <line>40</line>
+          <option name="timeStamp" value="438" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -989,6 +965,7 @@
     <SUITE FILE_PATH="coverage/tfg$contours_Advance.coverage" NAME="contours_Advance Coverage Results" MODIFIED="1567076301506" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gameAI/experiment" />
     <SUITE FILE_PATH="coverage/tfg$advanceRectSearcher.coverage" NAME="advanceRectSearcher Coverage Results" MODIFIED="1567027588893" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gameAI/experiment" />
     <SUITE FILE_PATH="coverage/tfg$pipe_contorn.coverage" NAME="pipe_contorn Coverage Results" MODIFIED="1558292229994" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/camshift/image" />
+    <SUITE FILE_PATH="coverage/tfg$ray_casting.coverage" NAME="ray_casting Coverage Results" MODIFIED="1567377013119" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gameAI/experiment" />
     <SUITE FILE_PATH="coverage/tfg$Unittests_for_test_neuralLayer_TestNeuralNet_test_clone_equal.coverage" NAME="Unittests for test_neuralLayer.TestNeuralNet.test_clone_equal Coverage Results" MODIFIED="1564229184041" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gameAI/ANN" />
     <SUITE FILE_PATH="coverage/tfg$Unittests_for_test_neuralLayer_TestNeuralLayer_test_equal.coverage" NAME="Unittests for test_neuralLayer.TestNeuralLayer.test_equal Coverage Results" MODIFIED="1564252136271" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gameAI/ANN" />
     <SUITE FILE_PATH="coverage/tfg$Unittests_for_test_neuralLayer_TestNeuralLayer_test_clone_equal.coverage" NAME="Unittests for test_neuralLayer.TestNeuralLayer.test_clone_equal Coverage Results" MODIFIED="1565466520613" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gameAI/ANN" />
@@ -1008,8 +985,10 @@
     <SUITE FILE_PATH="coverage/tfg$wrapped_flappy_bird.coverage" NAME="wrapped_flappy_bird Coverage Results" MODIFIED="1565474495596" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/game" />
     <SUITE FILE_PATH="coverage/tfg$Unittests_for_test_neuralLayer_TestNeuralLayer_test_crossover_and_mutate.coverage" NAME="Unittests for test_neuralLayer.TestNeuralLayer.test_crossover_and_mutate Coverage Results" MODIFIED="1564228697010" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gameAI/ANN" />
     <SUITE FILE_PATH="coverage/tfg$sensor.coverage" NAME="sensor Coverage Results" MODIFIED="1564341310059" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gameAI" />
+    <SUITE FILE_PATH="coverage/tfg$discret_result.coverage" NAME="discret_result Coverage Results" MODIFIED="1567340622343" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gameAI/discretization" />
     <SUITE FILE_PATH="coverage/tfg$Unittests_in_ANN.coverage" NAME="Unittests in ANN Coverage Results" MODIFIED="1563920168025" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gameAI/ANN" />
     <SUITE FILE_PATH="coverage/tfg$flappyBirdAI.coverage" NAME="flappyBirdAI Coverage Results" MODIFIED="1567028232346" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gameAI" />
+    <SUITE FILE_PATH="coverage/tfg$rect_searcher.coverage" NAME="rect_searcher Coverage Results" MODIFIED="1567340564708" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gameAI/experiment" />
     <SUITE FILE_PATH="coverage/tfg$advance_contours.coverage" NAME="advance_contours Coverage Results" MODIFIED="1566045254407" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gameAI/experiment" />
   </component>
   <component name="debuggerHistoryManager">
@@ -1089,129 +1068,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/gameAI/experiment/cmodule/lineFinder.pyx" />
-    <entry file="file://$PROJECT_DIR$/gameAI/experiment/advanceLineDetectionCyphon.py" />
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/numpy/doc/constants.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="736">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_bundle/pydev_import_hook.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gameAI/experiment/contours_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/-394233648/cv2/cv2/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175605">
-          <caret line="7650" column="36" selection-start-line="7650" selection-start-column="33" selection-end-line="7650" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gameAI/discretization/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" selection-start-line="3" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gameAI/discretization/camshift.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="920">
-          <caret line="40" column="40" lean-forward="true" selection-start-line="40" selection-start-column="40" selection-end-line="40" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gameAI/discretization/template_contour.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="44" column="8" selection-start-line="44" selection-start-column="8" selection-end-line="44" selection-end-column="26" />
-          <caret line="52" column="20" selection-start-line="52" selection-start-column="20" selection-end-line="52" selection-end-column="99" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/sprites/background-night.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/sprites/background-black.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/sprites/background-day.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gameAI/data/train20194821_23_48_01/data.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="705">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
-        </state>
-      </provider>
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gameAI/ANN/neuralnetwork.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="68" column="19" selection-start-line="68" selection-start-column="19" selection-end-line="68" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gameAI/genericAlgorithm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="463">
-          <caret line="187" column="36" selection-start-line="187" selection-start-column="36" selection-end-line="187" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game/frameImages/frame62.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game/frameImages/frame81.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game/frameImages/frame87.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game/frameImages/frame88.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game/frameImages/frame55.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game/frameImages/frame56.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game/frameImages/frame57.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game/frameImages/frame58.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game/frameImages/frame89.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/game/frameImages/frame64.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -1230,52 +1086,10 @@
     <entry file="file://$PROJECT_DIR$/game/frameImages/frame147.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/gameAI/experiment/night.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gameAI/experiment/bird_contour.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="85" column="27" selection-start-line="85" selection-start-column="27" selection-end-line="85" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.virtualenvs/tfg/Lib/site-packages/numpy/core/fromnumeric.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="277">
           <caret line="85" selection-start-line="85" selection-end-line="85" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game/flappy_bird_utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="53" column="72" selection-start-line="53" selection-start-column="72" selection-end-line="53" selection-end-column="72" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gameAI/experiment/frame.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gameAI/experiment/frame1000.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gameAI/experiment/img.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game/wrapped_flappy_bird.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="760">
-          <caret line="186" column="19" lean-forward="true" selection-start-line="186" selection-start-column="19" selection-end-line="186" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1293,60 +1107,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gameAI/experiment/bird_match_template.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gameAI/flappyBirdAI.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gameAI/experiment/rect_searcher.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="216" column="66" selection-start-line="216" selection-start-column="66" selection-end-line="216" selection-end-column="66" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gameAI/experiment/line_searcher.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1840">
+        <state relative-caret-position="2231">
           <caret line="100" selection-start-line="100" selection-end-line="100" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gameAI/discretization/geom2D.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="345" selection-start-line="345" selection-end-line="345" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gameAI/discretization/discret_result.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="696">
-          <caret line="63" selection-start-line="63" selection-end-line="63" />
         </state>
       </provider>
     </entry>
@@ -1360,10 +1127,100 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/gameAI/experiment/day2.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gameAI/experiment/day.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gameAI/experiment/img.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/sprites/5.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/sprites/9.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/sprites/base.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/sprites/redbird-upflap.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/sprites/redbird-downflap.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/sprites/redbird-midflap.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/-394233648/numpy/core/_multiarray_umath.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-79">
+          <caret line="6325" column="4" selection-start-line="6325" selection-start-column="4" selection-end-line="6325" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gameAI/discretization/discret_result.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1012">
+          <caret line="45" column="8" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gameAI/discretization/geom2D.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="966">
+          <caret line="43" column="8" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gameAI/experiment/frame1000.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gameAI/experiment/frame.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/gameAI/discretization/area_finder.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="69" selection-start-line="69" selection-end-line="69" />
+        <state relative-caret-position="1541">
+          <caret line="71" column="26" selection-start-line="71" selection-start-column="26" selection-end-line="71" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gameAI/discretization/sensor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/sprites/pipe-green.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gameAI/experiment/night.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gameAI/experiment/bird_contour.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="773">
+          <caret line="85" column="27" selection-start-line="85" selection-start-column="27" selection-end-line="85" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gameAI/experiment/bird_match_template.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
@@ -1372,25 +1229,149 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gameAI/experiment/contours_advance.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="98" selection-start-line="98" selection-end-line="98" selection-end-column="42" />
+        <state relative-caret-position="1339">
+          <caret line="149" column="4" selection-start-line="149" selection-start-column="4" selection-end-line="149" selection-end-column="79" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gameAI/experiment/ray_casting.py">
+    <entry file="file://$PROJECT_DIR$/game/flappy_bird_utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="650">
-          <caret line="36" column="30" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
+        <state relative-caret-position="1219">
+          <caret line="53" column="72" selection-start-line="53" selection-start-column="72" selection-end-line="53" selection-end-column="72" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gameAI/discretization/sensor.py">
+    <entry file="file://$PROJECT_DIR$/gameAI/experiment/ray_casting.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="254" column="89" selection-start-line="254" selection-start-column="89" selection-end-line="254" selection-end-column="89" />
+        <state relative-caret-position="161">
+          <caret line="11" column="20" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gameAI/experiment/rect_searcher.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4664">
+          <caret line="277" column="45" selection-start-line="277" selection-start-column="45" selection-end-line="277" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gameAI/data/train20190604_19_06_30/data.csv" />
+    <entry file="file://$PROJECT_DIR$/gameAI/data/train20191312_19_13_52/data.csv">
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="-1456">
+          <caret selection-end-line="102" selection-end-column="15" />
+        </state>
+      </provider>
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gameAI/data/train20193102_22_31_50/data.csv" />
+    <entry file="file://$PROJECT_DIR$/gameAI/data/train20192523_02_25_07/data.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gameAI/data/train20193302_22_33_17/data.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gameAI/data/train20194131_13_41_18/data.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gameAI/data/train20194431_13_44_52/data.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gameAI/data/train20194531_13_45_48/data.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gameAI/data/train20194821_23_48_01/data.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gameAI/data/train20192423_02_24_42/data.csv">
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="1725">
+          <caret line="75" column="2" selection-start-line="75" selection-end-line="75" selection-end-column="2" />
+        </state>
+      </provider>
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gameAI/data/train20195722_00_57_39/data.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gameAI/ANN/neuralnetwork.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="161" column="77" selection-start-line="161" selection-start-column="77" selection-end-line="161" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gameAI/ANN/activation_funtion.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="677">
+          <caret line="39" column="21" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gameAI/genericAlgorithm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="47" column="11" selection-start-line="47" selection-start-column="11" selection-end-line="47" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game/wrapped_flappy_bird.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="166" column="12" selection-start-line="166" selection-start-column="12" selection-end-line="166" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gameAI/flappyBirdAI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="20" column="34" lean-forward="true" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

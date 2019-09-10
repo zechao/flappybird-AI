@@ -31,10 +31,11 @@ PLAYER_INDEX_GEN = cycle([0, 1, 2, 1])
 
 class FlappyBird:
 
-    def __init__(self, seed=0, enableSound=False):
+    def __init__(self, seed=0, enableSound=False,lockFrame =False):
         self.seed = seed
         self.running = False
         self.crash = False
+        self.lockFrame = lockFrame
         self.reset()
         self.enableSound = enableSound
         self.rnd = random.Random(self.seed)
@@ -162,6 +163,8 @@ class FlappyBird:
         image_data = pygame.surfarray.array3d(SCREEN)
         # pygame.sndarray
         pygame.display.update()
+        if  self.lockFrame:
+            FPSCLOCK.tick(60)
 
         return image_data
 

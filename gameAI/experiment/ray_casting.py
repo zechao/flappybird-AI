@@ -9,7 +9,7 @@ import gameAI.discretization.sensor as sr
 
 
 areaFinder = af.AreaFinder()
-imgName = 'frame.png'
+imgName = 'frame1000.png'
 while True:
     cv2.waitKey(0)
     game_frame = cv2.imread(imgName)
@@ -24,7 +24,7 @@ while True:
 
     ret = True
     # copy of game frame for bird tracking
-    img = np.zeros((flappy.getCV2ScreenWidth(), flappy.getCV2ScreenHeight(), 3), np.float)
+    img = np.zeros((flappy.getCV2ScreenWidth()+10, flappy.getCV2ScreenHeight()+10, 3), np.float)
     discRes = areaFinder.track_areas(game_frame)
     # img = discRes.getAreaImage(img)
     walls = discRes.getGameWalls(flappy.getCV2ScreenWidth(), flappy.getCV2ScreenHeight())

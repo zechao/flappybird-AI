@@ -77,9 +77,9 @@ rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 setDefaultHSVValue()
 
 
-def searchRect(raster, x, y, rows, cols,allDirection=False):
-    minX = rows
-    minY = cols
+def searchRect(raster, x, y, rows, cols, allDirection=False):
+    minX = x
+    minY = y
     maxX = x
     maxY = y
     queue = collections.deque()
@@ -148,11 +148,11 @@ def searchRect(raster, x, y, rows, cols,allDirection=False):
 
 
 def fixRect(pipeRects):
-    #select all rect with startPoint y = 0
+    # select all rect with startPoint y = 0
     candidate = []
     result = []
-    for rect in pipeRects :
-        if rect[0][1] ==0 and rect[1][1]<53 and rect[1][0]-rect[0][0]<=2:
+    for rect in pipeRects:
+        if rect[0][1] == 0 and rect[1][1] < 53 and rect[1][0] - rect[0][0] <= 2:
             candidate.append(rect)
         else:
             result.append(rect)
@@ -160,18 +160,19 @@ def fixRect(pipeRects):
         minX = candidate[0][0][0]
         minY = candidate[0][0][1]
         maxY = candidate[0][1][1]
-        for start,end in candidate[1:]:
-            minX = min(minX,start[0])
-            minY = min(minY,start[1])
-            maxY = max(maxY,end[1])
-        for i,rect in enumerate(result):
-            if abs(minX -rect[0][0])<=3 and abs(rect[0][1] - maxY)<=37:
-                result[i]=[(rect[0][0],minY),rect[1]]
+        for start, end in candidate[1:]:
+            minX = min(minX, start[0])
+            minY = min(minY, start[1])
+            maxY = max(maxY, end[1])
+        for i, rect in enumerate(result):
+            if abs(minX - rect[0][0]) <= 3 and abs(rect[0][1] - maxY) <= 37:
+                result[i] = [(rect[0][0], minY), rect[1]]
 
     return result
 
 
-def findRect(binaryImage, minLength=0, transpose=True, heightStart=0, heightEnd=None, widthStart=0, widthEnd=None, allDirection=False):
+def findRect(binaryImage, minLength=0, transpose=True, heightStart=0, heightEnd=None, widthStart=0, widthEnd=None,
+             allDirection=False):
     """
     :param binaryImage: the edge of image, must contain line of one pixel
     :param minLength: the minim length of line allowed
@@ -194,7 +195,7 @@ def findRect(binaryImage, minLength=0, transpose=True, heightStart=0, heightEnd=
     for i in range(heightStart, rows):
         for j in range(widthStart, cols):
             if raster[i, j]:
-                rects.append(searchRect(raster, i, j, rows, cols,allDirection))
+                rects.append(searchRect(raster, i, j, rows, cols, allDirection))
 
     if transpose:
         tLines = []
@@ -233,41 +234,48 @@ while True:
 
     resultUnfix = np.zeros((img.shape[0], img.shape[1], 3), np.float)
     for start, end in pipeRects:
-        cv2.rectangle(resultUnfix, start, end, (255, 125, 0), 1)
+        cv2.rectangle(resultUnfix, start, end, (255, 255, 255), 1)
 
     cv2.imshow('find Rect with all', resultUnfix)
-
 
     pipeEdge[404:406, ] = 0
     # build bird mask
     birdEdge = cv2.inRange(rgb, bird_lower_rgb, bird_higher_rgb)
 
     result = np.zeros((img.shape[0], img.shape[1], 3), np.float)
+    birdresult = np.zeros((img.shape[0], img.shape[1], 3), np.float)
+    pipeRects = findRect(pipeEdge)
+
     startTime = time.time()
 
     pipeRects = findRect(pipeEdge, heightEnd=404)
 
-    birdRects = findRect(birdEdge, heightEnd=410, widthStart=50, widthEnd=100,allDirection=True)
+    birdRects = findRect(birdEdge, heightEnd=410, widthStart=50, widthEnd=100, allDirection=True)
 
     for start, end in pipeRects:
-        cv2.rectangle(result, start, end, (255, 125, 0), 1)
+        cv2.rectangle(result, start, end, (255, 255, 255), 1)
 
     for start, end in birdRects:
-        cv2.rectangle(result, start, end, (255, 125, 0), 1)
+        cv2.rectangle(birdresult, start, end, (255, 0, 0), 1)
 
     fixRectResult = np.zeros((img.shape[0], img.shape[1], 3), np.float)
 
-    pipeRects=fixRect(pipeRects)
-    for start, end in pipeRects:
-        cv2.rectangle(fixRectResult, start, end, (255, 125, 0), 1)
-
-    for start, end in birdRects:
-        cv2.rectangle(fixRectResult, start, end, (255, 0, 255), 1)
+    pipeRects = fixRect(pipeRects)
 
     print("time speed", time.time() - startTime)
+    for start, end in pipeRects:
+        cv2.rectangle(fixRectResult, start, end, [255]*3,  thickness=1)
+
+    for start, end in birdRects:
+        cv2.rectangle(fixRectResult, start, end, [255, 0, 0],  thickness=1)
+
+    cv2.rectangle(fixRectResult, (0, 405), (288, 512), [255]*3, thickness=1)
+
+
     cv2.imshow('only pipe', pipeEdge)
     cv2.imshow('only bird', birdEdge)
-    cv2.imshow('findRect', result)
+    cv2.imshow('find pipe Rect', result)
+    cv2.imshow('find bird Rect', birdresult)
     cv2.imshow('image', img)
-    cv2.imshow('Final result',fixRectResult)
+    cv2.imshow('Final result', fixRectResult)
 cv2.destroyAllWindows()
