@@ -20,6 +20,11 @@ while True:
         sr.Sensor.createBlankSensor(-45),
         sr.Sensor.createBlankSensor(90),
         sr.Sensor.createBlankSensor(-90),
+        sr.Sensor.createBlankSensor(-30),
+        sr.Sensor.createBlankSensor(30),
+        sr.Sensor.createBlankSensor(-15),
+
+        sr.Sensor.createBlankSensor(15),
     ]
 
     ret = True

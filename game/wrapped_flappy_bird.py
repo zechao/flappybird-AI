@@ -9,7 +9,7 @@ from itertools import cycle
 import cv2
 import os
 
-FPS = 30
+FPS = 50
 SCREENWIDTH = 288
 SCREENHEIGHT = 512
 
@@ -164,14 +164,14 @@ class FlappyBird:
         # pygame.sndarray
         pygame.display.update()
         if  self.lockFrame:
-            FPSCLOCK.tick(60)
+            FPSCLOCK.tick(FPS)
 
         return image_data
 
     def playSound(self):
         if self.enableSound:
             SOUNDS['hit'].play()
-            SOUNDS['crash'].play()
+            SOUNDS['die'].play()
 
     def next_frame(self, flap):
         """
@@ -282,7 +282,7 @@ def pixelCollision(rect1, rect2, hitmask1, hitmask2):
 
 
 if __name__ == '__main__':
-    game = FlappyBird(0)
+    game = FlappyBird(0,enableSound= True,lockFrame=True)
     game.resetAndRun()
     flap = False
     while (1):

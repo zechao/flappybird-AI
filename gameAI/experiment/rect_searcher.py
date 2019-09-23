@@ -77,67 +77,66 @@ rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 setDefaultHSVValue()
 
 
-def searchRect(raster, x, y, rows, cols, allDirection=False):
+def searchRect(image, x, y, rows, cols, allDirection=False):
     minX = x
     minY = y
     maxX = x
     maxY = y
-    queue = collections.deque()
-    queue.append((x, y))
+    queue = collections.deque() #init queue
+    queue.append((x, y)) # enqueue the first point
     while len(queue) > 0:
-        currentX, currentY = queue.popleft()
-        raster[currentX, currentY] = 0
-        # right
+        currentX, currentY = queue.popleft() #dequeue the first element
+        image[currentX, currentY] = 0 #set the current pixel with 0
 
         # left
         left = currentY - 1
         if left > 0:
-            if raster[currentX, left] and raster[currentX, left] != 2:
+            if image[currentX, left] and image[currentX, left] != 2:
                 queue.append((currentX, left))
-                raster[currentX, left] = 2
+                image[currentX, left] = 2
 
-            # top
+        # top
         top = currentX - 1
         if top > 0:
-            if raster[top, currentY] and raster[top, currentY] != 2:
+            if image[top, currentY] and image[top, currentY] != 2:
                 queue.append((top, currentY))
-                raster[top, currentY] = 2
+                image[top, currentY] = 2
 
         right = currentY + 1
         if right < cols:
-            if raster[currentX, right] and raster[currentX, right] != 2:
+            if image[currentX, right] and image[currentX, right] != 2:
                 queue.append((currentX, right))
-                raster[currentX, right] = 2
+                image[currentX, right] = 2
             # down
 
 
         down = currentX + 1
         if down < rows:
-            if raster[down, currentY] and raster[down, currentY] != 2:
+            if image[down, currentY] and image[down, currentY] != 2:
                 queue.append((down, currentY))
-                raster[down, currentY] = 2
+                image[down, currentY] = 2
 
 
         if allDirection:
             if left > 0 and top > 0:
-                if raster[top, left] and raster[top, left] != 2:
+                if image[top, left] and image[top, left] != 2:
                     queue.append((top, left))
-                    raster[top, left] = 2
+                    image[top, left] = 2
 
             if right < cols and top > 0:
-                if raster[top, right] and raster[top, right] != 2:
+                if image[top, right] and image[top, right] != 2:
                     queue.append((top, right))
-                    raster[top, right] = 2
+                    image[top, right] = 2
 
             if right < cols and down < rows:
-                if raster[down, right] and raster[down, right] != 2:
+                if image[down, right] and image[down, right] != 2:
                     queue.append((down, right))
-                    raster[down, right] = 2
+                    image[down, right] = 2
 
             if left > 0 and down < rows:
-                if raster[down, left] and raster[down, left] != 2:
+                if image[down, left] and image[down, left] != 2:
                     queue.append((down, left))
-                    raster[down, left] = 2
+                    image[down, left] = 2
 
         minX = min(minX, currentX)
         minY = min(minY, currentY)

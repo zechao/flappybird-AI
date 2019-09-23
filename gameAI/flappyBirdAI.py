@@ -3,6 +3,8 @@ import numpy as np
 import game.wrapped_flappy_bird as flappy
 import gameAI.discretization.area_finder as af
 import gameAI.discretization.sensor as sr
+import gameAI.ANN.neuralnetwork as nn
+import gameAI.ANN.activation_funtion as acf
 import gameAI.trainData as td
 import time
 
@@ -103,9 +105,10 @@ class FlappyBirdAI():
 
 
 if __name__ == '__main__':
-    # net = nn.NeuralNet.createRandomNeuralNet(6, 12, 1, 2, actFunction=af.relu)
-    net = td.loadNet("data/train20192423_02_24_42/generation100")
+     # net = td.loadNet("data/train20192423_02_24_42/generation100")
+    net = nn.NeuralNet.createRandomNeuralNet(10, 12, 2, 2, actFunction=acf.relu)
     ai = FlappyBirdAI([-90, 90, 45, -45, 0], net, 1,enableSound=True,lockFrame=True)
+
     ai.restAndRun()
 
     img = np.zeros((flappy.getCV2ScreenWidth(), flappy.getCV2ScreenHeight(), 3), np.float)
